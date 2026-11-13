@@ -58,7 +58,12 @@ h1{font-size:clamp(2.6rem,6vw,4.6rem);line-height:1.05;letter-spacing:-.04em;mar
 .typed b{color:var(--text)}
 .caret{display:inline-block;width:2px;height:1.1em;background:var(--accent);vertical-align:-3px;animation:blink 1s steps(1) infinite}
 @keyframes blink{50%{opacity:0}}
-.cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px;container-type:inline-size;container-name:cta}
+.pair{display:flex;gap:14px;flex-wrap:nowrap}
+@container cta (max-width:520px){
+  .pair{flex:1 0 100%}
+  .pair .btn{flex:1 1 0;min-width:0;text-align:center;white-space:nowrap}
+}
 .btn{text-decoration:none;padding:12px 22px;border-radius:12px;font-weight:600;border:1px solid var(--line);background:var(--card);transition:transform .2s,box-shadow .2s}
 .btn:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
 .btn.primary{background:var(--grad);color:#fff;border:none}
@@ -191,8 +196,10 @@ html.pv .hero{min-height:auto;padding:150px 0 90px}html.pv .scroll{display:none}
       <p class="typed"><span class="typed-line"><span id="typed"></span><span class="caret"></span></span><span class="typed-sizers" id="sizers" aria-hidden="true"></span></p>
       <div class="cta">
         <a class="btn primary" href="#trajetoria" data-i="cta"></a>
-        <a class="btn" href="https://linkedin.com/in/zeucxb" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="btn" href="https://github.com/zeucxb" target="_blank" rel="noopener">GitHub</a>
+        <div class="pair">
+          <a class="btn" href="https://linkedin.com/in/zeucxb" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" href="https://github.com/zeucxb" target="_blank" rel="noopener">GitHub</a>
+        </div>
       </div>
     </div>
     <div class="photo"><img src="avatar.png" alt="Eliseu Codinhoto">
