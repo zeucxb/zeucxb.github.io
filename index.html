@@ -22,8 +22,8 @@
   --shadow:0 20px 50px -25px rgba(30,40,80,.25);
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Inter,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden;transition:background .4s,color .4s}
+html{scroll-behavior:smooth;overflow-x:hidden;overflow-x:clip}
+body{font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Inter,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden;overflow-x:clip;max-width:100%;overflow-wrap:break-word;transition:background .4s,color .4s}
 a{color:inherit}
 .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
 .wrap{max-width:1100px;margin:0 auto;padding:0 24px}
@@ -38,17 +38,23 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 #theme{border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:999px;width:38px;height:38px;cursor:pointer;font-size:1rem}
 #progress{position:fixed;top:0;left:0;height:3px;background:var(--grad);z-index:60;width:0}
 /* hero */
-.hero{min-height:100vh;display:flex;align-items:center;position:relative;padding-top:64px}
-.blob{position:absolute;border-radius:50%;filter:blur(90px);opacity:.35;z-index:-1;animation:float 14s ease-in-out infinite}
+.hero{min-height:100vh;min-height:100svh;display:flex;align-items:center;position:relative;padding-top:64px}
+.blobs{position:absolute;z-index:0;left:0;right:0;top:-180px;bottom:-180px;overflow:hidden;pointer-events:none}
+.blob{position:absolute;border-radius:50%;filter:blur(90px);opacity:.35;animation:float 14s ease-in-out infinite}
 .b1{width:420px;height:420px;background:var(--accent);top:10%;left:-120px}
 .b2{width:380px;height:380px;background:var(--accent2);bottom:5%;right:-100px;animation-delay:-6s}
 @keyframes float{50%{transform:translate(40px,-30px) scale(1.08)}}
-.hero-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:center}
+@keyframes float-sm{50%{transform:translate(12px,-16px) scale(1.04)}}
+.hero-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:center;position:relative;z-index:1}
 .tag{display:inline-flex;gap:8px;align-items:center;font-size:.85rem;color:var(--muted);border:1px solid var(--line);padding:6px 14px;border-radius:999px;background:var(--card)}
 .dot{width:8px;height:8px;border-radius:50%;background:var(--accent3);box-shadow:0 0 0 0 var(--accent3);animation:pulse 2s infinite}
 @keyframes pulse{70%{box-shadow:0 0 0 10px transparent}}
 h1{font-size:clamp(2.6rem,6vw,4.6rem);line-height:1.05;letter-spacing:-.04em;margin:20px 0 14px;font-weight:850}
-.typed{font-size:clamp(1.1rem,2.3vw,1.45rem);color:var(--muted);min-height:2.2em}
+.typed{display:grid;font-size:clamp(1.1rem,2.3vw,1.45rem);color:var(--muted);min-height:2.2em}
+.typed-line,.typed-sizers{grid-area:1/1}
+.typed-line{align-self:start}
+.typed-sizers{display:grid;visibility:hidden;pointer-events:none}
+.typed-sizers>span{grid-area:1/1}
 .typed b{color:var(--text)}
 .caret{display:inline-block;width:2px;height:1.1em;background:var(--accent);vertical-align:-3px;animation:blink 1s steps(1) infinite}
 @keyframes blink{50%{opacity:0}}
@@ -62,7 +68,7 @@ h1{font-size:clamp(2.6rem,6vw,4.6rem);line-height:1.05;letter-spacing:-.04em;mar
 .photo::before{content:"";position:absolute;inset:-14px;border-radius:40px;background:var(--grad);opacity:.5;filter:blur(24px);z-index:-1}
 .chip{position:absolute;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:8px 12px;font-size:.82rem;box-shadow:var(--shadow);animation:float 8s ease-in-out infinite}
 .c1{top:6%;left:-30px}.c2{bottom:12%;right:-34px;animation-delay:-3s}.c3{bottom:-14px;left:12%;animation-delay:-5s}
-.scroll{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);color:var(--muted);font-size:.8rem;text-align:center}
+.scroll{position:absolute;z-index:1;bottom:28px;left:50%;transform:translateX(-50%);color:var(--muted);font-size:.8rem;text-align:center}
 .scroll .mouse{display:block;width:22px;height:36px;border:2px solid var(--muted);border-radius:12px;margin:8px auto 0;position:relative}
 .scroll .mouse::after{content:"";position:absolute;left:50%;top:6px;width:4px;height:8px;background:var(--muted);border-radius:2px;transform:translateX(-50%);animation:wheel 1.6s infinite}
 @keyframes wheel{to{transform:translate(-50%,12px);opacity:0}}
@@ -109,15 +115,16 @@ h2{font-size:clamp(2rem,4vw,3rem);letter-spacing:-.03em;line-height:1.1;margin:1
 .sk{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px}
 .sk h4{margin-bottom:14px;font-size:1.05rem}
 .pills{display:flex;flex-wrap:wrap;gap:8px}
-.pills span{font-size:.85rem;border:1px solid var(--line);padding:5px 12px;border-radius:999px;background:var(--bg2);transition:all .2s}
+.pills span{font-size:.85rem;border:1px solid var(--line);padding:5px 12px;border-radius:999px;background:var(--bg2);transition:all .2s;max-width:100%}
 .pills span:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
 /* community */
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
 .list{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px}
 .list h4{margin-bottom:12px}
-.list li{list-style:none;padding:10px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:12px}
+.list li{list-style:none;padding:10px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;min-width:0}
 .list li:last-child{border:none}
-.list li small{color:var(--muted);white-space:nowrap}
+.list li a,.list li span{min-width:0}
+.list li small{color:var(--muted);white-space:nowrap;flex:none}
 .list a{text-decoration:none}.list a:hover{color:var(--accent)}
 .repos{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
 .repo{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;text-decoration:none;transition:all .25s}
@@ -135,24 +142,35 @@ h2{font-size:clamp(2rem,4vw,3rem);letter-spacing:-.03em;line-height:1.1;margin:1
 footer{text-align:center;padding:30px;color:var(--muted);font-size:.82rem}
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s}
 .reveal.show{opacity:1;transform:none}
+.hero-grid>*,.grid2>*,.skills>*,.repos>*,.edu>*,.stats>*{min-width:0}
 @media (max-width:860px){
+  .hero{padding-bottom:108px}
   .hero-grid,.grid2,.edu{grid-template-columns:1fr}
   .photo{order:-1}
   .stats{grid-template-columns:repeat(2,1fr)}
   .skills,.repos{grid-template-columns:1fr}
   .links a:not(.keep){display:none}
-  .c1{left:-8px}.c2{right:-8px}
 }
 html.pv .hero{min-height:auto;padding:150px 0 90px}html.pv .scroll{display:none}html.pv .item,html.pv .reveal{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.item,.reveal{opacity:1;transform:none}}
 
-.langs{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:var(--card)}
+.langs{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:var(--card);flex:none}
 .langs button{border:0;background:transparent;color:var(--muted);padding:7px 10px;font-size:.78rem;font-weight:700;cursor:pointer;letter-spacing:.04em}
 .langs button.on{background:var(--grad);color:#fff}
+@media (max-width:480px){
+  nav .wrap{padding:0 8px;gap:6px}
+  .logo{font-size:.92rem}
+  .links{gap:4px}
+  .links a.keep{font-size:.82rem;white-space:nowrap}
+  .langs button{padding:6px 5px;letter-spacing:0}
+  #theme{width:32px;height:32px;flex:none}
+}
 .scroll{display:flex;flex-direction:column;align-items:center}
 .item.first .card{border-color:var(--accent2);background:linear-gradient(135deg,color-mix(in srgb,var(--accent2) 12%,var(--card)),var(--card))}
 .item.first::before{border-color:var(--accent2)}
-.c4{top:44%;left:-46px;animation-delay:-2s}@media (max-width:860px){.c4{left:-8px}}</style>
+.c4{top:44%;left:-46px;animation-delay:-2s}
+@media (max-width:1200px){.c2{right:10px}.chip{animation-name:float-sm}}
+@media (max-width:860px){.c1{left:-8px}.c2{right:-8px}.c4{left:-8px}}</style>
 </head>
 <body>
 <div id="progress"></div>
@@ -165,12 +183,12 @@ html.pv .hero{min-height:auto;padding:150px 0 90px}html.pv .scroll{display:none}
   </div>
 </div></nav>
 <header class="hero" id="top">
-  <div class="blob b1"></div><div class="blob b2"></div>
+  <div class="blobs" aria-hidden="true"><div class="blob b1"></div><div class="blob b2"></div></div>
   <div class="wrap hero-grid">
     <div>
       <span class="tag"><i class="dot"></i> <span data-i="now"></span></span>
       <h1><span data-i="hi"></span><br><span class="grad">Eliseu Codinhoto</span></h1>
-      <p class="typed"><span id="typed"></span><span class="caret"></span></p>
+      <p class="typed"><span class="typed-line"><span id="typed"></span><span class="caret"></span></span><span class="typed-sizers" id="sizers" aria-hidden="true"></span></p>
       <div class="cta">
         <a class="btn primary" href="#trajetoria" data-i="cta"></a>
         <a class="btn" href="https://linkedin.com/in/zeucxb" target="_blank" rel="noopener">LinkedIn</a>
@@ -431,7 +449,8 @@ const strip=s=>s.replace(/<[^>]+>/g,'');
 function render(full,n){let out='',c=0,tag=false;for(const ch of full){if(ch==='<')tag=true;if(tag){out+=ch;if(ch==='>')tag=false;continue}if(c<n){out+=ch;c++}}return out}
 function tick(){const ph=I18N[L].typed,f=ph[p%ph.length],len=strip(f).length;el.innerHTML=render(f,i);
  if(!del&&i<len){i++;timer=setTimeout(tick,55)}else if(!del){del=true;timer=setTimeout(tick,1600)}else if(i>0){i--;timer=setTimeout(tick,25)}else{del=false;p++;timer=setTimeout(tick,300)}}
-function typedReset(){clearTimeout(timer);p=0;del=false;i=root.classList.contains('pv')?99:0;tick()}
+function typedReset(){clearTimeout(timer);p=0;del=false;i=root.classList.contains('pv')?99:0;
+ document.getElementById('sizers').innerHTML=I18N[L].typed.map(s=>`<span>${s}<i class="caret"></i></span>`).join('');tick()}
 document.querySelectorAll('.langs button').forEach(b=>b.onclick=()=>setLang(b.dataset.l,true));
 const qp=new URLSearchParams(location.search).get('lang');
 const nav=(navigator.language||'pt').slice(0,2).toLowerCase();
