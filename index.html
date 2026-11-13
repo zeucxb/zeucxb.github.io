@@ -86,11 +86,12 @@ section{padding:110px 0}
 .kicker{font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
 h2{font-size:clamp(2rem,4vw,3rem);letter-spacing:-.03em;line-height:1.1;margin:10px 0 24px}
 .lead{font-size:1.15rem;color:var(--muted);max-width:760px}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px}
-.stat{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px}
-.stat .n{font-size:2.4rem;font-weight:800;letter-spacing:-.03em;line-height:1.05}
-.stat .n.word{font-size:clamp(1.15rem,2.1vw,1.75rem);line-height:1.12;overflow-wrap:break-word}
-.stat .l{color:var(--muted);font-size:.9rem;overflow-wrap:break-word}
+.exec{margin:42px 0 0}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:14px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px 18px}
+.stat .n{font-size:clamp(2.1rem,4vw,3rem);font-weight:800;letter-spacing:-.04em;line-height:1}
+.stat .n.word{font-size:clamp(1.35rem,2.6vw,2.05rem);line-height:1.05;overflow-wrap:break-word}
+.stat .l{color:var(--muted);font-size:.92rem;margin-top:8px;overflow-wrap:break-word}
 .quote{margin-top:40px;border-left:3px solid var(--accent2);padding:6px 0 6px 20px;font-style:italic;color:var(--muted);max-width:760px}
 /* chapters / timeline */
 .filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:40px}
@@ -262,11 +263,12 @@ html.pv .hero{min-height:auto;padding:150px 0 90px}html.pv .scroll{display:none}
   <h2><span data-i="h1a"></span><br><span class="grad" data-i="h1b"></span></h2>
   <p class="lead" data-i="p1"></p>
   <p class="lead" style="margin-top:16px" data-i="p2"></p>
+  <p class="kicker exec" data-i="exec"></p>
   <div class="stats">
-    <div class="stat"><div class="n" data-count="10">0</div><div class="l" data-s="0"></div></div>
-    <div class="stat"><div class="n word" data-w="0"></div><div class="l" data-s="1"></div></div>
-    <div class="stat"><div class="n" data-count="10">0</div><div class="l" data-s="2"></div></div>
-    <div class="stat"><div class="n word" data-w="1"></div><div class="l" data-s="3"></div></div>
+    <div class="stat"><div class="n grad" data-count="10">0</div><div class="l" data-s="0"></div></div>
+    <div class="stat"><div class="n word grad" data-w="0"></div><div class="l" data-s="1"></div></div>
+    <div class="stat"><div class="n grad" data-count="10">0</div><div class="l" data-s="2"></div></div>
+    <div class="stat"><div class="n word grad" data-w="1"></div><div class="l" data-s="3"></div></div>
   </div>
   <h3 class="wins-h" data-i="winsh"></h3>
   <ul class="wins" id="wins"></ul>
@@ -345,7 +347,8 @@ cta:"Ver a trajetória →",scroll:"role pra baixo",
 k1:"01 · Sobre",h1a:"Full stack, depois plataforma,",h1b:"agora a camada de IA.",
 p1:"Comecei aos 12. O que ficou foi o hábito de ver como um sistema se encaixa, e de aprender em público.",
 p2:"O caminho passou por full stack, backend e dados em startups, arquitetura de produto no mobile e plataforma em escala. Cada etapa entrou na seguinte. Hoje sou Senior Staff AI Engineer na AI Platform do Safra, em esteira agêntica, RAG e sistemas multiagente.",
-st:["anos construindo software","de usuários em produtos que ajudei a fundar e arquitetar (XP, Kueski)","empresas, de startups a bancos e fintechs","backend, dados, front, mobile e IA"],
+exec:"Resumo executivo",
+st:["anos construindo software","usuários · XP e Kueski","empresas, de startups a bancos e fintechs","backend, dados, front, mobile e IA"],
 sn:["Milhões","Ponta a ponta"],
 winsh:"Alguns resultados",
 wins:["-60% issues de lint e analyze · Kueski","-40% no tempo de onboarding · XP","+25% de performance com navegação modular · XP","+30% de produtividade do time · XP"],
@@ -382,7 +385,8 @@ cta:"See the path →",scroll:"scroll down",
 k1:"01 · About",h1a:"Full stack, then platform,",h1b:"now the AI layer.",
 p1:"I started at 12. What stayed was the habit of seeing how a system fits together, and of learning in public.",
 p2:"The path ran through full stack, backend and data in startups, product architecture on mobile, and platform work at scale. Each step fed the next. I am now Senior Staff AI Engineer on Safra's AI Platform, on agentic workflows, RAG and multi-agent systems.",
-st:["years building software","of users on products whose foundation and architecture I built (XP, Kueski)","companies, from startups to banks and fintechs","backend, data, front, mobile and AI"],
+exec:"Executive summary",
+st:["years building software","users · XP and Kueski","companies, startups to banks and fintechs","backend, data, front, mobile and AI"],
 sn:["Millions","End to end"],
 winsh:"Selected results",
 wins:["-60% lint and analyze issues · Kueski","-40% onboarding time · XP","+25% performance with modular navigation · XP","+30% team productivity · XP"],
@@ -419,7 +423,8 @@ cta:"Ver la trayectoria →",scroll:"desliza hacia abajo",
 k1:"01 · Sobre mí",h1a:"Full stack, después plataforma,",h1b:"ahora la capa de IA.",
 p1:"Empecé a los 12. Lo que quedó fue el hábito de ver cómo encaja un sistema, y de aprender en público.",
 p2:"El camino pasó por full stack, backend y datos en startups, arquitectura de producto en mobile y plataforma a escala. Cada etapa alimentó la siguiente. Hoy soy Senior Staff AI Engineer en la AI Platform de Safra, en flujos agénticos, RAG y sistemas multiagente.",
-st:["años construyendo software","de usuarios en productos cuya base y arquitectura ayudé a construir (XP, Kueski)","empresas, de startups a bancos y fintechs","backend, datos, front, mobile y IA"],
+exec:"Resumen ejecutivo",
+st:["años construyendo software","usuarios · XP y Kueski","empresas, de startups a bancos y fintechs","backend, datos, front, mobile y IA"],
 sn:["Millones","De punta a punta"],
 winsh:"Algunos resultados",
 wins:["-60% issues de lint y analyze · Kueski","-40% en el tiempo de onboarding · XP","+25% de rendimiento con navegación modular · XP","+30% de productividad del equipo · XP"],
@@ -456,7 +461,8 @@ cta:"Vedi il percorso →",scroll:"scorri in basso",
 k1:"01 · Chi sono",h1a:"Full stack, poi piattaforma,",h1b:"ora il livello IA.",
 p1:"Ho iniziato a 12 anni. È rimasta l'abitudine di vedere come un sistema si incastra, e di imparare in pubblico.",
 p2:"Il percorso è passato da full stack, backend e dati nelle startup, architettura di prodotto sul mobile e piattaforma su scala. Ogni tappa è entrata nella successiva. Oggi sono Senior Staff AI Engineer nella AI Platform di Safra, su flussi agentici, RAG e sistemi multiagente.",
-st:["anni a costruire software","di utenti in prodotti di cui ho costruito base e architettura (XP, Kueski)","aziende, dalle startup a banche e fintech","backend, dati, front, mobile e IA"],
+exec:"Sintesi",
+st:["anni a costruire software","utenti · XP e Kueski","aziende, startup, banche e fintech","backend, dati, front, mobile e IA"],
 sn:["Milioni","End-to-end"],
 winsh:"Alcuni risultati",
 wins:["-60% issue di lint e analyze · Kueski","-40% sul tempo di onboarding · XP","+25% di performance con navigazione modulare · XP","+30% di produttività del team · XP"],
