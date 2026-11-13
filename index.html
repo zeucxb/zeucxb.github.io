@@ -1,12 +1,16 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Eliseu Codinhoto · AI Staff Engineer</title>
-<meta name="description" content="Eliseu Codinhoto: AI Staff Engineer, Tech Lead &amp; Software Architect. Portfolio em PT · EN · ES · IT.">
-<meta property="og:title" content="Eliseu Codinhoto · AI Staff Engineer">
-<meta property="og:image" content="avatar.png">
+<title>Eliseu Codinhoto · Senior Staff AI Engineer</title>
+<meta name="description" content="Eliseu Codinhoto, Senior Staff AI Engineer on the AI Platform at Safra. Product engineer across backend, data, frontend, mobile and architecture. Agentic workflows, RAG and multi-agent systems. EU citizen, open to roles in Europe (relocation) or remote.">
+<meta property="og:title" content="Eliseu Codinhoto · Senior Staff AI Engineer">
+<meta property="og:description" content="Product engineer and Senior Staff AI Engineer, AI Platform at Safra. Agentic workflows, RAG and multi-agent systems. EU citizen, open to Europe (relocation) or remote.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://zeucxb.github.io/">
+<meta property="og:image" content="https://zeucxb.github.io/avatar.png">
+<meta property="og:locale" content="en_US">
 <link rel="alternate" hreflang="pt-BR" href="?lang=pt"><link rel="alternate" hreflang="en" href="?lang=en"><link rel="alternate" hreflang="es" href="?lang=es"><link rel="alternate" hreflang="it" href="?lang=it">
 <link rel="icon" href="avatar.png">
 <style>
@@ -30,15 +34,15 @@ a{color:inherit}
 .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 /* nav */
 nav{position:fixed;inset:0 0 auto 0;z-index:50;backdrop-filter:blur(14px);background:color-mix(in srgb,var(--bg) 72%,transparent);border-bottom:1px solid var(--line)}
-nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:auto;min-height:64px;flex-wrap:wrap;row-gap:8px;padding-top:10px;padding-bottom:10px}
 .logo{font-weight:800;letter-spacing:-.02em;text-decoration:none}
-.links{display:flex;gap:22px;align-items:center}
+.links{display:flex;gap:22px;align-items:center;flex-wrap:wrap;justify-content:flex-end;row-gap:6px;min-width:0}
 .links a{text-decoration:none;color:var(--muted);font-size:.92rem;transition:color .2s}
 .links a:hover{color:var(--text)}
 #theme{border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:999px;width:38px;height:38px;cursor:pointer;font-size:1rem}
 #progress{position:fixed;top:0;left:0;height:3px;background:var(--grad);z-index:60;width:0}
 /* hero */
-.hero{min-height:100vh;min-height:100svh;display:flex;align-items:center;position:relative;padding-top:64px}
+.hero{min-height:100vh;min-height:100svh;display:flex;align-items:center;position:relative;padding-top:var(--navh,72px)}
 .blobs{position:absolute;z-index:0;left:0;right:0;top:-180px;bottom:-180px;overflow:hidden;pointer-events:none}
 .blob{position:absolute;border-radius:50%;filter:blur(90px);opacity:.35;animation:float 14s ease-in-out infinite}
 .b1{width:420px;height:420px;background:var(--accent);top:10%;left:-120px}
@@ -46,7 +50,7 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 @keyframes float{50%{transform:translate(40px,-30px) scale(1.08)}}
 @keyframes float-sm{50%{transform:translate(12px,-16px) scale(1.04)}}
 .hero-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:center;position:relative;z-index:1}
-.tag{display:inline-flex;gap:8px;align-items:center;font-size:.85rem;color:var(--muted);border:1px solid var(--line);padding:6px 14px;border-radius:999px;background:var(--card)}
+.tag{display:inline-flex;gap:8px;align-items:center;font-size:.85rem;color:var(--muted);border:1px solid var(--line);padding:6px 14px;border-radius:999px;background:var(--card);max-width:100%;flex-wrap:wrap;white-space:normal}
 .dot{width:8px;height:8px;border-radius:50%;background:var(--accent3);box-shadow:0 0 0 0 var(--accent3);animation:pulse 2s infinite}
 @keyframes pulse{70%{box-shadow:0 0 0 10px transparent}}
 h1{font-size:clamp(2.6rem,6vw,4.6rem);line-height:1.05;letter-spacing:-.04em;margin:20px 0 14px;font-weight:850}
@@ -64,7 +68,7 @@ h1{font-size:clamp(2.6rem,6vw,4.6rem);line-height:1.05;letter-spacing:-.04em;mar
   .pair{flex:1 0 100%}
   .pair .btn{flex:1 1 0;min-width:0;text-align:center;white-space:nowrap}
 }
-.btn{text-decoration:none;padding:12px 22px;border-radius:12px;font-weight:600;border:1px solid var(--line);background:var(--card);transition:transform .2s,box-shadow .2s}
+.btn{text-decoration:none;padding:12px 22px;border-radius:12px;font-weight:600;border:1px solid var(--line);background:var(--card);transition:transform .2s,box-shadow .2s;max-width:100%}
 .btn:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
 .btn.primary{background:var(--grad);color:#fff;border:none}
 .photo{position:relative;justify-self:center}
@@ -82,10 +86,12 @@ section{padding:110px 0}
 .kicker{font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
 h2{font-size:clamp(2rem,4vw,3rem);letter-spacing:-.03em;line-height:1.1;margin:10px 0 24px}
 .lead{font-size:1.15rem;color:var(--muted);max-width:760px}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px}
-.stat{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px}
-.stat .n{font-size:2.4rem;font-weight:800;letter-spacing:-.03em}
-.stat .l{color:var(--muted);font-size:.9rem}
+.exec{margin:42px 0 0}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:14px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px 18px}
+.stat .n{font-size:clamp(2.1rem,4vw,3rem);font-weight:800;letter-spacing:-.04em;line-height:1}
+.stat .n.word{font-size:clamp(1.35rem,2.6vw,2.05rem);line-height:1.05;overflow-wrap:break-word}
+.stat .l{color:var(--muted);font-size:.92rem;margin-top:8px;overflow-wrap:break-word}
 .quote{margin-top:40px;border-left:3px solid var(--accent2);padding:6px 0 6px 20px;font-style:italic;color:var(--muted);max-width:760px}
 /* chapters / timeline */
 .filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:40px}
@@ -107,7 +113,7 @@ h2{font-size:clamp(2rem,4vw,3rem);letter-spacing:-.03em;line-height:1.1;margin:1
 .when{color:var(--muted);font-size:.85rem}
 .badge{display:inline-block;font-size:.72rem;padding:3px 9px;border-radius:999px;background:color-mix(in srgb,var(--accent3) 18%,transparent);color:var(--accent3);font-weight:700;margin-left:8px;vertical-align:2px}
 .more{max-height:0;overflow:hidden;transition:max-height .5s ease,margin .4s;color:var(--muted)}
-.card.open .more{max-height:400px;margin-top:12px}
+.card.open .more{max-height:900px;margin-top:12px}
 .sub{margin-top:10px;display:grid;gap:10px}
 .sub div{border-top:1px dashed var(--line);padding-top:10px}
 .chapter{margin:50px 0 22px -36px;display:flex;align-items:center;gap:14px}
@@ -162,6 +168,7 @@ html.pv .hero{min-height:auto;padding:150px 0 90px}html.pv .scroll{display:none}
 .langs{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:var(--card);flex:none}
 .langs button{border:0;background:transparent;color:var(--muted);padding:7px 10px;font-size:.78rem;font-weight:700;cursor:pointer;letter-spacing:.04em}
 .langs button.on{background:var(--grad);color:#fff}
+.cvnav .short{display:none}
 @media (max-width:480px){
   nav .wrap{padding:0 8px;gap:6px}
   .logo{font-size:.92rem}
@@ -169,20 +176,57 @@ html.pv .hero{min-height:auto;padding:150px 0 90px}html.pv .scroll{display:none}
   .links a.keep{font-size:.82rem;white-space:nowrap}
   .langs button{padding:6px 5px;letter-spacing:0}
   #theme{width:32px;height:32px;flex:none}
+  .stat{padding:16px 12px}
+  .links a.contact{display:none}
+  .cvnav .full{display:none}
+  .cvnav .short{display:inline}
 }
+.roleline{margin-top:12px;font-size:1.08rem;max-width:680px;line-height:1.45}
+.avail{margin-top:10px;max-width:720px;color:var(--text);font-size:.98rem}
+#cvroot h1{font-size:clamp(1.7rem,3vw,2.2rem);line-height:1.15;margin:4px 0 6px;letter-spacing:-.03em}
+#cvroot h2{font-size:.92rem;letter-spacing:.08em;text-transform:uppercase;margin:26px 0 8px;color:var(--accent);font-weight:700}
+#cvroot h3{font-size:1rem;line-height:1.4;font-weight:700;margin:0}
+#cvroot p{margin:4px 0}
+#cvroot ul{margin:6px 0 0 1.15rem}
+#cvroot li{margin:3px 0}
+.cv-title{font-weight:600;font-size:1.05rem}
+.cv-job{border:1px solid var(--line);border-radius:16px;padding:14px 16px;margin:10px 0;background:var(--card)}
+.cv-actions{margin:8px 0 18px}
+.cv-contact a{color:var(--accent)}
+#curriculo{border-top:1px solid var(--line)}
 .scroll{display:flex;flex-direction:column;align-items:center}
 .item.first .card{border-color:var(--accent2);background:linear-gradient(135deg,color-mix(in srgb,var(--accent2) 12%,var(--card)),var(--card))}
 .item.first::before{border-color:var(--accent2)}
 .c4{top:44%;left:-46px;animation-delay:-2s}
 @media (max-width:1200px){.c2{right:10px}.chip{animation-name:float-sm}}
-@media (max-width:860px){.c1{left:-8px}.c2{right:-8px}.c4{left:-8px}}</style>
+@media (max-width:860px){.c1{left:-8px}.c2{right:-8px}.c4{left:-8px}}
+@media print{
+  @page{size:A4;margin:12mm 13mm 12mm}
+  html,body{background:#fff!important;color:#111!important;overflow:visible!important;max-width:none!important;font-size:10pt!important;line-height:1.32!important}
+  nav,#progress,.hero,#sobre,#trajetoria,#skills,#comunidade,#formacao,#contato,footer,.noprint{display:none!important}
+  .reveal,.item{opacity:1!important;transform:none!important}
+  #curriculo{display:block!important;padding:0!important;background:#fff!important;border:none!important}
+  #curriculo .wrap{max-width:none!important;padding:0!important}
+  #cvroot section{padding:0!important;margin:0!important}
+  #cvroot,#cvroot *{background:transparent!important;box-shadow:none!important;color:#111!important}
+  #cvroot h1{font-size:18pt!important;line-height:1.15!important;margin:0 0 2pt!important;letter-spacing:0!important;color:#111!important}
+  #cvroot h2{font-size:11pt!important;color:#1e3a5f!important;border-bottom:0.6pt solid #1e3a5f!important;padding:0 0 1pt!important;margin:9pt 0 3pt!important;letter-spacing:.03em!important;text-transform:none!important;font-weight:700!important;break-after:avoid;page-break-after:avoid}
+  #cvroot h3{font-size:10pt!important;line-height:1.3!important;margin:6pt 0 1pt!important;font-weight:700!important;break-after:avoid;page-break-after:avoid}
+  #cvroot p,#cvroot li{font-size:10pt!important;line-height:1.32!important;margin:0!important}
+  #cvroot ul{margin:0 0 2pt 1.1em!important;padding:0!important}
+  .cv-job{border:0!important;border-radius:0!important;padding:0!important;margin:0 0 2pt!important;background:transparent!important;break-inside:avoid;page-break-inside:avoid}
+  .cv-title{font-size:11pt!important;font-weight:700!important;margin:0 0 1pt!important}
+  a{color:#111!important;text-decoration:none!important}
+  .cv-langs h2,.cv-langs p{display:inline!important;margin:0!important;border:0!important;padding:0!important}
+  .cv-langs p::before{content:" — "}
+}</style>
 </head>
 <body>
 <div id="progress"></div>
 <nav><div class="wrap">
   <a href="#top" class="logo mono">&lt;eliseu/&gt;</a>
   <div class="links">
-    <a href="#sobre" data-n="0"></a><a href="#trajetoria" data-n="1"></a><a href="#skills" data-n="2"></a><a href="#comunidade" data-n="3"></a><a href="#formacao" data-n="4"></a><a href="#contato" class="keep" data-n="5"></a>
+    <a href="#sobre" data-n="0"></a><a href="#trajetoria" data-n="1"></a><a href="#skills" data-n="2"></a><a href="#comunidade" data-n="3"></a><a href="#formacao" data-n="4"></a><a href="#curriculo" class="keep cvnav" data-n="5"><span class="full"></span><span class="short">CV</span></a><a href="#contato" class="keep contact" data-n="6"></a>
     <div class="langs" role="group" aria-label="Language"><button data-l="pt">PT</button><button data-l="en">EN</button><button data-l="es">ES</button><button data-l="it">IT</button></div>
     <button id="theme" aria-label="Theme">◐</button>
   </div>
@@ -193,9 +237,12 @@ html.pv .hero{min-height:auto;padding:150px 0 90px}html.pv .scroll{display:none}
     <div>
       <span class="tag"><i class="dot"></i> <span data-i="now"></span></span>
       <h1><span data-i="hi"></span><br><span class="grad">Eliseu Codinhoto</span></h1>
+      <p class="roleline" data-i="role"></p>
+      <p class="avail" data-i="avail"></p>
       <p class="typed"><span class="typed-line"><span id="typed"></span><span class="caret"></span></span><span class="typed-sizers" id="sizers" aria-hidden="true"></span></p>
       <div class="cta">
         <a class="btn primary" href="#trajetoria" data-i="cta"></a>
+        <a class="btn" href="mailto:zeucxb@gmail.com">zeucxb@gmail.com</a>
         <div class="pair">
           <a class="btn" href="https://linkedin.com/in/zeucxb" target="_blank" rel="noopener">LinkedIn</a>
           <a class="btn" href="https://github.com/zeucxb" target="_blank" rel="noopener">GitHub</a>
@@ -203,7 +250,7 @@ html.pv .hero{min-height:auto;padding:150px 0 90px}html.pv .scroll{display:none}
       </div>
     </div>
     <div class="photo"><img src="avatar.png" alt="Eliseu Codinhoto">
-      <div class="chip c1">💙 Flutter</div><div class="chip c2">🤖 AI Platform</div><div class="chip c4">🇪🇺 EU Citizen</div><div class="chip c3 mono">São Paulo, BR</div></div>
+      <div class="chip c1">Product Eng.</div><div class="chip c2">🤖 AI Platform</div><div class="chip c4">🇪🇺 EU Citizen</div><div class="chip c3 mono">São Paulo, BR</div></div>
   </div>
   <div class="scroll"><span data-i="scroll"></span><span class="mouse"></span></div>
 </header>
@@ -212,13 +259,13 @@ html.pv .hero{min-height:auto;padding:150px 0 90px}html.pv .scroll{display:none}
   <h2><span data-i="h1a"></span><br><span class="grad" data-i="h1b"></span></h2>
   <p class="lead" data-i="p1"></p>
   <p class="lead" style="margin-top:16px" data-i="p2"></p>
+  <p class="kicker exec" data-i="exec"></p>
   <div class="stats">
-    <div class="stat"><div class="n" data-count="10">0</div><div class="l" data-s="0"></div></div>
-    <div class="stat"><div class="n" data-count="200">0</div><div class="l" data-s="1"></div></div>
-    <div class="stat"><div class="n" data-count="140">0</div><div class="l" data-s="2"></div></div>
-    <div class="stat"><div class="n" data-count="2015">0</div><div class="l" data-s="3"></div></div>
+    <div class="stat"><div class="n grad" data-count="10">0</div><div class="l" data-s="0"></div></div>
+    <div class="stat"><div class="n word grad" data-w="0"></div><div class="l" data-s="1"></div></div>
+    <div class="stat"><div class="n grad" data-count="10">0</div><div class="l" data-s="2"></div></div>
+    <div class="stat"><div class="n word grad" data-w="1"></div><div class="l" data-s="3"></div></div>
   </div>
-  <blockquote class="quote" data-i="quote"></blockquote>
 </div></section>
 <section id="trajetoria" style="background:var(--bg2)"><div class="wrap">
   <div class="reveal">
@@ -232,11 +279,7 @@ html.pv .hero{min-height:auto;padding:150px 0 90px}html.pv .scroll{display:none}
 <section id="skills"><div class="wrap reveal">
   <p class="kicker" data-i="k3"></p>
   <h2><span data-i="h3a"></span> <span class="grad" data-i="h3b"></span></h2>
-  <div class="skills">
-    <div class="sk"><h4 data-k="0"></h4><div class="pills"><span>Flutter</span><span>iOS</span><span>Android</span><span>Android SDK</span><span>Fastlane</span><span>Animation</span><span>AI-first DevEx</span></div></div>
-    <div class="sk"><h4 data-k="1"></h4><div class="pills"><span>Golang</span><span>Elixir</span><span>Phoenix</span><span>Node.js</span><span>GraphQL</span><span>JavaScript</span><span>Java</span><span>PHP</span><span>MongoDB</span><span>Postgres</span><span>Redis</span><span>Cassandra</span><span>Kafka</span><span>Vert.x</span><span>MQTT</span><span>GCP</span></div></div>
-    <div class="sk"><h4 data-k="2"></h4><div class="pills" id="leadp"></div></div>
-  </div>
+  <div class="skills" id="skillsGrid"></div>
 </div></section>
 <section id="comunidade" style="background:var(--bg2)"><div class="wrap reveal">
   <p class="kicker" data-i="k4"></p>
@@ -258,21 +301,30 @@ html.pv .hero{min-height:auto;padding:150px 0 90px}html.pv .scroll{display:none}
 <section id="formacao"><div class="wrap reveal">
   <p class="kicker" data-i="k5"></p>
   <h2><span data-i="h5a"></span> <span class="grad" data-i="h5b"></span></h2>
+  <p class="lead" data-i="p5" style="margin-bottom:28px"></p>
   <div class="edu" id="edu"></div>
   <h4 style="margin:34px 0 14px" data-i="cert"></h4>
-  <div class="pills"><span>TOEIC 885/990 · ETS (2025)</span><span>Sebrae Supernova · SEBRAE (2025)</span><span>Flutter, TDD, Clean Architecture, SOLID e Design Patterns · Udemy (2020)</span><span>Flutter - Aprendendo tudo sobre Design · Udemy (2019)</span><span>Advanced English · Wise Up (2018)</span><span>HTTP: Entendendo a web por baixo dos panos · Alura (2018)</span><span>The Complete Elixir and Phoenix Bootcamp · Udemy (2018)</span><span>React Native Parte 1 · Alura (2018)</span><span>Produtividade · Alura (2018)</span><span>Duolingo Certified Educator (2017)</span><span>iMasters Certified Professional · JavaScript (2016)</span></div>
+  <div class="pills" id="certs"></div>
   <h4 style="margin:28px 0 14px" data-i="lang"></h4>
   <div class="pills" id="langp"></div>
+</div></section>
+<section id="curriculo" style="background:var(--bg2)"><div class="wrap reveal">
+  <p class="kicker noprint" data-i="kcv"></p>
+  <h2 class="noprint"><span data-i="hcva"></span> <span class="grad" data-i="hcvb"></span></h2>
+  <p class="lead noprint" data-i="pcv"></p>
+  <p class="noprint cv-actions"><a class="btn primary" id="pdfbtn" href="/resume.pdf" data-i="pdf"></a></p>
+  <div id="cvroot"></div>
 </div></section>
 <section id="contato" class="contact"><div class="wrap reveal">
   <p class="kicker" data-i="k6"></p>
   <h2><span data-i="h6a"></span> <span class="grad" data-i="h6b"></span></h2>
   <p class="lead" style="margin:0 auto" data-i="p6"></p>
   <div class="socials">
+    <a class="btn primary" href="mailto:zeucxb@gmail.com">zeucxb@gmail.com</a>
     <a class="btn primary" href="https://linkedin.com/in/zeucxb" target="_blank" rel="noopener">LinkedIn</a>
     <a class="btn" href="https://github.com/zeucxb" target="_blank" rel="noopener">GitHub</a>
     <a class="btn" href="https://x.com/zeucxb" target="_blank" rel="noopener">X / Twitter</a>
-    <a class="btn" href="https://youtube.com/eliseucodinhoto" target="_blank" rel="noopener">YouTube</a>
+    <a class="btn" href="https://www.youtube.com/@zeucxb" target="_blank" rel="noopener">YouTube</a>
     <a class="btn" href="https://medium.com/@zeucxb" target="_blank" rel="noopener">Medium</a>
   </div>
 </div></section>
@@ -280,138 +332,218 @@ html.pv .hero{min-height:auto;padding:150px 0 90px}html.pv .scroll{display:none}
 
 <script>
 const I18N={
-pt:{nav:["Sobre","Trajetória","Skills","Comunidade","Formação","Contato"],
+pt:{nav:["Sobre","Trajetória","Skills","Comunidade","Formação","Currículo","Contato"],
 now:"Hoje: Senior Staff AI Engineer · AI Platform @ Safra",hi:"Oi, eu sou o",
-typed:["<b>AI Staff Engineer</b> no Safra","<b>Tech Lead</b> & Arquiteto de Software","<b>+10 anos</b> construindo produtos","Fundador do <b>FlutterSP</b> 💙","Curioso desde os <b>12 anos</b>","Cidadão europeu 🇪🇺"],
-cta:"Ver minha trajetória →",scroll:"role pra baixo",
-k1:"01 · Sobre",h1a:"Um curioso que transformou",h1b:"curiosidade em carreira.",
-p1:"Comecei nessa vida aos 12 anos e uma coisa eu aprendi cedo: o valor do conhecimento. Por isso não passo um dia sem descobrir e compartilhar algo novo.",
-p2:"Profissional de Desenvolvimento Mobile e Tech Lead com mais de 10 anos de experiência na construção e otimização de soluções mobile de alto impacto. Liderança em projetos desde a concepção até a entrega, com foco em performance, escalabilidade e na capacitação de equipes de engenharia. Comecei como full stack, passei pelo backend em startups, liderei áreas inteiras de mobile e hoje levo essa bagagem para a Inteligência Artificial.",
-st:["anos de experiência","devs mobile na XP (quase isso!)","repositórios públicos","ano em que criei meu canal"],
-quote:"“O Eliseu é um dos caras com mais expertise técnica que eu já conheci. […] Inspira e ajuda quem está nos desafios do dia a dia junto com ele.”<br>— Leonardo Ribeiro, recomendação no LinkedIn",
-k2:"02 · Trajetória",h2a:"A jornada,",h2b:"capítulo por capítulo.",hint:"Clique em um card para ver os detalhes. Use os filtros para explorar.",
-f:["Tudo","IA","Mobile & Flutter","Liderança","Backend & Web","Comunidade"],now2:"ATUAL",
-k3:"03 · Skills",h3a:"A caixa de",h3b:"ferramentas.",sk:["📱 Mobile & IA","⚙️ Backend & Dados","🧭 Liderança"],
-lead:["Liderança em tecnologia", "Desenvolvimento de pessoas", "Arquitetura e design de software", "TDD", "SOLID", "Design Patterns", "Injeção de dependência", "Testes unitários", "CI", "Gestão de projetos", "Startups", "FinTech"],
-k4:"04 · Comunidade",h4a:"Aprender em público,",h4b:"devolver em dobro.",
-p4:"Criei meu canal no YouTube em 2015, aos 17 anos, para compartilhar o que aprendia. Desde então organizo comunidades, palestro, escrevo e mantenho projetos open source.",
+role:"Construo produto técnico de ponta a ponta. Agora isso é a plataforma de IA: esteira agêntica, RAG e sistemas multiagente.",
+avail:"Cidadão europeu · aberto a vagas na Europa (realocação) ou remotas",
+typed:["<b>Senior Staff</b> AI Engineer no Safra","Product engineer, <b>ponta a ponta</b>","<b>Esteira agêntica</b>, RAG, multiagentes","Backend, dados, front, <b>arquitetura</b>","<b>+10 anos</b> construindo produtos","Curioso desde os <b>11 anos</b>"],
+cta:"Ver a trajetória →",scroll:"role pra baixo",
+k1:"01 · Sobre",h1a:"Full stack, depois plataforma,",h1b:"agora a camada de IA.",
+p1:"Aos 11 anos, descobrir o código foi como ganhar superpoderes: dava pra criar qualquer coisa a partir de nada. Essa vontade de construir é o fio da minha trajetória.",
+p2:"Ela me levou de full stack a backend e dados em startups, depois à arquitetura de produto e à plataforma em escala, cada etapa abrindo a próxima. Hoje sou Senior Staff AI Engineer na AI Platform do Safra, construindo esteira agêntica, RAG e sistemas multiagente.",
+exec:"Resumo executivo",
+st:["anos construindo software","de usuários impactados pelas minhas soluções","empresas, de startups a bancos e fintechs","backend, dados, front, mobile e IA"],
+sn:["Milhões","Ponta a ponta"],
+k2:"02 · Trajetória",h2a:"A trajetória,",h2b:"capítulo a capítulo.",hint:"Abra um card para o detalhe. Os filtros separam o trabalho por tipo.",
+f:["Tudo","IA","Mobile","Liderança","Backend","Comunidade"],now2:"ATUAL",
+k3:"03 · Skills",h3a:"Ferramentas,",h3b:"por camada.",
+groups:[["IA / LLM",["LLM","RAG","Esteira agêntica","Agentes de IA","Sistemas multiagente","Plataforma de IA","AI-first DevEx"]],["Backend, dados e cloud",["Go","Elixir","Phoenix","Node.js","JavaScript","Java","PHP","GraphQL","MySQL","Postgres","MongoDB","Redis","Cassandra","Kafka","MQTT","Vert.x","AWS","GCP","Docker"]],["Arquitetura e plataforma",["Desenho de sistemas","Sistemas distribuídos","Arquitetura de software","Clean Architecture","SOLID","DDD","MVVM","Design Patterns","TDD","Injeção de dependência","Testes unitários","CI/CD","Backstage","Observabilidade (OpenTelemetry, Dynatrace)","SDUI"]],["Frontend e mobile",["Flutter","Dart","Android","iOS","Android SDK","Fastlane","Angular","HTML","CSS","Animation","SQLite","Hive","Firebase","Bloc","GetIt","Shorebird"]],["Liderança",["Liderança técnica","Desenvolvimento de pessoas","Mentoria","Gestão de projetos","Startups","FinTech"]]],
+k4:"04 · Comunidade",h4a:"Comunidade,",h4b:"artigos e código.",
+p4:'Abri o <a href="https://www.youtube.com/@zeucxb" target="_blank" rel="noopener">canal no YouTube</a> em 2015, aos 17, para registrar o que estudava. Sigo com comunidades, palestras, artigos e open source.',
 ct:"🎤 Comunidade & palestras",art:"✍️ Artigos",os:"🛠️ Open source em destaque",
 comm:["Organizer · FlutterBR / fundador do FlutterSP","Coordenador das trilhas Flutter/Mobile · TDC","Palestra “Golang GraphQL API” · TDC São Paulo","7Masters Go & Programação Funcional · iMasters","Instrutor e palestrante · EuProgramador","Instrutor · WebSchool","Speaker · .NETCoders","Writer & Volunteer · Training Center"],
 today:"hoje",
 repos:["Descubra seu nome safadão com um CLI em Node.js.","Um CLI para envio de e-mails.","CLI que simplifica a criação de mocks dinâmicos.","Material da minha palestra no Golang Meetup SP, no Google.","Exemplo de API REST em Go com MongoDB.","Lista de empresas usando Flutter pelo mundo 🌎💙"],
-k5:"05 · Formação",h5a:"Nunca parei",h5b:"de estudar.",
-edu:[["Gestão Empresarial", "Fatec São Bernardo do Campo Adib Moises Dib", "2024 — 2027"], ["Informática para Negócios", "Fatec São Bernardo do Campo Adib Moises Dib", "2023 — hoje"], ["Tecnólogo em Análise e Desenvolvimento de Sistemas", "IFSP", "2015 — 2016"], ["Inglês", "Wise Up", "2017 — 2018"], ["Técnico em Informática para Internet · Técnico em Informática", "ETEC", "2013 — 2014"], ["Técnico em Programação de Jogos Digitais (não concluído)", "ETEC", "2015"], ["Webmaster", "Alpha Brasil", "2012 — 2013"]],
-cert:"Certificações",lang:"Idiomas",langs:["Português", "Inglês · TOEIC 885/990"],
-k6:"06 · Contato",h6a:"Bora construir",h6b:"algo juntos?",p6:"Seja para falar de IA, Flutter, arquitetura ou liderança técnica, me chama.",
-foot:"feito com curiosidade 💙",
-ch:[["0","O começo","Curiosidade, primeiros códigos e o primeiro emprego"],["I","Backend, startups e comunidade","Go, Node, arquitetura e muita vontade de aprender"],["II","A virada Flutter","Do primeiro dev mobile a Head de uma área inteira"],["III","Escala na XP Inc.","Arquitetura, gestão e Flutter para centenas de devs"],["IV","IA e fintechs globais","De arquiteto mobile a engenheiro de plataformas de IA"]],
+k5:"05 · Formação",h5a:"Nunca pare",h5b:"de estudar.",p5:"O que eu estudei no caminho, e o que ainda está em curso.",
+edu:[["Gestão Empresarial","Fatec São Bernardo do Campo Adib Moises Dib","2024 — 2027"],["Informática para Negócios","Fatec São Bernardo do Campo Adib Moises Dib","2023 — hoje"],["Tecnólogo em Análise e Desenvolvimento de Sistemas","IFSP","2015 — 2016"],["Inglês","Wise Up","2017 — 2018"],["Técnico em Informática para Internet · Técnico em Informática","ETEC","2013 — 2014"],["Técnico em Programação de Jogos Digitais (não concluído)","ETEC","2015"],["Webmaster","Alpha Brasil","2012 — 2013"]],
+cert:"Certificações",lang:"Idiomas",langs:["Português","Inglês · TOEIC 885/990"],
+kcv:"06 · Currículo",hcva:"O currículo,",hcvb:"para leitura rápida.",
+pcv:"A mesma trajetória, em formato de currículo. O PDF é gerado a partir desta página.",
+pdf:"Baixar PDF",
+cvh:["Resumo","Competências","Experiência","Formação","Certificações","Idiomas"],
+cvtitle:"Senior Staff AI Engineer · AI Platform @ Safra",
+cvloc:"São Paulo, Brasil",
+cvsum:"Engenheiro de produto de ponta a ponta (backend, dados, frontend, mobile, arquitetura). Plataforma de IA: esteira agêntica, RAG e sistemas multiagente.",
+k6:"07 · Contato",h6a:"E-mail ou",h6b:"LinkedIn.",p6:"Plataforma de IA, arquitetura, backend ou produto.",
+foot:"São Paulo, Brasil · cidadão europeu",
+ch:[["0","O começo","Full stack no primeiro emprego, do PHP e do MySQL até a tela. O passo seguinte foi passar a responder por um backend."],["I","Backend e startups","Na Like, na Easy Carros e na NeoPag o backend virou o produto: Node, Go, Elixir, time e arquitetura. Na Accenture isso chegou a desenho de sistema para clientes globais. A pergunta depois foi o produto na mão de quem usa."],["II","Produto e mobile","A mesma arquitetura, agora no app. Consultoria de Flutter na Sciensa e, na Remessa, a área de mobile criada do zero. Montar base e time para outras pessoas é o que a escala na XP ia pedir."],["III","Escala na XP","De um app para a plataforma dos outros times: design system em mais de 10 marcas, trilha para quase 200 devs, onboarding 40% menor. Um período curto de gestão, com produtividade 30% maior, devolveu o foco ao sistema inteiro."],["IV","Plataforma e IA","Na Kueski, escala e qualidade para mais de 10 milhões de usuários: Backstage, lint e analyze 60% menores, cold start 10% menor. O fluxo AI-first dali é o trabalho de agora, na AI Platform do Safra: esteira agêntica, RAG e sistemas multiagente."]],
 undated:"sem data"},
-en:{nav:["About","Journey","Skills","Community","Education","Contact"],
+en:{nav:["About","Journey","Skills","Community","Education","Resume","Contact"],
 now:"Now: Senior Staff AI Engineer · AI Platform @ Safra",hi:"Hi, I'm",
-typed:["<b>AI Staff Engineer</b> at Safra","<b>Tech Lead</b> & Software Architect","<b>10+ years</b> building products","Founder of <b>FlutterSP</b> 💙","Curious since age <b>12</b>","EU citizen 🇪🇺"],
-cta:"See my journey →",scroll:"scroll down",
-k1:"01 · About",h1a:"A curious kid who turned",h1b:"curiosity into a career.",
-p1:"I started in this world at 12, and learned early on the value of knowledge. That's why I don't let a day go by without discovering and sharing something new.",
-p2:"Mobile Development professional and Tech Lead with 10+ years building and optimizing high-impact mobile solutions. I lead projects from conception to delivery, focused on performance, scalability and empowering engineering teams. I started as a full-stack developer, went through backend at startups, led entire mobile areas, and now bring all of that into Artificial Intelligence.",
-st:["years of experience","mobile devs at XP (almost!)","public repositories","year I started my channel"],
-quote:"“Eliseu is one of the most technically skilled people I've ever met. […] He inspires and helps everyone facing day-to-day challenges alongside him.”<br>— Leonardo Ribeiro, LinkedIn recommendation",
-k2:"02 · Journey",h2a:"The journey,",h2b:"chapter by chapter.",hint:"Click a card to see the details. Use the filters to explore.",
-f:["All","AI","Mobile & Flutter","Leadership","Backend & Web","Community"],now2:"CURRENT",
-k3:"03 · Skills",h3a:"The",h3b:"toolbox.",sk:["📱 Mobile & AI","⚙️ Backend & Data","🧭 Leadership"],
-lead:["Tech leadership", "People development", "Software architecture & design", "TDD", "SOLID", "Design Patterns", "Dependency Injection", "Unit Testing", "CI", "Project Management", "Startups", "FinTech"],
-k4:"04 · Community",h4a:"Learn in public,",h4b:"give back twice.",
-p4:"I started my YouTube channel in 2015, at 17, to share what I was learning. Since then I've organized communities, given talks, written articles and maintained open source projects.",
+role:"I build technical products end to end. Right now that is the AI platform: agentic workflows, RAG and multi-agent systems.",
+avail:"EU citizen · open to roles in Europe (relocation) or remote",
+typed:["<b>Senior Staff</b> AI Engineer at Safra","Product engineer, <b>end to end</b>","<b>Agentic workflows</b>, RAG, multi-agent","Backend, data, front, <b>architecture</b>","<b>10+ years</b> building products","Curious since age <b>11</b>"],
+cta:"See the path →",scroll:"scroll down",
+k1:"01 · About",h1a:"Full stack, then platform,",h1b:"now the AI layer.",
+p1:"At 11, discovering code felt like getting superpowers: I could create anything out of nothing. That urge to build is the thread running through my career.",
+p2:"It took me from full stack to backend and data in startups, then to product architecture and platform work at scale, each step opening the next. Today I'm a Senior Staff AI Engineer on Safra's AI Platform, building agentic workflows, RAG and multi-agent systems.",
+exec:"Executive summary",
+st:["years building software","of users impacted by my solutions","companies, startups to banks and fintechs","backend, data, front, mobile and AI"],
+sn:["Millions","End to end"],
+k2:"02 · Journey",h2a:"The path,",h2b:"chapter by chapter.",hint:"Open a card for the detail. Filters split the work by kind.",
+f:["All","AI","Mobile","Leadership","Backend","Community"],now2:"CURRENT",
+k3:"03 · Skills",h3a:"Tools,",h3b:"by layer.",
+groups:[["AI / LLM",["LLM","RAG","Agentic workflows","AI agents","Multi-agent systems","AI platform","AI-first DevEx"]],["Backend, data & cloud",["Go","Elixir","Phoenix","Node.js","JavaScript","Java","PHP","GraphQL","MySQL","Postgres","MongoDB","Redis","Cassandra","Kafka","MQTT","Vert.x","AWS","GCP","Docker"]],["Architecture & platform",["System design","Distributed systems","Software architecture","Clean Architecture","SOLID","DDD","MVVM","Design Patterns","TDD","Dependency injection","Unit testing","CI/CD","Backstage","Observability (OpenTelemetry, Dynatrace)","SDUI"]],["Frontend & mobile",["Flutter","Dart","Android","iOS","Android SDK","Fastlane","Angular","HTML","CSS","Animation","SQLite","Hive","Firebase","Bloc","GetIt","Shorebird"]],["Leadership",["Technical leadership","People development","Mentorship","Project management","Startups","FinTech"]]],
+k4:"04 · Community",h4a:"Community,",h4b:"writing and code.",
+p4:'I opened my <a href="https://www.youtube.com/@zeucxb" target="_blank" rel="noopener">YouTube channel</a> in 2015, at 17, to record what I was studying. I still do communities, talks, articles and open source.',
 ct:"🎤 Community & talks",art:"✍️ Articles",os:"🛠️ Featured open source",
 comm:["Organizer · FlutterBR / founder of FlutterSP","Flutter/Mobile track coordinator · TDC","Talk “Golang GraphQL API” · TDC São Paulo","7Masters Go & Functional Programming · iMasters","Instructor & speaker · EuProgramador","Instructor · WebSchool","Speaker · .NETCoders","Writer & Volunteer · Training Center"],
 today:"now",
 repos:["Find your “safadão” name with a Node.js CLI.","A CLI email sender.","A CLI that simplifies creating dynamic mocks.","Slides/code from my talk at Golang Meetup SP, at Google.","A simple Go REST API example with MongoDB.","A list of companies using Flutter around the world 🌎💙"],
-k5:"05 · Education",h5a:"I never stopped",h5b:"learning.",
-edu:[["Business Management", "Fatec São Bernardo do Campo Adib Moises Dib", "2024 — 2027"], ["IT for Business", "Fatec São Bernardo do Campo Adib Moises Dib", "2023 — now"], ["Technologist in Systems Analysis & Development", "IFSP", "2015 — 2016"], ["English", "Wise Up", "2017 — 2018"], ["IT for Internet Technician · IT Technician", "ETEC", "2013 — 2014"], ["Digital Games Programming Technician (not completed)", "ETEC", "2015"], ["Webmaster", "Alpha Brasil", "2012 — 2013"]],
-cert:"Certifications",lang:"Languages",langs:["Portuguese", "English · TOEIC 885/990"],
-k6:"06 · Contact",h6a:"Let's build",h6b:"something together?",p6:"Whether it's AI, Flutter, architecture or technical leadership, reach out.",
-foot:"made with curiosity 💙",
-ch:[["0","The beginning","Curiosity, first lines of code and my first job"],["I","Backend, startups & community","Go, Node, architecture and a hunger to learn"],["II","The Flutter turn","From first mobile dev to Head of an entire area"],["III","Scale at XP Inc.","Architecture, management and Flutter for hundreds of devs"],["IV","AI & global fintechs","From mobile architect to AI platform engineer"]],
+k5:"05 · Education",h5a:"Never stop",h5b:"learning.",p5:"What I studied along the way, and what is still in progress.",
+edu:[["Business Management","Fatec São Bernardo do Campo Adib Moises Dib","2024 — 2027"],["IT for Business","Fatec São Bernardo do Campo Adib Moises Dib","2023 — now"],["Technologist in Systems Analysis & Development","IFSP","2015 — 2016"],["English","Wise Up","2017 — 2018"],["IT for Internet Technician · IT Technician","ETEC","2013 — 2014"],["Digital Games Programming Technician (not completed)","ETEC","2015"],["Webmaster","Alpha Brasil","2012 — 2013"]],
+cert:"Certifications",lang:"Languages",langs:["Portuguese","English · TOEIC 885/990"],
+kcv:"06 · Resume",hcva:"The résumé,",hcvb:"for a quick read.",
+pcv:"The same path as the timeline, in résumé form. The PDF is generated from this page.",
+pdf:"Download PDF",
+cvh:["Summary","Skills","Experience","Education","Certifications","Languages"],
+cvtitle:"Senior Staff AI Engineer · AI Platform @ Safra",
+cvloc:"São Paulo, Brazil",
+cvsum:"End-to-end product engineer (backend, data, frontend, mobile, architecture). AI platform: agentic workflows, RAG and multi-agent systems.",
+k6:"07 · Contact",h6a:"Email or",h6b:"LinkedIn.",p6:"AI platform, architecture, backend or product.",
+foot:"São Paulo, Brazil · EU citizen",
+ch:[["0","The beginning","Full stack on the first job, from PHP and MySQL through to the screen. The next step was to start being responsible for a backend."],["I","Backend and startups","At Like, Easy Carros and NeoPag the backend became the product: Node, Go, Elixir, the team and the architecture. At Accenture that turned into system design for global clients. The question after that was the product in someone's hands."],["II","Product and mobile","The same architecture, now in the app. Flutter consulting at Sciensa, then a mobile area built from scratch at Remessa. Setting up the base and the team for other people is what scale at XP would ask for."],["III","Scale at XP","From one app to a platform for other teams: a design system across more than 10 brands, a path for almost 200 developers, onboarding 40% shorter. A short stretch in management, with productivity up 30%, sent the focus back to the whole system."],["IV","Platform and AI","At Kueski, scale and quality for more than 10 million users: Backstage, lint and analyze issues down 60%, cold start down 10%. The AI-first workflow from there is the work now, on Safra's AI Platform: agentic workflows, RAG and multi-agent systems."]],
 undated:"undated"},
-es:{nav:["Sobre mí","Trayectoria","Skills","Comunidad","Formación","Contacto"],
+es:{nav:["Sobre mí","Trayectoria","Skills","Comunidad","Formación","Currículum","Contacto"],
 now:"Hoy: Senior Staff AI Engineer · AI Platform @ Safra",hi:"Hola, soy",
-typed:["<b>AI Staff Engineer</b> en Safra","<b>Tech Lead</b> y Arquitecto de Software","<b>+10 años</b> construyendo productos","Fundador de <b>FlutterSP</b> 💙","Curioso desde los <b>12 años</b>","Ciudadano europeo 🇪🇺"],
-cta:"Ver mi trayectoria →",scroll:"desliza hacia abajo",
-k1:"01 · Sobre mí",h1a:"Un curioso que convirtió",h1b:"la curiosidad en carrera.",
-p1:"Empecé en este mundo a los 12 años y aprendí pronto el valor del conocimiento. Por eso no dejo pasar un día sin descubrir y compartir algo nuevo.",
-p2:"Profesional de Desarrollo Mobile y Tech Lead con más de 10 años de experiencia construyendo y optimizando soluciones mobile de alto impacto. Lidero proyectos desde la concepción hasta la entrega, con foco en rendimiento, escalabilidad y en potenciar equipos de ingeniería. Empecé como full stack, pasé por el backend en startups, lideré áreas mobile completas y hoy llevo esa experiencia a la Inteligencia Artificial.",
-st:["años de experiencia","devs mobile en XP (¡casi!)","repositorios públicos","año en que creé mi canal"],
-quote:"“Eliseu es una de las personas con más expertise técnico que he conocido. […] Inspira y ayuda a quienes enfrentan los desafíos del día a día junto a él.”<br>— Leonardo Ribeiro, recomendación en LinkedIn",
-k2:"02 · Trayectoria",h2a:"El viaje,",h2b:"capítulo a capítulo.",hint:"Haz clic en una tarjeta para ver los detalles. Usa los filtros para explorar.",
-f:["Todo","IA","Mobile y Flutter","Liderazgo","Backend y Web","Comunidad"],now2:"ACTUAL",
-k3:"03 · Skills",h3a:"La caja de",h3b:"herramientas.",sk:["📱 Mobile e IA","⚙️ Backend y Datos","🧭 Liderazgo"],
-lead:["Liderazgo tecnológico", "Desarrollo de personas", "Arquitectura y diseño de software", "TDD", "SOLID", "Design Patterns", "Inyección de dependencias", "Pruebas unitarias", "CI", "Gestión de proyectos", "Startups", "FinTech"],
-k4:"04 · Comunidad",h4a:"Aprender en público,",h4b:"devolver el doble.",
-p4:"Creé mi canal de YouTube en 2015, a los 17 años, para compartir lo que aprendía. Desde entonces organizo comunidades, doy charlas, escribo y mantengo proyectos open source.",
+role:"Construyo producto técnico de punta a punta. Ahora eso es la plataforma de IA: flujos agénticos, RAG y sistemas multiagente.",
+avail:"Ciudadano de la UE · abierto a puestos en Europa (reubicación) o en remoto",
+typed:["<b>Senior Staff</b> AI Engineer en Safra","Product engineer, <b>de punta a punta</b>","<b>Flujos agénticos</b>, RAG, multiagente","Backend, datos, front, <b>arquitectura</b>","<b>+10 años</b> construyendo productos","Curioso desde los <b>11 años</b>"],
+cta:"Ver la trayectoria →",scroll:"desliza hacia abajo",
+k1:"01 · Sobre mí",h1a:"Full stack, después plataforma,",h1b:"ahora la capa de IA.",
+p1:"A los 11 años, descubrir el código fue como recibir superpoderes: podía crear cualquier cosa de la nada. Esas ganas de construir son el hilo de mi trayectoria.",
+p2:"Me llevaron de full stack a backend y datos en startups, luego a la arquitectura de producto y a la plataforma a escala, cada etapa abriendo la siguiente. Hoy soy Senior Staff AI Engineer en la AI Platform de Safra, construyendo flujos agénticos, RAG y sistemas multiagente.",
+exec:"Resumen ejecutivo",
+st:["años construyendo software","de usuarios impactados por mis soluciones","empresas, de startups a bancos y fintechs","backend, datos, front, mobile y IA"],
+sn:["Millones","De punta a punta"],
+k2:"02 · Trayectoria",h2a:"La trayectoria,",h2b:"capítulo a capítulo.",hint:"Abre una tarjeta para el detalle. Los filtros separan el trabajo por tipo.",
+f:["Todo","IA","Mobile","Liderazgo","Backend","Comunidad"],now2:"ACTUAL",
+k3:"03 · Skills",h3a:"Herramientas,",h3b:"por capa.",
+groups:[["IA / LLM",["LLM","RAG","Flujos agénticos","Agentes de IA","Sistemas multiagente","Plataforma de IA","AI-first DevEx"]],["Backend, datos y cloud",["Go","Elixir","Phoenix","Node.js","JavaScript","Java","PHP","GraphQL","MySQL","Postgres","MongoDB","Redis","Cassandra","Kafka","MQTT","Vert.x","AWS","GCP","Docker"]],["Arquitectura y plataforma",["Diseño de sistemas","Sistemas distribuidos","Arquitectura de software","Clean Architecture","SOLID","DDD","MVVM","Design Patterns","TDD","Inyección de dependencias","Pruebas unitarias","CI/CD","Backstage","Observabilidad (OpenTelemetry, Dynatrace)","SDUI"]],["Frontend y mobile",["Flutter","Dart","Android","iOS","Android SDK","Fastlane","Angular","HTML","CSS","Animation","SQLite","Hive","Firebase","Bloc","GetIt","Shorebird"]],["Liderazgo",["Liderazgo técnico","Desarrollo de personas","Mentoría","Gestión de proyectos","Startups","FinTech"]]],
+k4:"04 · Comunidad",h4a:"Comunidad,",h4b:"textos y código.",
+p4:'Abrí mi <a href="https://www.youtube.com/@zeucxb" target="_blank" rel="noopener">canal de YouTube</a> en 2015, a los 17, para registrar lo que estudiaba. Sigo con comunidades, charlas, artículos y open source.',
 ct:"🎤 Comunidad y charlas",art:"✍️ Artículos",os:"🛠️ Open source destacado",
 comm:["Organizer · FlutterBR / fundador de FlutterSP","Coordinador de los tracks Flutter/Mobile · TDC","Charla “Golang GraphQL API” · TDC São Paulo","7Masters Go y Programación Funcional · iMasters","Instructor y speaker · EuProgramador","Instructor · WebSchool","Speaker · .NETCoders","Writer & Volunteer · Training Center"],
 today:"hoy",
 repos:["Descubre tu nombre “safadão” con un CLI en Node.js.","Un CLI para enviar e-mails.","CLI que simplifica la creación de mocks dinámicos.","Material de mi charla en el Golang Meetup SP, en Google.","Ejemplo de API REST en Go con MongoDB.","Lista de empresas que usan Flutter en el mundo 🌎💙"],
-k5:"05 · Formación",h5a:"Nunca dejé",h5b:"de estudiar.",
-edu:[["Gestión Empresarial", "Fatec São Bernardo do Campo Adib Moises Dib", "2024 — 2027"], ["Informática para Negocios", "Fatec São Bernardo do Campo Adib Moises Dib", "2023 — hoy"], ["Tecnólogo en Análisis y Desarrollo de Sistemas", "IFSP", "2015 — 2016"], ["Inglés", "Wise Up", "2017 — 2018"], ["Técnico en Informática para Internet · Técnico en Informática", "ETEC", "2013 — 2014"], ["Técnico en Programación de Videojuegos (no concluido)", "ETEC", "2015"], ["Webmaster", "Alpha Brasil", "2012 — 2013"]],
-cert:"Certificaciones",lang:"Idiomas",langs:["Portugués", "Inglés · TOEIC 885/990"],
-k6:"06 · Contacto",h6a:"¿Construimos",h6b:"algo juntos?",p6:"Ya sea para hablar de IA, Flutter, arquitectura o liderazgo técnico, escríbeme.",
-foot:"hecho con curiosidad 💙",
-ch:[["0","El comienzo","Curiosidad, primeras líneas de código y mi primer empleo"],["I","Backend, startups y comunidad","Go, Node, arquitectura y muchas ganas de aprender"],["II","El giro Flutter","De primer dev mobile a Head de un área entera"],["III","Escala en XP Inc.","Arquitectura, gestión y Flutter para cientos de devs"],["IV","IA y fintechs globales","De arquitecto mobile a ingeniero de plataformas de IA"]],
+k5:"05 · Formación",h5a:"Nunca dejes",h5b:"de estudiar.",p5:"Lo que estudié en el camino, y lo que sigue en curso.",
+edu:[["Gestión Empresarial","Fatec São Bernardo do Campo Adib Moises Dib","2024 — 2027"],["Informática para Negocios","Fatec São Bernardo do Campo Adib Moises Dib","2023 — hoy"],["Tecnólogo en Análisis y Desarrollo de Sistemas","IFSP","2015 — 2016"],["Inglés","Wise Up","2017 — 2018"],["Técnico en Informática para Internet · Técnico en Informática","ETEC","2013 — 2014"],["Técnico en Programación de Videojuegos (no concluido)","ETEC","2015"],["Webmaster","Alpha Brasil","2012 — 2013"]],
+cert:"Certificaciones",lang:"Idiomas",langs:["Portugués","Inglés · TOEIC 885/990"],
+kcv:"06 · Currículum",hcva:"El currículum,",hcvb:"para una lectura rápida.",
+pcv:"La misma trayectoria, en formato de currículum. El PDF se genera desde esta página.",
+pdf:"Descargar PDF",
+cvh:["Resumen","Competencias","Experiencia","Formación","Certificaciones","Idiomas"],
+cvtitle:"Senior Staff AI Engineer · AI Platform @ Safra",
+cvloc:"São Paulo, Brasil",
+cvsum:"Ingeniero de producto de punta a punta (backend, datos, frontend, mobile, arquitectura). Plataforma de IA: flujos agénticos, RAG y sistemas multiagente.",
+k6:"07 · Contacto",h6a:"Email o",h6b:"LinkedIn.",p6:"Plataforma de IA, arquitectura, backend o producto.",
+foot:"São Paulo, Brasil · ciudadano de la UE",
+ch:[["0","El comienzo","Full stack en el primer empleo, de PHP y MySQL hasta la pantalla. El paso siguiente fue pasar a responder por un backend."],["I","Backend y startups","En Like, Easy Carros y NeoPag el backend se volvió el producto: Node, Go, Elixir, el equipo y la arquitectura. En Accenture eso pasó a diseño de sistemas para clientes globales. La pregunta de después fue el producto en la mano de quien lo usa."],["II","Producto y mobile","La misma arquitectura, ahora en la app. Consultoría Flutter en Sciensa y, en Remessa, el área mobile creada desde cero. Armar la base y el equipo para otras personas es lo que la escala en XP iba a pedir."],["III","Escala en XP","De una app a la plataforma de otros equipos: design system en más de 10 marcas, ruta para casi 200 devs, onboarding un 40% más corto. Un tramo breve de gestión, con productividad un 30% mayor, devolvió el foco al sistema entero."],["IV","Plataforma e IA","En Kueski, escala y calidad para más de 10 millones de usuarios: Backstage, lint y analyze un 60% menores, cold start un 10% menor. El flujo AI-first de ahí es el trabajo de ahora, en la AI Platform de Safra: flujos agénticos, RAG y sistemas multiagente."]],
 undated:"sin fecha"},
-it:{nav:["Chi sono","Percorso","Skills","Community","Formazione","Contatti"],
+it:{nav:["Chi sono","Percorso","Skills","Community","Formazione","Curriculum","Contatti"],
 now:"Oggi: Senior Staff AI Engineer · AI Platform @ Safra",hi:"Ciao, sono",
-typed:["<b>AI Staff Engineer</b> in Safra","<b>Tech Lead</b> e Software Architect","<b>10+ anni</b> a costruire prodotti","Fondatore di <b>FlutterSP</b> 💙","Curioso dall'età di <b>12 anni</b>","Cittadino UE 🇪🇺"],
-cta:"Guarda il mio percorso →",scroll:"scorri in basso",
-k1:"01 · Chi sono",h1a:"Un curioso che ha trasformato",h1b:"la curiosità in carriera.",
-p1:"Ho iniziato a 12 anni e ho imparato presto il valore della conoscenza. Per questo non lascio passare un giorno senza scoprire e condividere qualcosa di nuovo.",
-p2:"Professionista dello sviluppo mobile e Tech Lead con oltre 10 anni di esperienza nella creazione e ottimizzazione di soluzioni mobile ad alto impatto. Guido progetti dall'ideazione alla consegna, con focus su prestazioni, scalabilità e crescita dei team di ingegneria. Ho iniziato come full stack, sono passato al backend nelle startup, ho guidato intere aree mobile e oggi porto tutto questo nell'Intelligenza Artificiale.",
-st:["anni di esperienza","dev mobile in XP (quasi!)","repository pubblici","anno in cui ho aperto il canale"],
-quote:"“Eliseu è una delle persone con più competenza tecnica che abbia mai conosciuto. […] Ispira e aiuta chi affronta con lui le sfide di ogni giorno.”<br>— Leonardo Ribeiro, raccomandazione su LinkedIn",
-k2:"02 · Percorso",h2a:"Il viaggio,",h2b:"capitolo per capitolo.",hint:"Clicca su una card per i dettagli. Usa i filtri per esplorare.",
-f:["Tutto","IA","Mobile e Flutter","Leadership","Backend e Web","Community"],now2:"ATTUALE",
-k3:"03 · Skills",h3a:"La cassetta degli",h3b:"attrezzi.",sk:["📱 Mobile e IA","⚙️ Backend e Dati","🧭 Leadership"],
-lead:["Leadership tecnologica", "Sviluppo delle persone", "Architettura e design del software", "TDD", "SOLID", "Design Patterns", "Dependency Injection", "Unit Testing", "CI", "Project Management", "Startup", "FinTech"],
-k4:"04 · Community",h4a:"Imparare in pubblico,",h4b:"restituire il doppio.",
-p4:"Ho aperto il mio canale YouTube nel 2015, a 17 anni, per condividere ciò che imparavo. Da allora organizzo community, tengo talk, scrivo e mantengo progetti open source.",
+role:"Costruisco il prodotto tecnico per intero. Oggi il focus è la piattaforma di IA: flussi agentici, RAG e sistemi multiagente.",
+avail:"Cittadino UE · disponibile a ruoli in Europa (trasferimento) o da remoto",
+typed:["<b>Senior Staff</b> AI Engineer in Safra","Product engineer, <b>end to end</b>","<b>Flussi agentici</b>, RAG, multiagente","Backend, dati, front, <b>architettura</b>","<b>10+ anni</b> a costruire prodotti","Curioso dagli <b>11 anni</b>"],
+cta:"Vedi il percorso →",scroll:"scorri in basso",
+k1:"01 · Chi sono",h1a:"Full stack, poi piattaforma,",h1b:"ora il livello IA.",
+p1:"A 11 anni, scoprire il codice è stato come ricevere dei superpoteri: potevo creare qualsiasi cosa dal nulla. Questa voglia di costruire è il filo della mia carriera.",
+p2:"Mi ha portato dal full stack al backend e ai dati nelle startup, poi all'architettura di prodotto e alla piattaforma su scala, ogni tappa aprendo la successiva. Oggi sono Senior Staff AI Engineer nella AI Platform di Safra, dove costruisco flussi agentici, RAG e sistemi multiagente.",
+exec:"Sintesi",
+st:["anni a costruire software","di utenti raggiunti dalle mie soluzioni","aziende, startup, banche e fintech","backend, dati, front, mobile e IA"],
+sn:["Milioni","End-to-end"],
+k2:"02 · Percorso",h2a:"Il percorso,",h2b:"capitolo per capitolo.",hint:"Apri una card per il dettaglio. I filtri separano il lavoro per tipo.",
+f:["Tutto","IA","Mobile","Leadership","Backend","Community"],now2:"ATTUALE",
+k3:"03 · Skills",h3a:"Strumenti,",h3b:"per strato.",
+groups:[["IA / LLM",["LLM","RAG","Flussi agentici","Agenti di IA","Sistemi multiagente","Piattaforma di IA","AI-first DevEx"]],["Backend, dati e cloud",["Go","Elixir","Phoenix","Node.js","JavaScript","Java","PHP","GraphQL","MySQL","Postgres","MongoDB","Redis","Cassandra","Kafka","MQTT","Vert.x","AWS","GCP","Docker"]],["Architettura e piattaforma",["System design","Sistemi distribuiti","Architettura del software","Clean Architecture","SOLID","DDD","MVVM","Design Patterns","TDD","Dependency injection","Unit testing","CI/CD","Backstage","Osservabilità (OpenTelemetry, Dynatrace)","SDUI"]],["Frontend e mobile",["Flutter","Dart","Android","iOS","Android SDK","Fastlane","Angular","HTML","CSS","Animation","SQLite","Hive","Firebase","Bloc","GetIt","Shorebird"]],["Leadership",["Leadership tecnica","Sviluppo delle persone","Mentoring","Gestione progetti","Startup","FinTech"]]],
+k4:"04 · Community",h4a:"Community,",h4b:"testi e codice.",
+p4:'Ho aperto il <a href="https://www.youtube.com/@zeucxb" target="_blank" rel="noopener">canale YouTube</a> nel 2015, a 17 anni, per registrare ciò che studiavo. Continuo con community, talk, articoli e open source.',
 ct:"🎤 Community e talk",art:"✍️ Articoli",os:"🛠️ Open source in evidenza",
 comm:["Organizer · FlutterBR / fondatore di FlutterSP","Coordinatore delle track Flutter/Mobile · TDC","Talk “Golang GraphQL API” · TDC São Paulo","7Masters Go e Programmazione Funzionale · iMasters","Istruttore e speaker · EuProgramador","Istruttore · WebSchool","Speaker · .NETCoders","Writer & Volunteer · Training Center"],
 today:"oggi",
 repos:["Scopri il tuo nome “safadão” con una CLI in Node.js.","Una CLI per inviare e-mail.","CLI che semplifica la creazione di mock dinamici.","Materiale del mio talk al Golang Meetup SP, da Google.","Esempio di API REST in Go con MongoDB.","Elenco di aziende che usano Flutter nel mondo 🌎💙"],
-k5:"05 · Formazione",h5a:"Non ho mai smesso",h5b:"di studiare.",
-edu:[["Gestione Aziendale", "Fatec São Bernardo do Campo Adib Moises Dib", "2024 — 2027"], ["Informatica per il Business", "Fatec São Bernardo do Campo Adib Moises Dib", "2023 — oggi"], ["Tecnologo in Analisi e Sviluppo di Sistemi", "IFSP", "2015 — 2016"], ["Inglese", "Wise Up", "2017 — 2018"], ["Tecnico Informatico per Internet · Tecnico Informatico", "ETEC", "2013 — 2014"], ["Tecnico in Programmazione di Videogiochi (non completato)", "ETEC", "2015"], ["Webmaster", "Alpha Brasil", "2012 — 2013"]],
-cert:"Certificazioni",lang:"Lingue",langs:["Portoghese", "Inglese · TOEIC 885/990"],
-k6:"06 · Contatti",h6a:"Costruiamo",h6b:"qualcosa insieme?",p6:"Che si tratti di IA, Flutter, architettura o leadership tecnica, scrivimi.",
-foot:"fatto con curiosità 💙",
-ch:[["0","L'inizio","Curiosità, prime righe di codice e il primo lavoro"],["I","Backend, startup e community","Go, Node, architettura e tanta voglia di imparare"],["II","La svolta Flutter","Da primo dev mobile a Head di un'intera area"],["III","Scala in XP Inc.","Architettura, gestione e Flutter per centinaia di dev"],["IV","IA e fintech globali","Da architetto mobile a ingegnere di piattaforme IA"]],
+k5:"05 · Formazione",h5a:"Non smettere mai",h5b:"di studiare.",p5:"Quello che ho studiato lungo il percorso, e quello che è ancora in corso.",
+edu:[["Gestione Aziendale","Fatec São Bernardo do Campo Adib Moises Dib","2024 — 2027"],["Informatica per il Business","Fatec São Bernardo do Campo Adib Moises Dib","2023 — oggi"],["Tecnologo in Analisi e Sviluppo di Sistemi","IFSP","2015 — 2016"],["Inglese","Wise Up","2017 — 2018"],["Tecnico Informatico per Internet · Tecnico Informatico","ETEC","2013 — 2014"],["Tecnico in Programmazione di Videogiochi (non completato)","ETEC","2015"],["Webmaster","Alpha Brasil","2012 — 2013"]],
+cert:"Certificazioni",lang:"Lingue",langs:["Portoghese","Inglese · TOEIC 885/990"],
+kcv:"06 · Curriculum",hcva:"Il curriculum,",hcvb:"per una lettura rapida.",
+pcv:"Lo stesso percorso, in formato curriculum. Il PDF è generato da questa pagina.",
+pdf:"Scarica PDF",
+cvh:["Profilo","Competenze","Esperienza","Formazione","Certificazioni","Lingue"],
+cvtitle:"Senior Staff AI Engineer · AI Platform @ Safra",
+cvloc:"São Paulo, Brasile",
+cvsum:"Ingegnere di prodotto end to end (backend, dati, frontend, mobile, architettura). Piattaforma di IA: flussi agentici, RAG e sistemi multiagente.",
+k6:"07 · Contatti",h6a:"Email o",h6b:"LinkedIn.",p6:"Piattaforma di IA, architettura, backend o prodotto.",
+foot:"São Paulo, Brasile · cittadino UE",
+ch:[["0","L'inizio","Full stack nel primo lavoro, da PHP e MySQL fino allo schermo. Il passo dopo è stato iniziare a rispondere di un backend."],["I","Backend e startup","In Like, Easy Carros e NeoPag il backend è diventato il prodotto: Node, Go, Elixir, il team e l'architettura. In Accenture questo è diventato system design per clienti globali. La domanda successiva è stata il prodotto in mano a chi lo usa."],["II","Prodotto e mobile","La stessa architettura, ora nell'app. Consulenza Flutter in Sciensa e, in Remessa, l'area mobile creata da zero. Mettere in piedi base e team per altre persone è ciò che la scala in XP avrebbe chiesto."],["III","Scala in XP","Da un'app alla piattaforma degli altri team: design system per più di 10 brand, percorso per quasi 200 dev, onboarding più corto del 40%. Un periodo breve di gestione, con produttività più alta del 30%, ha riportato il focus sull'intero sistema."],["IV","Piattaforma e IA","In Kueski, scala e qualità per più di 10 milioni di utenti: Backstage, lint e analyze più bassi del 60%, cold start più basso del 10%. Il flusso AI-first di lì è il lavoro di adesso, nella AI Platform di Safra: flussi agentici, RAG e sistemi multiagente."]],
 undated:"senza data"}
 };
 const M={pt:["jan","fev","mar","abr","mai","jun","jul","ago","set","out","nov","dez"],en:["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],es:["ene","feb","mar","abr","may","jun","jul","ago","sep","oct","nov","dic"],it:["gen","feb","mar","apr","mag","giu","lug","ago","set","ott","nov","dic"]};
-// timeline: c=chapter idx, t=tags, d=[start,end] "YYYY-MM"|"YYYY"|null|"now"
+const PRES={pt:"hoje",en:"Present",es:"actualidad",it:"oggi"};
+const PDF={en:"/resume.pdf",pt:"/resume-pt.pdf",es:"/resume-es.pdf",it:"/resume-it.pdf"};
+const CERTS=["TOEIC 885/990 · ETS (2025)","Sebrae Supernova · SEBRAE (2025)","Flutter, TDD, Clean Architecture, SOLID e Design Patterns · Udemy (2020)","Flutter - Aprendendo tudo sobre Design · Udemy (2019)","Advanced English · Wise Up (2018)","HTTP: Entendendo a web por baixo dos panos · Alura (2018)","The Complete Elixir and Phoenix Bootcamp · Udemy (2018)","React Native Parte 1 · Alura (2018)","Produtividade · Alura (2018)","Duolingo Certified Educator (2017)","iMasters Certified Professional · JavaScript (2016)"];
 const TL=[
-{c:0,t:"backend",first:1,d:["2015-04","2015-10"],co:"Alphacode IT Solutions",r:{pt:"Desenvolvedor Full Stack · primeiro emprego",en:"Full Stack Developer · first job",es:"Desarrollador Full Stack · primer empleo",it:"Sviluppatore Full Stack · primo lavoro"},x:{pt:"Meu primeiro emprego e o primeiro funcionário da empresa. Em remoto, participei de muitos projetos em pouco tempo, principalmente lojas de e-commerce em PHP/MySQL, além do frontend em HTML, CSS e JavaScript.",en:"My first job, as the company's very first employee. Working remotely, I took part in many projects in a short time, mostly e-commerce stores in PHP/MySQL, plus frontend in HTML, CSS and JavaScript.",es:"Mi primer empleo, como el primer empleado de la empresa. En remoto, participé en muchos proyectos en poco tiempo, sobre todo tiendas e-commerce en PHP/MySQL, además del frontend en HTML, CSS y JavaScript.",it:"Il mio primo lavoro, come primo dipendente dell'azienda. Da remoto ho partecipato a molti progetti in poco tempo, soprattutto e-commerce in PHP/MySQL, oltre al frontend in HTML, CSS e JavaScript."}},
+{c:0,t:"backend",first:1,cv:1,where:{pt:"Remoto",en:"Remote",es:"Remoto",it:"Remoto"},d:["2015-04","2015-10"],co:"Alphacode IT Solutions",
+r:{pt:"Desenvolvedor Full Stack · primeiro emprego",en:"Full Stack Developer · first job",es:"Desarrollador Full Stack · primer empleo",it:"Sviluppatore Full Stack · primo lavoro"},
+x:{pt:"Meu primeiro emprego, como primeiro funcionário da empresa. Em remoto, participei de vários projetos em pouco tempo, principalmente e-commerce em PHP e MySQL, com frontend em HTML, CSS e JavaScript. Foi o começo: produto inteiro, do banco à tela.",en:"My first job, as the company's first employee. Working remotely, I took part in several projects in a short time, mostly e-commerce in PHP and MySQL, plus HTML, CSS and JavaScript on the front. That was the start: the whole product, from the database to the screen.",es:"Mi primer empleo, como primer empleado de la empresa. En remoto participé en varios proyectos en poco tiempo, sobre todo e-commerce en PHP y MySQL, con frontend en HTML, CSS y JavaScript. Fue el comienzo: el producto entero, de la base a la pantalla.",it:"Il mio primo lavoro, come primo dipendente dell'azienda. Da remoto ho partecipato a diversi progetti in poco tempo, soprattutto e-commerce in PHP e MySQL, con frontend in HTML, CSS e JavaScript. È stato l'inizio: il prodotto intero, dal database allo schermo."},
+b:{pt:["Entrega full stack em vários produtos, principalmente e-commerce com PHP, MySQL, HTML, CSS e JavaScript. Remoto.","Primeiro funcionário da empresa."],en:["Full-stack delivery on several products, mainly e-commerce with PHP, MySQL, HTML, CSS and JavaScript. Remote.","First employee at the company."],es:["Entrega full stack en varios productos, sobre todo e-commerce con PHP, MySQL, HTML, CSS y JavaScript. Remoto.","Primer empleado de la empresa."],it:["Delivery full stack su più prodotti, soprattutto e-commerce con PHP, MySQL, HTML, CSS e JavaScript. Remoto.","Primo dipendente dell'azienda."]}},
 {c:0,t:"comm",d:["2015-01","2019-10"],co:"EuProgramador",r:{pt:"Criador, instrutor e palestrante",en:"Creator, instructor & speaker",es:"Creador, instructor y speaker",it:"Creatore, istruttore e speaker"},x:{pt:"Meu desafio pessoal de aprender, compartilhar e retribuir: palestras, vídeos, podcasts e textos sobre Go, Elixir, GraphQL, React, Java, Sass, PHP e temas do dia a dia de quem trabalha com tecnologia.",en:"My personal challenge to learn, share and give back: talks, videos, podcasts and writing about Go, Elixir, GraphQL, React, Java, Sass, PHP and the day-to-day of tech professionals.",es:"Mi desafío personal de aprender, compartir y retribuir: charlas, videos, podcasts y textos sobre Go, Elixir, GraphQL, React, Java, Sass, PHP y el día a día de quien trabaja en tecnología.",it:"La mia sfida personale per imparare, condividere e restituire: talk, video, podcast e articoli su Go, Elixir, GraphQL, React, Java, Sass, PHP e la quotidianità di chi lavora nella tecnologia."}},
 {c:0,t:"comm",d:["2015-04","2017-12"],co:".NETCoders",r:{pt:"Speaker voluntário",en:"Volunteer speaker",es:"Speaker voluntario",it:"Speaker volontario"},x:{pt:"Palestras na comunidade .NETCoders.",en:"Talks at the .NETCoders community.",es:"Charlas en la comunidad .NETCoders.",it:"Talk nella community .NETCoders."}},
 {c:0,t:"backend",d:["2015","2016"],co:"IFSP",r:{pt:"Tecnólogo em Análise e Desenvolvimento de Sistemas",en:"Technologist in Systems Analysis & Development",es:"Tecnólogo en Análisis y Desarrollo de Sistemas",it:"Tecnologo in Analisi e Sviluppo di Sistemi"},x:{pt:"Formação em paralelo aos primeiros trabalhos.",en:"Studied alongside my first jobs.",es:"Estudios en paralelo a mis primeros trabajos.",it:"Studi in parallelo ai primi lavori."}},
 {c:0,t:"comm",d:["2016-02","2017-12"],co:"WebSchool",r:{pt:"Instrutor voluntário",en:"Volunteer instructor",es:"Instructor voluntario",it:"Istruttore volontario"},x:{pt:"Ensinando desenvolvimento web.",en:"Teaching web development.",es:"Enseñando desarrollo web.",it:"Insegnando sviluppo web."}},
-{c:0,t:"backend lead",d:["2016-05","2016-10"],co:"Like Online",r:{pt:"Arquiteto e engenheiro de software",en:"Software Architect & Engineer",es:"Arquitecto e ingeniero de software",it:"Architetto e ingegnere del software"},x:{pt:"Responsável pela reestruturação completa, pelas decisões e pela criação do backend de duas startups nascidas dentro da Like: OneFits e GoAhead. Semi-remoto, com NodeJS e MongoDB e, depois, Go. Cresci muito profissionalmente.",en:"Responsible for the full restructuring, decisions and creation of the backend for two startups born inside Like: OneFits and GoAhead. Semi-remote, with NodeJS and MongoDB, later Go. I grew a lot professionally.",es:"Responsable de la reestructuración completa, las decisiones y la creación del backend de dos startups nacidas dentro de Like: OneFits y GoAhead. Semi-remoto, con NodeJS y MongoDB y, después, Go. Crecí mucho profesionalmente.",it:"Responsabile della ristrutturazione completa, delle decisioni e della creazione del backend di due startup nate dentro Like: OneFits e GoAhead. Semi-remoto, con NodeJS e MongoDB, poi Go. Sono cresciuto molto professionalmente."}},
-{c:1,t:"backend",d:["2016-10","2017-11"],co:"Easy Carros",r:{pt:"Desenvolvedor back-end",en:"Back-end Developer",es:"Desarrollador back-end",it:"Sviluppatore back-end"},x:{pt:"Primeira vez alocado integralmente em um time de dev maior: aprendi a trabalhar em equipe e o dia a dia de uma startup, incluindo o negócio. NodeJS, GraphQL e MongoDB, e assumi projetos em Go.",en:"My first time fully allocated to a larger dev team: I learned teamwork and startup life, including the business side. NodeJS, GraphQL and MongoDB, and I took on Go projects.",es:"Mi primera vez en un equipo de desarrollo más grande a tiempo completo: aprendí a trabajar en equipo y el día a día de una startup, incluido el negocio. NodeJS, GraphQL y MongoDB, y asumí proyectos en Go.",it:"La prima volta a tempo pieno in un team di sviluppo più grande: ho imparato il lavoro di squadra e la vita in startup, incluso il business. NodeJS, GraphQL e MongoDB, e ho preso in carico progetti in Go."}},
+{c:0,t:"backend lead",cv:1,where:{pt:"Semi-remoto",en:"Semi-remote",es:"Semi-remoto",it:"Semi-remoto"},d:["2016-05","2016-10"],co:"Like Online",
+r:{pt:"Arquiteto e engenheiro de software",en:"Software Architect & Engineer",es:"Arquitecto e ingeniero de software",it:"Architetto e ingegnere del software"},
+x:{pt:"Reestruturei e implementei o backend de duas startups nascidas na Like, OneFits e GoAhead, incluindo as decisões técnicas. Semi-remoto. O stack começou em Node.js e MongoDB e passou para Go quando a performance pediu. Foi o passo de full stack para responder por um backend.",en:"I rebuilt the backend of two startups born inside Like, OneFits and GoAhead, including the technical decisions. Semi-remote. We started on Node.js and MongoDB and moved to Go when performance needed it. That was the step from full stack to being responsible for a backend.",es:"Reestructuré e implementé el backend de dos startups nacidas en Like, OneFits y GoAhead, decisiones técnicas incluidas. Semi-remoto. Empezamos en Node.js y MongoDB y pasamos a Go cuando la performance lo pidió. Fue el paso de full stack a responder por un backend.",it:"Ho ristrutturato e implementato il backend di due startup nate in Like, OneFits e GoAhead, decisioni tecniche incluse. Semi-remoto. Siamo partiti da Node.js e MongoDB e siamo passati a Go quando serviva performance. È stato il passo dal full stack a rispondere di un backend."},
+b:{pt:["Reestruturação do backend das startups OneFits e GoAhead, incluindo as decisões técnicas. Semi-remoto.","Node.js e MongoDB, depois Go por performance."],en:["Rebuilt the backend of startups OneFits and GoAhead, including the technical decisions. Semi-remote.","Node.js and MongoDB, then Go for performance."],es:["Reestructuración del backend de las startups OneFits y GoAhead, incluidas las decisiones técnicas. Semi-remoto.","Node.js y MongoDB, después Go por rendimiento."],it:["Ristrutturazione del backend delle startup OneFits e GoAhead, decisioni tecniche incluse. Semi-remoto.","Node.js e MongoDB, poi Go per le performance."]}},
+{c:1,t:"backend",cv:1,d:["2016-10","2017-11"],co:"Easy Carros",
+r:{pt:"Desenvolvedor back-end",en:"Back-end Developer",es:"Desarrollador back-end",it:"Sviluppatore back-end"},
+x:{pt:"Primeira vez num time maior. Aprendi o ritmo de startup, negócio incluso, e construí backends em Node.js, GraphQL e MongoDB, além de projetos em Go. A restrição era escalar sem perder confiabilidade.",en:"My first time on a larger team. I learned the startup rhythm, business included, and built backends in Node.js, GraphQL and MongoDB, plus projects in Go. The constraint was scaling without losing reliability.",es:"Primera vez en un equipo más grande. Aprendí el ritmo de una startup, negocio incluido, y construí backends en Node.js, GraphQL y MongoDB, además de proyectos en Go. El punto era escalar sin perder confiabilidad.",it:"Prima volta in un team più grande. Ho imparato il ritmo di una startup, business incluso, e ho costruito backend in Node.js, GraphQL e MongoDB, più progetti in Go. Il vincolo era scalare senza perdere affidabilità."},
+b:{pt:["Backends para uma startup em crescimento: Node.js, GraphQL, MongoDB e Go, com escalabilidade e confiabilidade como restrição."],en:["Backends for a growing startup: Node.js, GraphQL, MongoDB and Go, with scalability and reliability as the constraint."],es:["Backends para una startup en crecimiento: Node.js, GraphQL, MongoDB y Go, con escalabilidad y confiabilidad como restricción."],it:["Backend per una startup in crescita: Node.js, GraphQL, MongoDB e Go, con scalabilità e affidabilità come vincolo."]}},
 {c:1,t:"backend",d:["2016-10","2017-06"],co:"SecretCrew",r:{pt:"Projeto com Giovanny",en:"Project with Giovanny",es:"Proyecto con Giovanny",it:"Progetto con Giovanny"},x:{pt:"Projeto paralelo, com uma API GraphQL.",en:"Side project, with a GraphQL API.",es:"Proyecto paralelo, con una API GraphQL.",it:"Progetto parallelo, con un'API GraphQL."}},
 {c:1,t:"comm",d:["2017-05","now"],co:"Training Center",r:{pt:"Writer & Volunteer",en:"Writer & Volunteer",es:"Writer & Volunteer",it:"Writer & Volunteer"},x:{pt:"Projeto sem fins lucrativos que ajuda devs, iniciantes ou não, com dúvidas de carreira e conexões para criar projetos juntos.",en:"A non-profit helping developers, beginners or not, with career questions and connections to build projects together.",es:"Proyecto sin fines de lucro que ayuda a devs, principiantes o no, con dudas de carrera y conexiones para crear proyectos juntos.",it:"Progetto no-profit che aiuta gli sviluppatori, principianti e non, con dubbi di carriera e contatti per creare progetti insieme."}},
 {c:1,t:"backend",d:["2017-06","2018-12"],co:"Scanbü",r:{pt:"Projeto com Giovanny",en:"Project with Giovanny",es:"Proyecto con Giovanny",it:"Progetto con Giovanny"},x:{pt:"Projeto empreendedor construído em parceria com o Giovanny.",en:"An entrepreneurial project built in partnership with Giovanny.",es:"Proyecto emprendedor construido junto a Giovanny.",it:"Progetto imprenditoriale costruito insieme a Giovanny."}},
-{c:1,t:"backend lead",d:["2017-11","2018-03"],co:"NeoPag",r:{pt:"Engenheiro de software sênior",en:"Senior Software Engineer",es:"Ingeniero de software senior",it:"Ingegnere del software senior"},x:{pt:"Ajudei a criar um produto do zero, montar o time, estruturar o backend e liderar o projeto. Meu primeiro contato com Elixir: Elixir, Phoenix, MongoDB e Postgres.",en:"Helped create a product from scratch, build the team, structure the backend and lead the project. My first time with Elixir: Elixir, Phoenix, MongoDB and Postgres.",es:"Ayudé a crear un producto desde cero, armar el equipo, estructurar el backend y liderar el proyecto. Mi primer contacto con Elixir: Elixir, Phoenix, MongoDB y Postgres.",it:"Ho aiutato a creare un prodotto da zero, formare il team, strutturare il backend e guidare il progetto. Il mio primo incontro con Elixir: Elixir, Phoenix, MongoDB e Postgres."}},
+{c:1,t:"backend lead",cv:1,d:["2017-11","2018-03"],co:"NeoPag",
+r:{pt:"Engenheiro de software sênior",en:"Senior Software Engineer",es:"Ingeniero de software senior",it:"Ingegnere del software senior"},
+x:{pt:"Ajudei a criar um produto financeiro do zero: arquitetura de backend, formação do time e condução do projeto. Primeiro contato com Elixir, Phoenix, MongoDB e Postgres. O trabalho de produto daqui seguiu comigo.",en:"I helped create a financial product from scratch: backend architecture, the team and how the project ran. First time with Elixir, Phoenix, MongoDB and Postgres. The product work from here stayed on the path.",es:"Ayudé a crear un producto financiero desde cero: arquitectura de backend, armado del equipo y conducción del proyecto. Primer contacto con Elixir, Phoenix, MongoDB y Postgres. El trabajo de producto de aquí siguió conmigo.",it:"Ho aiutato a creare un prodotto finanziario da zero: architettura backend, formazione del team e guida del progetto. Primo contatto con Elixir, Phoenix, MongoDB e Postgres. Il lavoro di prodotto di qui è rimasto nel percorso."},
+b:{pt:["Arquitetura de backend de um produto financeiro criado do zero, com formação de time e decisões técnicas.","Elixir, Phoenix, MongoDB e Postgres."],en:["Designed the backend of a financial product from scratch, including team setup and technical decisions.","Elixir, Phoenix, MongoDB and Postgres."],es:["Arquitectura de backend de un producto financiero creado desde cero, con armado de equipo y decisiones técnicas.","Elixir, Phoenix, MongoDB y Postgres."],it:["Architettura backend di un prodotto finanziario creato da zero, con formazione del team e decisioni tecniche.","Elixir, Phoenix, MongoDB e Postgres."]}},
 {c:1,t:"comm mobile",d:["2018-05","now"],co:"FlutterBR",r:{pt:"Organizer",en:"Organizer",es:"Organizer",it:"Organizer"},x:{pt:"Organizando a comunidade Flutter no Brasil.",en:"Organizing the Flutter community in Brazil.",es:"Organizando la comunidad Flutter en Brasil.",it:"Organizzo la community Flutter in Brasile."}},
-{c:1,t:"backend",d:["2018-05","2019-08"],co:"Accenture",r:{pt:"Consultor",en:"Consultant",es:"Consultor",it:"Consulente"},x:{pt:"Projetos de inovação e transformação digital para clientes globais, com foco em backend: arquitetura de referência para produtos de alta performance, escalabilidade e disponibilidade. Go, Node, JavaScript, Java, Angular, MongoDB, Redis, Cassandra, Kafka, Vert.x e MQTT.",en:"Innovation and digital transformation projects for global clients, focused on backend: reference architecture for high-performance, scalable, highly available products. Go, Node, JavaScript, Java, Angular, MongoDB, Redis, Cassandra, Kafka, Vert.x and MQTT.",es:"Proyectos de innovación y transformación digital para clientes globales, con foco en backend: arquitectura de referencia para productos de alto rendimiento, escalabilidad y disponibilidad. Go, Node, JavaScript, Java, Angular, MongoDB, Redis, Cassandra, Kafka, Vert.x y MQTT.",it:"Progetti di innovazione e trasformazione digitale per clienti globali, con focus sul backend: architettura di riferimento per prodotti ad alte prestazioni, scalabili e disponibili. Go, Node, JavaScript, Java, Angular, MongoDB, Redis, Cassandra, Kafka, Vert.x e MQTT."}},
-{c:2,t:"mobile",d:["2019-08","2020-10"],co:"Sciensa",r:{pt:"Flutter Consultant",en:"Flutter Consultant",es:"Consultor Flutter",it:"Consulente Flutter"},x:{pt:"Consultoria para empresas migrando ou iniciando o desenvolvimento de produtos com Flutter.",en:"Consulting for companies migrating to or starting product development with Flutter.",es:"Consultoría para empresas que migran o inician el desarrollo de productos con Flutter.",it:"Consulenza per aziende che migrano a Flutter o iniziano a sviluppare prodotti con Flutter."}},
-{c:2,t:"mobile",d:["2019-10","2020-10"],co:"Remessa Online",r:{pt:"Mobile Specialist",en:"Mobile Specialist",es:"Mobile Specialist",it:"Mobile Specialist"},x:{pt:"Primeiro desenvolvedor mobile da empresa: defini a arquitetura, estruturei a área e desenvolvi o app inteiro sozinho.",en:"The company's first mobile developer: I defined the architecture, structured the area and built the whole app by myself.",es:"El primer desarrollador mobile de la empresa: definí la arquitectura, estructuré el área y desarrollé toda la app yo solo.",it:"Il primo sviluppatore mobile dell'azienda: ho definito l'architettura, strutturato l'area e sviluppato l'intera app da solo."}},
-{c:2,t:"mobile lead",d:["2020-10","2022-01"],co:"Remessa Online",r:{pt:"Head Mobile",en:"Head of Mobile",es:"Head Mobile",it:"Head Mobile"},x:{pt:"Defini arquitetura e decisões técnicas e conduzi a evolução técnica do mobile. Construí e operei a Área Mobile, formei e guiei times apoiando seu crescimento profissional e pessoal.",en:"Defined architecture and technical decisions and drove mobile's technical evolution. Built and ran the Mobile Area, formed and guided teams while supporting their professional and personal growth.",es:"Definí la arquitectura y las decisiones técnicas e impulsé la evolución técnica de mobile. Construí y operé el Área Mobile, formé y guié equipos apoyando su crecimiento profesional y personal.",it:"Ho definito architettura e decisioni tecniche e guidato l'evoluzione tecnica del mobile. Ho costruito e gestito l'Area Mobile, formato e guidato team sostenendone la crescita professionale e personale."}},
-{c:2,t:"mobile comm",d:["2021-01","2021-12"],co:"Rocketseat",r:{pt:"Creator no Experts Club",en:"Creator at Experts Club",es:"Creator en Experts Club",it:"Creator all'Experts Club"},x:{pt:"Aulas práticas periódicas em vídeo compartilhando minha experiência em mobile para ajudar os devs do clube no aprendizado contínuo.",en:"Regular hands-on video lessons sharing my mobile expertise to help club developers keep learning.",es:"Clases prácticas periódicas en video compartiendo mi experiencia en mobile para ayudar a los devs del club en su aprendizaje continuo.",it:"Lezioni pratiche periodiche in video per condividere la mia esperienza mobile e aiutare i dev del club nell'apprendimento continuo."}},
-{c:3,t:"lead mobile",d:["2022-01","2022-08"],co:"XP Inc. · InfoMoney | IM+",r:{pt:"Staff Engineer",en:"Staff Engineer",es:"Staff Engineer",it:"Staff Engineer"},x:{pt:"Líder técnico apoiando arquitetura e decisões de tecnologia, melhorando o ambiente de compartilhamento de conhecimento e a evolução das pessoas do time.",en:"Technical leader supporting architecture and tech decisions, improving the knowledge-sharing environment and the team's self-improvement.",es:"Líder técnico apoyando la arquitectura y las decisiones tecnológicas, mejorando el ambiente de conocimiento compartido y la evolución del equipo.",it:"Leader tecnico a supporto di architettura e scelte tecnologiche, migliorando la condivisione della conoscenza e la crescita del team."}},
-{c:3,t:"lead",d:["2022-08","2022-11"],co:"XP Inc.",r:{pt:"Engineering Manager",en:"Engineering Manager",es:"Engineering Manager",it:"Engineering Manager"},x:{pt:"Gestão de projetos e de time.",en:"Project and team management.",es:"Gestión de proyectos y de equipo.",it:"Gestione di progetti e team."}},
-{c:3,t:"mobile lead",d:["2022-11","2025-09"],co:"XP Inc.",r:{pt:"Staff Engineer · Mobile Architecture",en:"Staff Engineer · Mobile Architecture",es:"Staff Engineer · Mobile Architecture",it:"Staff Engineer · Mobile Architecture"},x:{pt:"Estruturei a fundação mobile da empresa, com ferramentas internas e componentes cross para acelerar a migração de times e projetos para Flutter. Defini stack e arquitetura, apoiei novos times e construí a trilha de aprendizado para quase 200 devs mobile.",en:"Built the company's mobile foundation, with internal tools and cross components to speed up migrating teams and projects to Flutter. Defined stack and architecture, supported new teams and built the learning path for almost 200 mobile developers.",es:"Estructuré la base mobile de la empresa, con herramientas internas y componentes cross para acelerar la migración de equipos y proyectos a Flutter. Definí stack y arquitectura, apoyé nuevos equipos y construí la ruta de aprendizaje para casi 200 devs mobile.",it:"Ho costruito le fondamenta mobile dell'azienda, con strumenti interni e componenti cross per accelerare la migrazione di team e progetti a Flutter. Ho definito stack e architettura, supportato nuovi team e creato il percorso di apprendimento per quasi 200 sviluppatori mobile."}},
-{c:4,t:"lead mobile ai",d:["2025-09","2026-07"],co:"Kueski",r:{pt:"Senior Staff Software Engineer",en:"Senior Staff Software Engineer",es:"Senior Staff Software Engineer",it:"Senior Staff Software Engineer"},x:{pt:"Liderei iniciativas cross-mobile e escalei a engenharia de aplicações para preparar a plataforma para mais de 10 milhões de usuários: migrei e reorganizei a arquitetura mobile, padronizei dependências e governança dos times e defini boas práticas de uso de IA, com pipelines, scripts e hooks automatizados num fluxo AI-first.",en:"Led cross-mobile initiatives and scaled application engineering to prepare the platform for 10M+ users: migrated and reorganized the mobile architecture, standardized dependencies and team governance, and defined AI best practices with automated pipelines, scripts and hooks for an AI-first workflow.",es:"Lideré iniciativas cross-mobile y escalé la ingeniería de aplicaciones para preparar la plataforma para más de 10 millones de usuarios: migré y reorganicé la arquitectura mobile, estandaricé dependencias y gobernanza de los equipos y definí buenas prácticas de uso de IA, con pipelines, scripts y hooks automatizados en un flujo AI-first.",it:"Ho guidato iniziative cross-mobile e scalato l'ingegneria applicativa per preparare la piattaforma a oltre 10 milioni di utenti: ho migrato e riorganizzato l'architettura mobile, standardizzato dipendenze e governance dei team e definito best practice per l'uso dell'IA, con pipeline, script e hook automatizzati in un flusso AI-first."}},
-{c:4,t:"ai lead",d:["2026-07","now"],now:1,co:"Safra",r:{pt:"Senior Staff AI Engineer · AI Platform",en:"Senior Staff AI Engineer · AI Platform",es:"Senior Staff AI Engineer · AI Platform",it:"Senior Staff AI Engineer · AI Platform"},x:{pt:"Meu capítulo atual: engenharia de IA no time de AI Platform.",en:"My current chapter: AI engineering on the AI Platform team.",es:"Mi capítulo actual: ingeniería de IA en el equipo de AI Platform.",it:"Il mio capitolo attuale: ingegneria IA nel team AI Platform."}}
+{c:1,t:"backend",cv:1,d:["2018-05","2019-08"],co:"Accenture",
+r:{pt:"Consultor",en:"Consultant",es:"Consultor",it:"Consulente"},
+x:{pt:"Consultoria de inovação e transformação digital para clientes globais. Trabalhei em arquiteturas de referência para backends rápidos, escaláveis e disponíveis: Go, Node.js, JavaScript, Java, Angular, MongoDB, Redis, Cassandra, Kafka, Vert.x e MQTT. Depois das startups, desenho de sistema em outra escala.",en:"Consulting on innovation and digital transformation for global clients. I worked on reference architectures for backends that had to be fast, scalable and available: Go, Node.js, JavaScript, Java, Angular, MongoDB, Redis, Cassandra, Kafka, Vert.x and MQTT. After the startups, this was system design at another scale.",es:"Consultoría de innovación y transformación digital para clientes globales. Arquitecturas de referencia para backends rápidos, escalables y disponibles: Go, Node.js, JavaScript, Java, Angular, MongoDB, Redis, Cassandra, Kafka, Vert.x y MQTT. Después de las startups, diseño de sistemas a otra escala.",it:"Consulenza su innovazione e trasformazione digitale per clienti globali. Architetture di riferimento per backend veloci, scalabili e disponibili: Go, Node.js, JavaScript, Java, Angular, MongoDB, Redis, Cassandra, Kafka, Vert.x e MQTT. Dopo le startup, system design a un'altra scala."},
+b:{pt:["Arquiteturas de referência para backends de alta performance, escaláveis e disponíveis, para clientes globais.","Go, Node.js, JavaScript, Java, Angular, MongoDB, Redis, Cassandra, Kafka, Vert.x e MQTT."],en:["Reference architectures for high-performance, scalable, highly available backends for global clients.","Go, Node.js, JavaScript, Java, Angular, MongoDB, Redis, Cassandra, Kafka, Vert.x and MQTT."],es:["Arquitecturas de referencia para backends de alto rendimiento, escalables y disponibles, para clientes globales.","Go, Node.js, JavaScript, Java, Angular, MongoDB, Redis, Cassandra, Kafka, Vert.x y MQTT."],it:["Architetture di riferimento per backend ad alte prestazioni, scalabili e disponibili, per clienti globali.","Go, Node.js, JavaScript, Java, Angular, MongoDB, Redis, Cassandra, Kafka, Vert.x e MQTT."]}},
+{c:2,t:"mobile",cv:1,d:["2019-08","2020-10"],co:"Sciensa",
+r:{pt:"Flutter Consultant",en:"Flutter Consultant",es:"Consultor Flutter",it:"Consulente Flutter"},
+x:{pt:"Consultoria para empresas que migravam para Flutter ou começavam um produto nele. O mobile entrou como o mesmo problema de produto e arquitetura, em outro cliente.",en:"Consulting for companies migrating to Flutter or starting a product on it. Mobile showed up as the same product and architecture problem, on another client.",es:"Consultoría para empresas que migraban a Flutter o empezaban un producto ahí. El mobile entró como el mismo problema de producto y arquitectura, en otro cliente.",it:"Consulenza per aziende che migravano a Flutter o avviavano un prodotto lì. Il mobile è entrato come lo stesso problema di prodotto e architettura, su un altro cliente."},
+b:{pt:["Consultoria para empresas que migravam para Flutter ou iniciavam produto com Flutter."],en:["Consulting for companies migrating to Flutter or starting product development with it."],es:["Consultoría para empresas que migraban a Flutter o empezaban un producto con Flutter."],it:["Consulenza per aziende che migravano a Flutter o avviavano un prodotto con Flutter."]}},
+{c:2,t:"mobile",cv:1,d:["2019-10","2020-10"],co:"Remessa Online",
+r:{pt:"Mobile Specialist",en:"Mobile Specialist",es:"Mobile Specialist",it:"Mobile Specialist"},
+x:{pt:"Entrei como primeiro desenvolvedor mobile da empresa. Defini a arquitetura, montei uma área que não existia e desenvolvi o app. A área de mobile da Remessa começa aqui.",en:"I joined as the company's first mobile developer. I defined the architecture, set up an area that did not exist and built the app. Remessa's mobile area starts here.",es:"Entré como primer desarrollador mobile. Definí la arquitectura, armé un área que no existía y desarrollé la app. El área mobile de Remessa empieza aquí.",it:"Sono entrato come primo sviluppatore mobile. Ho definito l'architettura, ho messo in piedi un'area che non esisteva e ho sviluppato l'app. L'area mobile di Remessa inizia qui."},
+b:{pt:["Primeiro desenvolvedor mobile da empresa: definição da arquitetura e desenvolvimento do app.","Montagem da área de mobile, que não existia."],en:["First mobile developer at the company: defined the architecture and built the app.","Set up the mobile area, which did not exist before."],es:["Primer desarrollador mobile de la empresa: definición de la arquitectura y desarrollo de la app.","Montaje del área mobile, que no existía."],it:["Primo sviluppatore mobile dell'azienda: definizione dell'architettura e sviluppo dell'app.","Creazione dell'area mobile, che non esisteva."]}},
+{c:2,t:"mobile lead",cv:1,d:["2020-10","2022-01"],co:"Remessa Online",
+r:{pt:"Head Mobile",en:"Head of Mobile",es:"Head Mobile",it:"Head Mobile"},
+x:{pt:"Segui na arquitetura e nas decisões técnicas, e passei a operar a área: evolução do produto, formação e orientação do time.",en:"I stayed on architecture and technical decisions, and started running the area: the product's technical evolution, plus forming and guiding the team.",es:"Seguí en la arquitectura y en las decisiones técnicas, y pasé a operar el área: evolución del producto, formación y guía del equipo.",it:"Ho continuato su architettura e decisioni tecniche, e sono passato a gestire l'area: evoluzione del prodotto, formazione e guida del team."},
+b:{pt:["Arquitetura, decisões técnicas e evolução técnica do produto.","Construção e operação da área mobile: formação, orientação do time e entrega."],en:["Set architecture and technical decisions and led the product's technical evolution.","Built and ran the mobile area: team formation, guidance and delivery."],es:["Arquitectura, decisiones técnicas y evolución técnica del producto.","Construcción y operación del área mobile: formación, guía del equipo y entrega."],it:["Architettura, decisioni tecniche ed evoluzione tecnica del prodotto.","Costruzione e gestione dell'area mobile: formazione, guida del team e delivery."]}},
+{c:2,t:"mobile comm",d:["2021-01","2021-12"],co:"Rocketseat",r:{pt:"Creator no Experts Club",en:"Creator at Experts Club",es:"Creator en Experts Club",it:"Creator all'Experts Club"},x:{pt:"Aulas práticas em vídeo para os devs do clube, sobre a prática de mobile no dia a dia.",en:"Hands-on video lessons for club developers, on day-to-day mobile practice.",es:"Clases prácticas en video para los devs del club, sobre la práctica diaria de mobile.",it:"Lezioni pratiche in video per i dev del club, sulla pratica quotidiana del mobile."}},
+{c:3,t:"lead mobile",cv:1,d:["2022-01","2022-08"],co:"XP Inc. · InfoMoney | IM+",
+r:{pt:"Staff Engineer",en:"Staff Engineer",es:"Staff Engineer",it:"Staff Engineer"},
+x:{pt:"No InfoMoney, apoiei arquitetura, decisões de tecnologia e o compartilhamento de conhecimento no time. Nesse trecho: navegação modular e componentes reutilizáveis, com 25% de melhora de performance; um design system para mais de 10 marcas; scaffolding e templates que reduziram o tempo de desenvolvimento em 20%; migração de apps nativos Android e iOS para Flutter; testes A/B e releases dinâmicos sem depender de loja, com analytics e tracking na arquitetura.",en:"At InfoMoney I supported architecture, technology choices and how the team shared knowledge. In this stretch: modular navigation and reusable components, with a 25% performance improvement; a design system across more than 10 brands; scaffolding and templates that cut development time by 20%; the migration of native Android and iOS apps to Flutter; A/B tests and dynamic releases without a store submission, with analytics and tracking in the architecture.",es:"En InfoMoney apoyé la arquitectura, las decisiones de tecnología y cómo el equipo compartía conocimiento. En ese tramo: navegación modular y componentes reutilizables, con un 25% de mejora de rendimiento; un design system para más de 10 marcas; scaffolding y templates que redujeron el tiempo de desarrollo un 20%; migración de apps nativas Android e iOS a Flutter; pruebas A/B y releases dinámicos sin depender de la tienda, con analytics y tracking en la arquitectura.",it:"In InfoMoney ho supportato architettura, scelte tecnologiche e il modo in cui il team condivideva conoscenza. In quel tratto: navigazione modulare e componenti riusabili, con un miglioramento del 25% delle performance; un design system per più di 10 brand; scaffolding e template che hanno ridotto il tempo di sviluppo del 20%; migrazione di app native Android e iOS verso Flutter; test A/B e release dinamiche senza dipendere dallo store, con analytics e tracking nell'architettura."},
+b:{pt:["Melhora de 25% em performance com navegação modular e componentes reutilizáveis.","Planejamento e execução da migração de apps nativos Android e iOS para Flutter.","Design system estruturado para mais de 10 marcas.","Redução de 20% no tempo de desenvolvimento com scaffolding e templates de arquitetura.","Testes A/B e releases dinâmicos sem dependência de loja, com analytics e tracking na arquitetura."],en:["Improved performance by 25% with modular navigation and reusable components.","Planned and executed the migration of native Android and iOS applications to Flutter.","Structured a design system used across more than 10 brands.","Reduced development time by 20% with scaffolding tools and architectural templates.","Delivered A/B testing and dynamic releases without a store dependency, with analytics and tracking in the architecture."],es:["Mejora del 25% en rendimiento con navegación modular y componentes reutilizables.","Planificación y ejecución de la migración de apps nativas Android e iOS a Flutter.","Design system estructurado para más de 10 marcas.","Reducción del 20% en el tiempo de desarrollo con scaffolding y templates de arquitectura.","Pruebas A/B y releases dinámicos sin dependencia de tienda, con analytics y tracking en la arquitectura."],it:["Miglioramento del 25% delle performance con navigazione modulare e componenti riusabili.","Pianificazione ed esecuzione della migrazione di app native Android e iOS verso Flutter.","Design system strutturato per più di 10 brand.","Riduzione del 20% del tempo di sviluppo con scaffolding e template di architettura.","Test A/B e release dinamiche senza dipendenza dallo store, con analytics e tracking nell'architettura."]}},
+{c:3,t:"lead",cv:1,d:["2022-08","2022-11"],co:"XP Inc.",
+r:{pt:"Engineering Manager",en:"Engineering Manager",es:"Engineering Manager",it:"Engineering Manager"},
+x:{pt:"Um período curto de gestão de projetos e de time. Mudanças de processo aumentaram a produtividade em 30%. Também implantei ciclos de feedback e planos de carreira. Serviu para voltar à arquitetura enxergando o time junto com o sistema.",en:"A short stretch of project and team management. Process changes increased productivity by 30%. I also ran feedback cycles and career plans. It was useful, and it sent me back to architecture seeing the team together with the system.",es:"Un tramo corto de gestión de proyectos y de equipo. Los cambios de proceso aumentaron la productividad un 30%. También armé ciclos de feedback y planes de carrera. Sirvió para volver a la arquitectura viendo al equipo junto con el sistema.",it:"Un periodo breve di gestione di progetti e del team. I cambiamenti di processo hanno aumentato la produttività del 30%. Ho anche avviato cicli di feedback e piani di carriera. È servito a tornare all'architettura vedendo il team insieme al sistema."},
+b:{pt:["Gestão de projetos e de time; mudanças de processo aumentaram a produtividade em 30%.","Mentoria com ciclos de feedback e planos de carreira."],en:["Led project and team management; process changes increased productivity by 30%.","Mentored the team with feedback cycles and career development plans."],es:["Gestión de proyectos y de equipo; los cambios de proceso aumentaron la productividad un 30%.","Mentoría con ciclos de feedback y planes de carrera."],it:["Gestione di progetti e del team; i cambiamenti di processo hanno aumentato la produttività del 30%.","Mentoring con cicli di feedback e piani di carriera."]}},
+{c:3,t:"mobile lead",cv:1,d:["2022-11","2025-09"],co:"XP Inc.",
+r:{pt:"Staff Engineer · Mobile Architecture",en:"Staff Engineer · Mobile Architecture",es:"Staff Engineer · Mobile Architecture",it:"Staff Engineer · Mobile Architecture"},
+x:{pt:"O foco virou plataforma: a base mobile da empresa, com ferramentas internas e componentes compartilhados para outros times migrarem projetos para Flutter. Defini stack e arquitetura, apoiei times novos e montei a trilha de aprendizado para quase 200 devs mobile. Trilhas e sessões de arquitetura reduziram o onboarding em 40%. Server-Driven UI e orquestração passaram a sustentar testes A/B, e pipelines com frameworks modulares padronizaram dados de analytics entre plataformas.",en:"The work became a platform problem: the company's mobile foundation, with internal tools and shared components so other teams could move projects to Flutter. I defined the stack and the architecture, supported new teams and built the learning path for almost 200 mobile developers. Those paths and architecture sessions cut onboarding time by 40%. Server-Driven UI and orchestration carried the A/B tests, and pipelines with modular frameworks standardized analytics data across platforms.",es:"El foco pasó a ser plataforma: la base mobile de la empresa, con herramientas internas y componentes compartidos para que otros equipos migraran proyectos a Flutter. Definí stack y arquitectura, apoyé equipos nuevos y armé la ruta de aprendizaje para casi 200 devs mobile. Las rutas y las sesiones de arquitectura redujeron el onboarding un 40%. Server-Driven UI y orquestación sostuvieron las pruebas A/B, y pipelines con frameworks modulares ordenaron los datos de analytics entre plataformas.",it:"Il focus è diventato la piattaforma: la base mobile dell'azienda, con strumenti interni e componenti condivisi perché altri team migrassero i progetti a Flutter. Ho definito stack e architettura, supportato team nuovi e costruito il percorso di apprendimento per quasi 200 dev mobile. Percorsi e sessioni di architettura hanno ridotto l'onboarding del 40%. Server-Driven UI e orchestrazione hanno retto i test A/B, e pipeline con framework modulari hanno ordinato i dati di analytics tra piattaforme."},
+b:{pt:["Base mobile da empresa: ferramentas internas, componentes compartilhados, stack e arquitetura para times migrarem projetos para Flutter.","Trilha de aprendizado para quase 200 devs mobile; trilhas e sessões de arquitetura reduziram o onboarding em 40%.","Server-Driven UI e orquestração para testes A/B e validação de hipóteses.","Padronização de dados de analytics com pipelines e frameworks modulares, para integração entre plataformas.","Decisões de arquitetura em projetos centrais, com foco em performance e escalabilidade."],en:["Built the company's mobile foundation: internal tools, shared components, stack and architecture for teams migrating projects to Flutter.","Created the learning path for almost 200 mobile developers; structured paths and architecture sessions cut onboarding time by 40%.","Used Server-Driven UI and orchestration for A/B tests and hypothesis validation.","Standardized analytics data with pipelines and modular frameworks for cross-platform integration.","Led architecture decisions on key projects to improve performance and scalability."],es:["Base mobile de la empresa: herramientas internas, componentes compartidos, stack y arquitectura para que los equipos migraran proyectos a Flutter.","Ruta de aprendizaje para casi 200 devs mobile; las rutas y las sesiones de arquitectura redujeron el onboarding un 40%.","Server-Driven UI y orquestación para pruebas A/B y validación de hipótesis.","Estandarización de datos de analytics con pipelines y frameworks modulares, para integración entre plataformas.","Decisiones de arquitectura en proyectos clave, orientadas a rendimiento y escalabilidad."],it:["Fondazione mobile dell'azienda: strumenti interni, componenti condivisi, stack e architettura per la migrazione dei progetti dei team a Flutter.","Percorso di apprendimento per quasi 200 dev mobile; percorsi e sessioni di architettura hanno ridotto l'onboarding del 40%.","Server-Driven UI e orchestrazione per test A/B e validazione di ipotesi.","Standardizzazione dei dati di analytics con pipeline e framework modulari, per l'integrazione tra piattaforme.","Decisioni di architettura su progetti centrali, orientate a performance e scalabilità."]}},
+{c:4,t:"lead mobile ai",cv:1,d:["2025-09","2026-07"],co:"Kueski",
+r:{pt:"Senior Staff Software Engineer",en:"Senior Staff Software Engineer",es:"Senior Staff Software Engineer",it:"Senior Staff Software Engineer"},
+x:{pt:"O problema era escala e qualidade da aplicação, para uma plataforma com mais de 10 milhões de usuários: arquitetura, governança de dependências e um fluxo AI-first com pipelines, scripts e hooks, além de iniciativas cross-mobile. Montei um portal de qualidade no Backstage como fonte única de métricas (cobertura de módulos, issues de analyze e ferramentas). Dali saíram a sanitização de código, com 60% menos issues de lint e analyze; a centralização de dependências, com 20% menos dependências de baixa qualidade e 10% menos cold start; e a migração para Pub Workspace, com 25% menos crashes de conflito e erros de build nas pipelines. Também coloquei guardrails, pipelines de regressão e melhorias nas pipelines de pull request. O fluxo AI-first daqui é o que liga com o capítulo seguinte.",en:"The problem was application scale and quality, for a platform of more than 10 million users: architecture, dependency governance and an AI-first workflow with pipelines, scripts and hooks, plus cross-mobile initiatives. I built a quality portal in Backstage as a single source of truth for metrics such as module coverage, analyze issues and tooling. From that: code sanitization, with lint and analyze issues down 60%; dependency centralization, with low-quality dependencies down 20% and cold start down 10%; and a Pub Workspace migration, with conflict crashes and pipeline build errors down 25%. I also added guardrails, regression pipelines and changes to pull request pipelines. The AI-first workflow here is what connects to the next chapter.",es:"El problema era escala y calidad de la aplicación, para una plataforma de más de 10 millones de usuarios: arquitectura, gobierno de dependencias y un flujo AI-first con pipelines, scripts y hooks, además de iniciativas cross-mobile. Armé un portal de calidad en Backstage como fuente única de métricas (cobertura de módulos, issues de analyze y herramientas). De ahí salieron el saneamiento de código, con un 60% menos de issues de lint y analyze; la centralización de dependencias, con un 20% menos de dependencias de baja calidad y un 10% menos de cold start; y la migración a Pub Workspace, con un 25% menos de crashes por conflicto y errores de build en pipelines. También sumé guardrails, pipelines de regresión y mejoras en las pipelines de pull request. El flujo AI-first de aquí es el que conecta con el capítulo siguiente.",it:"Il problema era scala e qualità dell'applicazione, per una piattaforma con più di 10 milioni di utenti: architettura, governance delle dipendenze e un flusso AI-first con pipeline, script e hook, oltre a iniziative cross-mobile. Ho costruito un portale di qualità su Backstage come fonte unica delle metriche (copertura dei moduli, issue di analyze e strumenti). Da lì: sanificazione del codice, con il 60% in meno di issue di lint e analyze; centralizzazione delle dipendenze, con il 20% in meno di dipendenze di bassa qualità e il 10% in meno di cold start; migrazione a Pub Workspace, con il 25% in meno di crash da conflitto ed errori di build nelle pipeline. Ho aggiunto anche guardrail, pipeline di regressione e miglioramenti alle pipeline di pull request. Il flusso AI-first di qui è quello che si collega al capitolo successivo."},
+b:{pt:["Engenharia de aplicações para uma plataforma com mais de 10 milhões de usuários: arquitetura, governança de dependências, iniciativas cross-mobile e um fluxo AI-first com pipelines, scripts e hooks.","Portal de qualidade no Backstage como fonte única de métricas (cobertura de módulos, issues de analyze e ferramentas).","Sanitização de código: redução de 60% nos issues de lint e analyze.","Centralização de dependências: redução de 20% nas dependências de baixa qualidade e de 10% no cold start.","Migração para Pub Workspace: redução de 25% em crashes por conflito e erros de build nas pipelines.","Guardrails nas pipelines, pipelines de teste de regressão e melhorias nas pipelines de pull request."],en:["Prepared application engineering for a platform of more than 10 million users: architecture, dependency governance, cross-mobile initiatives and an AI-first workflow with pipelines, scripts and hooks.","Built a quality portal in Backstage as a single source of truth for metrics such as module coverage, analyze issues and tooling.","Code sanitization cut lint and analyze issues by 60%.","Dependency centralization cut low-quality third-party dependencies by 20% and cold start time by 10%.","Pub Workspace migration cut conflict-related crashes and pipeline build errors by 25%.","Added pipeline guardrails, regression-test pipelines and pull request pipeline improvements."],es:["Preparación de la ingeniería de aplicaciones para una plataforma de más de 10 millones de usuarios: arquitectura, gobierno de dependencias, iniciativas cross-mobile y un flujo AI-first con pipelines, scripts y hooks.","Portal de calidad en Backstage como fuente única de métricas (cobertura de módulos, issues de analyze y herramientas).","Saneamiento de código: reducción del 60% en issues de lint y analyze.","Centralización de dependencias: reducción del 20% en dependencias de baja calidad y del 10% en el cold start.","Migración a Pub Workspace: reducción del 25% en crashes por conflicto y errores de build en pipelines.","Guardrails en pipelines, pipelines de regresión y mejoras en las pipelines de pull request."],it:["Preparazione dell'ingegneria applicativa per una piattaforma con più di 10 milioni di utenti: architettura, governance delle dipendenze, iniziative cross-mobile e un flusso AI-first con pipeline, script e hook.","Portale di qualità su Backstage come fonte unica delle metriche (copertura dei moduli, issue di analyze e strumenti).","Sanificazione del codice: riduzione del 60% delle issue di lint e analyze.","Centralizzazione delle dipendenze: riduzione del 20% delle dipendenze di bassa qualità e del 10% del cold start.","Migrazione a Pub Workspace: riduzione del 25% di crash da conflitto ed errori di build nelle pipeline.","Guardrail sulle pipeline, pipeline di regressione e miglioramenti alle pipeline di pull request."]}},
+{c:4,t:"ai lead",cv:1,now:1,d:["2026-07","now"],co:"Safra",
+r:{pt:"Senior Staff AI Engineer · AI Platform",en:"Senior Staff AI Engineer · AI Platform",es:"Senior Staff AI Engineer · AI Platform",it:"Senior Staff AI Engineer · AI Platform"},
+x:{pt:"Capítulo atual, no time de AI Platform. Trabalho na plataforma: esteira agêntica, RAG e sistemas multiagente. A mesma lógica de antes, em outra camada: o sistema em volta do produto, não um único app.",en:"Current chapter, on the AI Platform team. I work on the platform: agentic workflows, RAG and multi-agent systems. Same kind of problem as before, on another layer: the system around the product, not a single app.",es:"Capítulo actual, en el equipo de AI Platform. Trabajo en la plataforma: flujos agénticos, RAG y sistemas multiagente. La misma lógica de antes, en otra capa: el sistema alrededor del producto, no una sola app.",it:"Capitolo attuale, nel team AI Platform. Lavoro sulla piattaforma: flussi agentici, RAG e sistemi multiagente. La stessa logica di prima, su un altro strato: il sistema intorno al prodotto, non una singola app."},
+b:{pt:["Engenharia da AI Platform: esteira agêntica, RAG, agentes de IA e sistemas multiagente."],en:["AI platform engineering: agentic workflows, RAG, AI agents and multi-agent systems."],es:["Ingeniería de la AI Platform: flujos agénticos, RAG, agentes de IA y sistemas multiagente."],it:["Ingegneria della AI Platform: flussi agentici, RAG, agenti di IA e sistemi multiagente."]}}
 ];
-
 const root=document.documentElement;
 if(location.search.includes('preview'))root.classList.add('pv');
 const saved=localStorage.getItem('theme');
@@ -421,8 +553,12 @@ document.getElementById('y').textContent=new Date().getFullYear();
 const REPOS=[["Dev-Safadao",28],["mail-sender",16],["dymock",12],["golang-graphql-talk",12],["Go-REST",10],["FlutterUsers",0]];
 const COMMY=["2018 — *","2020 — 2021","2017","2017","2015 — 2019","2016 — 2017","2015 — 2017","2017 — *"];
 const FT=["all","ai","mobile","lead","backend","comm"];
-let L='pt',filter='all';
+let L='en',filter='all';
+function esc(s){return String(s).replace(/[&<>]/g,c=>c==='&'?'&amp;':c==='<'?'&lt;':'&gt;')}
 function fmt(d,l){if(!d)return I18N[l].undated;const f=x=>x==='now'?I18N[l].today:(x.length===4?x:M[l][+x.slice(5)-1]+' '+x.slice(0,4));return f(d[0])+' — '+f(d[1])}
+function ym(x,end){if(x==='now')return '9999-12';return x.length===4?x+(end?'-12':'-01'):x}
+function cvWhen(d,l){const one=x=>x==='now'?PRES[l]:(x.length===4?x:M[l][+x.slice(5)-1]+' '+x.slice(0,4));return one(d[0])+' – '+one(d[1])}
+function cvLine(it,l){const parts=[it.r[l],it.co];if(it.where)parts.push(it.where[l]);parts.push(cvWhen(it.d,l));return parts.join(' — ')}
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;e.target.classList.add('show');
  e.target.querySelectorAll('[data-count]').forEach(n=>{if(n.dataset.done)return;n.dataset.done=1;const t=+n.dataset.count,suf=t===10?'+':'';
   if(root.classList.contains('pv')){n.textContent=t+suf;return}const s=performance.now();
@@ -431,26 +567,32 @@ function renderTL(){const T=I18N[L],tl=document.getElementById('tl');let h='<div
  TL.forEach(it=>{if(it.c!==last){last=it.c;const c=T.ch[it.c];h+=`<div class="chapter"><span class="num">${c[0]}</span><div><h3>${c[1]}</h3><p>${c[2]}</p></div></div>`}
   h+=`<div class="item${it.now?' now':''}${it.first?' first':''}" data-t="${it.t}"><div class="card"><div class="top"><div><span class="role">${it.r[L]}</span>${it.now?`<span class="badge">${T.now2}</span>`:''}<br><span class="co">${it.co}</span></div><span class="when">${fmt(it.d,L)}</span></div><div class="more">${it.x[L]}</div></div></div>`});
  tl.innerHTML=h;tl.querySelectorAll('.item').forEach(x=>{io.observe(x)});tl.querySelectorAll('.card').forEach(c=>c.onclick=()=>c.classList.toggle('open'));applyFilter()}
+function renderCV(){const T=I18N[L];
+ const items=TL.filter(it=>it.cv).slice().sort((a,b)=>ym(b.d[1],true).localeCompare(ym(a.d[1],true))||ym(b.d[0],false).localeCompare(ym(a.d[0],false)));
+ const h=T.cvh;
+ document.getElementById('cvroot').innerHTML=`<header><h1>Eliseu Codinhoto</h1><p class="cv-title">${esc(T.cvtitle)}</p><p>${esc(T.cvloc)}</p><p>${esc(T.avail)}</p><p class="cv-contact"><a href="mailto:zeucxb@gmail.com">zeucxb@gmail.com</a> · <a href="https://linkedin.com/in/zeucxb">linkedin.com/in/zeucxb</a> · <a href="https://github.com/zeucxb">github.com/zeucxb</a> · <a href="https://www.youtube.com/@zeucxb">youtube.com/@zeucxb</a> · <a href="https://zeucxb.github.io/">zeucxb.github.io</a></p></header><section><h2>${esc(h[0])}</h2><p>${esc(T.cvsum)}</p></section><section><h2>${esc(h[1])}</h2><ul>${T.groups.map(g=>`<li><strong>${esc(g[0])}:</strong> ${g[1].map(esc).join(', ')}</li>`).join('')}</ul></section><section id="cv-exp"><h2>${esc(h[2])}</h2>${items.map(it=>`<article class="cv-job"><h3>${esc(cvLine(it,L))}</h3><ul>${it.b[L].map(x=>`<li>${esc(x)}</li>`).join('')}</ul></article>`).join('')}</section><section><h2>${esc(h[3])}</h2><ul>${T.edu.map(e=>`<li><strong>${esc(e[0])}</strong> — ${esc(e[1])} — ${esc(e[2])}</li>`).join('')}</ul></section><section><h2>${esc(h[4])}</h2><p>${CERTS.map(esc).join(' · ')}</p></section><section class="cv-langs"><h2>${esc(h[5])}</h2><p>${T.langs.map(esc).join(' · ')}</p></section>`}
 function applyFilter(){document.querySelectorAll('#filters button').forEach(b=>b.classList.toggle('on',b.dataset.f===filter));
  document.querySelectorAll('.item').forEach(it=>it.classList.toggle('hide',filter!=='all'&&!it.dataset.t.split(' ').includes(filter)));
  document.querySelectorAll('.chapter').forEach(c=>c.style.display=filter==='all'?'':'none')}
-function setLang(l,push){if(!I18N[l])l='pt';L=l;const T=I18N[l];root.lang=l==='pt'?'pt-BR':l;localStorage.setItem('lang',l);
+function fitNav(){root.style.setProperty('--navh',document.querySelector('nav').offsetHeight+'px')}
+function setLang(l,push){if(!I18N[l])l='en';L=l;const T=I18N[l];root.lang=l==='pt'?'pt-BR':l;localStorage.setItem('lang',l);
  if(push){const u=new URL(location);u.searchParams.set('lang',l);history.replaceState(null,'',u)}
- document.querySelectorAll('[data-i]').forEach(e=>e.innerHTML=T[e.dataset.i]);
- document.querySelectorAll('[data-n]').forEach(e=>e.textContent=T.nav[+e.dataset.n]);
+ document.querySelectorAll('[data-i]').forEach(e=>{if(T[e.dataset.i]!=null)e.innerHTML=T[e.dataset.i]});
+ document.querySelectorAll('[data-n]').forEach(e=>{const label=T.nav[+e.dataset.n];const full=e.querySelector('.full');if(full)full.textContent=label;else e.textContent=label});
  document.querySelectorAll('[data-s]').forEach(e=>e.textContent=T.st[+e.dataset.s]);
- document.querySelectorAll('[data-k]').forEach(e=>e.textContent=T.sk[+e.dataset.k]);
+ document.querySelectorAll('[data-w]').forEach(e=>e.textContent=T.sn[+e.dataset.w]);
  document.querySelectorAll('.langs button').forEach(b=>b.classList.toggle('on',b.dataset.l===l));
  document.getElementById('filters').innerHTML=T.f.map((x,i)=>`<button data-f="${FT[i]}">${x}</button>`).join('');
  document.querySelectorAll('#filters button').forEach(b=>b.onclick=()=>{filter=b.dataset.f;applyFilter()});
- document.getElementById('leadp').innerHTML=T.lead.map(x=>`<span>${x}</span>`).join('');
- document.getElementById('langp').innerHTML=T.langs.map(x=>`<span>${x}</span>`).join('');
+ document.getElementById('skillsGrid').innerHTML=T.groups.map(g=>`<div class="sk"><h4>${esc(g[0])}</h4><div class="pills">${g[1].map(x=>`<span>${esc(x)}</span>`).join('')}</div></div>`).join('');
+ document.getElementById('certs').innerHTML=CERTS.map(x=>`<span>${esc(x)}</span>`).join('');
+ document.getElementById('langp').innerHTML=T.langs.map(x=>`<span>${esc(x)}</span>`).join('');
  document.getElementById('comm').innerHTML=T.comm.map((x,i)=>`<li>${x}<small>${COMMY[i].replace('*',T.today)}</small></li>`).join('');
  document.getElementById('repos').innerHTML=REPOS.map((r,i)=>`<a class="repo" href="https://github.com/zeucxb/${r[0]}" target="_blank" rel="noopener"><b>${r[0]}</b><p>${T.repos[i]}</p><small>${r[1]?'★ '+r[1]:'Flutter'}</small></a>`).join('');
  document.getElementById('edu').innerHTML=T.edu.map(e=>`<div class="e"><b>${e[0]}</b><br>${e[1]}<br><span>${e[2]}</span></div>`).join('');
- document.title='Eliseu Codinhoto · '+(l==='pt'?'AI Staff Engineer':'AI Staff Engineer');
- renderTL();typedReset()}
-// typed
+ const pdf=document.getElementById('pdfbtn');pdf.href=PDF[l];pdf.setAttribute('download',PDF[l].slice(1));
+ document.title='Eliseu Codinhoto · Senior Staff AI Engineer';
+ renderCV();renderTL();typedReset();requestAnimationFrame(fitNav)}
 const el=document.getElementById('typed');let p=0,i=0,del=false,timer;
 const strip=s=>s.replace(/<[^>]+>/g,'');
 function render(full,n){let out='',c=0,tag=false;for(const ch of full){if(ch==='<')tag=true;if(tag){out+=ch;if(ch==='>')tag=false;continue}if(c<n){out+=ch;c++}}return out}
@@ -459,15 +601,19 @@ function tick(){const ph=I18N[L].typed,f=ph[p%ph.length],len=strip(f).length;el.
 function typedReset(){clearTimeout(timer);p=0;del=false;i=root.classList.contains('pv')?99:0;
  document.getElementById('sizers').innerHTML=I18N[L].typed.map(s=>`<span>${s}<i class="caret"></i></span>`).join('');tick()}
 document.querySelectorAll('.langs button').forEach(b=>b.onclick=()=>setLang(b.dataset.l,true));
+document.getElementById('pdfbtn').addEventListener('click',e=>{e.preventDefault();const href=e.currentTarget.getAttribute('href');
+ fetch(href,{method:'HEAD'}).then(r=>{if(r.ok)location.assign(href);else window.print()}).catch(()=>window.print())});
 const qp=new URLSearchParams(location.search).get('lang');
-const nav=(navigator.language||'pt').slice(0,2).toLowerCase();
-setLang(qp||localStorage.getItem('lang')||(I18N[nav]?nav:'pt'),false);
+const browser=(navigator.language||'en').slice(0,2).toLowerCase();
+const browserDefault=(browser==='pt'||browser==='es'||browser==='it')?browser:'en';
+const stored=localStorage.getItem('lang');
+setLang((qp&&I18N[qp]?qp:null)||(stored&&I18N[stored]?stored:null)||browserDefault,false);
 document.querySelectorAll('.reveal').forEach(x=>io.observe(x));
+addEventListener('resize',fitNav);
 const bar=document.getElementById('progress');
-addEventListener('scroll',()=>{const h=document.body.scrollHeight-innerHeight;bar.style.width=(scrollY/h*100)+'%';
+addEventListener('scroll',()=>{const h=document.body.scrollHeight-innerHeight;bar.style.width=(h>0?scrollY/h*100:0)+'%';
  const tl=document.getElementById('tl'),fill=document.getElementById('tlfill');if(!fill)return;const r=tl.getBoundingClientRect();
  fill.style.height=(Math.min(Math.max((innerHeight*.6-r.top)/r.height,0),1)*100)+'%'},{passive:true});
-
 </script>
 </body>
 </html>
