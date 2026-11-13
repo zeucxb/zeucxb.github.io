@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eliseu Codinhoto · AI Staff Engineer</title>
+<meta name="description" content="Eliseu Codinhoto: AI Staff Engineer, Tech Lead &amp; Software Architect. Portfolio em PT · EN · ES · IT.">
+<meta property="og:title" content="Eliseu Codinhoto · AI Staff Engineer">
+<meta property="og:image" content="avatar.png">
+<link rel="alternate" hreflang="pt-BR" href="?lang=pt"><link rel="alternate" hreflang="en" href="?lang=en"><link rel="alternate" hreflang="es" href="?lang=es"><link rel="alternate" hreflang="it" href="?lang=it">
+<link rel="icon" href="avatar.png">
+<style>
+:root{
+  --bg:#0b0d14;--bg2:#121624;--card:#161b2c;--line:#262d45;
+  --text:#e9ecf5;--muted:#9aa3bd;--accent:#5cc8ff;--accent2:#a78bfa;--accent3:#34d399;
+  --grad:linear-gradient(120deg,var(--accent),var(--accent2) 55%,#f472b6);
+  --shadow:0 20px 50px -20px rgba(0,0,0,.6);
+}
+:root[data-theme="light"]{
+  --bg:#f7f8fc;--bg2:#eef1f8;--card:#ffffff;--line:#dde2ef;
+  --text:#141826;--muted:#5b647d;--accent:#0284c7;--accent2:#7c3aed;--accent3:#059669;
+  --shadow:0 20px 50px -25px rgba(30,40,80,.25);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Inter,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden;transition:background .4s,color .4s}
+a{color:inherit}
+.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+.grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+/* nav */
+nav{position:fixed;inset:0 0 auto 0;z-index:50;backdrop-filter:blur(14px);background:color-mix(in srgb,var(--bg) 72%,transparent);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-weight:800;letter-spacing:-.02em;text-decoration:none}
+.links{display:flex;gap:22px;align-items:center}
+.links a{text-decoration:none;color:var(--muted);font-size:.92rem;transition:color .2s}
+.links a:hover{color:var(--text)}
+#theme{border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:999px;width:38px;height:38px;cursor:pointer;font-size:1rem}
+#progress{position:fixed;top:0;left:0;height:3px;background:var(--grad);z-index:60;width:0}
+/* hero */
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;padding-top:64px}
+.blob{position:absolute;border-radius:50%;filter:blur(90px);opacity:.35;z-index:-1;animation:float 14s ease-in-out infinite}
+.b1{width:420px;height:420px;background:var(--accent);top:10%;left:-120px}
+.b2{width:380px;height:380px;background:var(--accent2);bottom:5%;right:-100px;animation-delay:-6s}
+@keyframes float{50%{transform:translate(40px,-30px) scale(1.08)}}
+.hero-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:center}
+.tag{display:inline-flex;gap:8px;align-items:center;font-size:.85rem;color:var(--muted);border:1px solid var(--line);padding:6px 14px;border-radius:999px;background:var(--card)}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--accent3);box-shadow:0 0 0 0 var(--accent3);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 10px transparent}}
+h1{font-size:clamp(2.6rem,6vw,4.6rem);line-height:1.05;letter-spacing:-.04em;margin:20px 0 14px;font-weight:850}
+.typed{font-size:clamp(1.1rem,2.3vw,1.45rem);color:var(--muted);min-height:2.2em}
+.typed b{color:var(--text)}
+.caret{display:inline-block;width:2px;height:1.1em;background:var(--accent);vertical-align:-3px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.btn{text-decoration:none;padding:12px 22px;border-radius:12px;font-weight:600;border:1px solid var(--line);background:var(--card);transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.btn.primary{background:var(--grad);color:#fff;border:none}
+.photo{position:relative;justify-self:center}
+.photo img{width:min(340px,70vw);aspect-ratio:1;object-fit:cover;border-radius:32px;border:1px solid var(--line);box-shadow:var(--shadow);transform:rotate(-3deg);transition:transform .5s}
+.photo:hover img{transform:rotate(0) scale(1.02)}
+.photo::before{content:"";position:absolute;inset:-14px;border-radius:40px;background:var(--grad);opacity:.5;filter:blur(24px);z-index:-1}
+.chip{position:absolute;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:8px 12px;font-size:.82rem;box-shadow:var(--shadow);animation:float 8s ease-in-out infinite}
+.c1{top:6%;left:-30px}.c2{bottom:12%;right:-34px;animation-delay:-3s}.c3{bottom:-14px;left:12%;animation-delay:-5s}
+.scroll{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);color:var(--muted);font-size:.8rem;text-align:center}
+.scroll .mouse{display:block;width:22px;height:36px;border:2px solid var(--muted);border-radius:12px;margin:8px auto 0;position:relative}
+.scroll .mouse::after{content:"";position:absolute;left:50%;top:6px;width:4px;height:8px;background:var(--muted);border-radius:2px;transform:translateX(-50%);animation:wheel 1.6s infinite}
+@keyframes wheel{to{transform:translate(-50%,12px);opacity:0}}
+/* sections */
+section{padding:110px 0}
+.kicker{font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
+h2{font-size:clamp(2rem,4vw,3rem);letter-spacing:-.03em;line-height:1.1;margin:10px 0 24px}
+.lead{font-size:1.15rem;color:var(--muted);max-width:760px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px}
+.stat .n{font-size:2.4rem;font-weight:800;letter-spacing:-.03em}
+.stat .l{color:var(--muted);font-size:.9rem}
+.quote{margin-top:40px;border-left:3px solid var(--accent2);padding:6px 0 6px 20px;font-style:italic;color:var(--muted);max-width:760px}
+/* chapters / timeline */
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:40px}
+.filters button{border:1px solid var(--line);background:var(--card);color:var(--muted);padding:8px 16px;border-radius:999px;cursor:pointer;font-size:.88rem;transition:all .2s}
+.filters button.on{background:var(--grad);color:#fff;border-color:transparent}
+.timeline{position:relative;padding-left:36px}
+.timeline::before{content:"";position:absolute;left:11px;top:0;bottom:0;width:2px;background:var(--line)}
+.tl-fill{position:absolute;left:11px;top:0;width:2px;background:var(--grad);height:0}
+.item{position:relative;margin-bottom:26px;opacity:0;transform:translateY(30px);transition:opacity .7s,transform .7s}
+.item.show{opacity:1;transform:none}
+.item.hide{display:none}
+.item::before{content:"";position:absolute;left:-31px;top:24px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:3px solid var(--accent)}
+.item.now::before{background:var(--accent3);border-color:var(--accent3);box-shadow:0 0 0 6px color-mix(in srgb,var(--accent3) 25%,transparent)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px 24px;cursor:pointer;transition:border-color .3s,transform .3s,box-shadow .3s}
+.card:hover{border-color:var(--accent);transform:translateX(4px);box-shadow:var(--shadow)}
+.top{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:baseline}
+.role{font-weight:700;font-size:1.12rem}
+.co{color:var(--accent);font-weight:600}
+.when{color:var(--muted);font-size:.85rem}
+.badge{display:inline-block;font-size:.72rem;padding:3px 9px;border-radius:999px;background:color-mix(in srgb,var(--accent3) 18%,transparent);color:var(--accent3);font-weight:700;margin-left:8px;vertical-align:2px}
+.more{max-height:0;overflow:hidden;transition:max-height .5s ease,margin .4s;color:var(--muted)}
+.card.open .more{max-height:400px;margin-top:12px}
+.sub{margin-top:10px;display:grid;gap:10px}
+.sub div{border-top:1px dashed var(--line);padding-top:10px}
+.chapter{margin:50px 0 22px -36px;display:flex;align-items:center;gap:14px}
+.chapter .num{font-size:3rem;font-weight:900;line-height:1;opacity:.18}
+.chapter h3{font-size:1.25rem}
+.chapter p{color:var(--muted);font-size:.92rem}
+.hint{color:var(--muted);font-size:.85rem;margin-bottom:20px}
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.sk{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px}
+.sk h4{margin-bottom:14px;font-size:1.05rem}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pills span{font-size:.85rem;border:1px solid var(--line);padding:5px 12px;border-radius:999px;background:var(--bg2);transition:all .2s}
+.pills span:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
+/* community */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.list{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px}
+.list h4{margin-bottom:12px}
+.list li{list-style:none;padding:10px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:12px}
+.list li:last-child{border:none}
+.list li small{color:var(--muted);white-space:nowrap}
+.list a{text-decoration:none}.list a:hover{color:var(--accent)}
+.repos{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+.repo{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;text-decoration:none;transition:all .25s}
+.repo:hover{border-color:var(--accent2);transform:translateY(-4px)}
+.repo b{display:block;margin-bottom:6px}
+.repo p{color:var(--muted);font-size:.88rem}
+.repo small{color:var(--accent2)}
+/* education */
+.edu{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.edu .e{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px}
+.edu .e span{color:var(--muted);font-size:.85rem}
+/* contact */
+.contact{text-align:center;background:var(--bg2);border-top:1px solid var(--line)}
+.socials{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:30px}
+footer{text-align:center;padding:30px;color:var(--muted);font-size:.82rem}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s}
+.reveal.show{opacity:1;transform:none}
+@media (max-width:860px){
+  .hero-grid,.grid2,.edu{grid-template-columns:1fr}
+  .photo{order:-1}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .skills,.repos{grid-template-columns:1fr}
+  .links a:not(.keep){display:none}
+  .c1{left:-8px}.c2{right:-8px}
+}
+html.pv .hero{min-height:auto;padding:150px 0 90px}html.pv .scroll{display:none}html.pv .item,html.pv .reveal{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.item,.reveal{opacity:1;transform:none}}
+
+.langs{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:var(--card)}
+.langs button{border:0;background:transparent;color:var(--muted);padding:7px 10px;font-size:.78rem;font-weight:700;cursor:pointer;letter-spacing:.04em}
+.langs button.on{background:var(--grad);color:#fff}
+.scroll{display:flex;flex-direction:column;align-items:center}
+.item.first .card{border-color:var(--accent2);background:linear-gradient(135deg,color-mix(in srgb,var(--accent2) 12%,var(--card)),var(--card))}
+.item.first::before{border-color:var(--accent2)}
+.c4{top:44%;left:-46px;animation-delay:-2s}@media (max-width:860px){.c4{left:-8px}}</style>
+</head>
+<body>
+<div id="progress"></div>
+<nav><div class="wrap">
+  <a href="#top" class="logo mono">&lt;eliseu/&gt;</a>
+  <div class="links">
+    <a href="#sobre" data-n="0"></a><a href="#trajetoria" data-n="1"></a><a href="#skills" data-n="2"></a><a href="#comunidade" data-n="3"></a><a href="#formacao" data-n="4"></a><a href="#contato" class="keep" data-n="5"></a>
+    <div class="langs" role="group" aria-label="Language"><button data-l="pt">PT</button><button data-l="en">EN</button><button data-l="es">ES</button><button data-l="it">IT</button></div>
+    <button id="theme" aria-label="Theme">◐</button>
+  </div>
+</div></nav>
+<header class="hero" id="top">
+  <div class="blob b1"></div><div class="blob b2"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="tag"><i class="dot"></i> <span data-i="now"></span></span>
+      <h1><span data-i="hi"></span><br><span class="grad">Eliseu Codinhoto</span></h1>
+      <p class="typed"><span id="typed"></span><span class="caret"></span></p>
+      <div class="cta">
+        <a class="btn primary" href="#trajetoria" data-i="cta"></a>
+        <a class="btn" href="https://linkedin.com/in/zeucxb" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://github.com/zeucxb" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+    <div class="photo"><img src="avatar.png" alt="Eliseu Codinhoto">
+      <div class="chip c1">💙 Flutter</div><div class="chip c2">🤖 AI Platform</div><div class="chip c4">🇪🇺 EU Citizen</div><div class="chip c3 mono">São Paulo, BR</div></div>
+  </div>
+  <div class="scroll"><span data-i="scroll"></span><span class="mouse"></span></div>
+</header>
+<section id="sobre"><div class="wrap reveal">
+  <p class="kicker" data-i="k1"></p>
+  <h2><span data-i="h1a"></span><br><span class="grad" data-i="h1b"></span></h2>
+  <p class="lead" data-i="p1"></p>
+  <p class="lead" style="margin-top:16px" data-i="p2"></p>
+  <div class="stats">
+    <div class="stat"><div class="n" data-count="10">0</div><div class="l" data-s="0"></div></div>
+    <div class="stat"><div class="n" data-count="200">0</div><div class="l" data-s="1"></div></div>
+    <div class="stat"><div class="n" data-count="140">0</div><div class="l" data-s="2"></div></div>
+    <div class="stat"><div class="n" data-count="2015">0</div><div class="l" data-s="3"></div></div>
+  </div>
+  <blockquote class="quote" data-i="quote"></blockquote>
+</div></section>
+<section id="trajetoria" style="background:var(--bg2)"><div class="wrap">
+  <div class="reveal">
+    <p class="kicker" data-i="k2"></p>
+    <h2><span data-i="h2a"></span> <span class="grad" data-i="h2b"></span></h2>
+    <p class="hint" data-i="hint"></p>
+    <div class="filters" id="filters"></div>
+  </div>
+  <div class="timeline" id="tl"></div>
+</div></section>
+<section id="skills"><div class="wrap reveal">
+  <p class="kicker" data-i="k3"></p>
+  <h2><span data-i="h3a"></span> <span class="grad" data-i="h3b"></span></h2>
+  <div class="skills">
+    <div class="sk"><h4 data-k="0"></h4><div class="pills"><span>Flutter</span><span>iOS</span><span>Android</span><span>Android SDK</span><span>Fastlane</span><span>Animation</span><span>AI-first DevEx</span></div></div>
+    <div class="sk"><h4 data-k="1"></h4><div class="pills"><span>Golang</span><span>Elixir</span><span>Phoenix</span><span>Node.js</span><span>GraphQL</span><span>JavaScript</span><span>Java</span><span>PHP</span><span>MongoDB</span><span>Postgres</span><span>Redis</span><span>Cassandra</span><span>Kafka</span><span>Vert.x</span><span>MQTT</span><span>GCP</span></div></div>
+    <div class="sk"><h4 data-k="2"></h4><div class="pills" id="leadp"></div></div>
+  </div>
+</div></section>
+<section id="comunidade" style="background:var(--bg2)"><div class="wrap reveal">
+  <p class="kicker" data-i="k4"></p>
+  <h2><span data-i="h4a"></span> <span class="grad" data-i="h4b"></span></h2>
+  <p class="lead" data-i="p4"></p>
+  <div class="grid2" style="margin-top:36px">
+    <div class="list"><h4 data-i="ct"></h4><ul id="comm"></ul></div>
+    <div class="list"><h4 data-i="art"></h4><ul>
+      <li><a href="https://medium.com/@zeucxb" target="_blank" rel="noopener">Flutter Live 2018</a><small>2018</small></li>
+      <li><a href="https://medium.com/@zeucxb" target="_blank" rel="noopener">A caixa de ferramentas do JS funcional</a><small>2018</small></li>
+      <li><a href="https://medium.com/trainingcenter/como-%C3%A9-trabalhar-como-desenvolvedor-backend-por-eliseu-codinhoto-6a50c56c5277" target="_blank" rel="noopener">Como é trabalhar como Desenvolvedor Backend</a><small>2017</small></li>
+      <li><a href="https://medium.com/@zeucxb/filosofia-go-d287110d3833" target="_blank" rel="noopener">GO além do Pokémon</a><small>2016</small></li>
+      <li><a href="https://medium.com/@zeucxb/criando-cli-globais-com-nodejs-46f403e0f835" target="_blank" rel="noopener">Criando CLI globais com NodeJS</a><small>2016</small></li>
+    </ul></div>
+  </div>
+  <h4 style="margin-top:40px" data-i="os"></h4>
+  <div class="repos" id="repos"></div>
+</div></section>
+<section id="formacao"><div class="wrap reveal">
+  <p class="kicker" data-i="k5"></p>
+  <h2><span data-i="h5a"></span> <span class="grad" data-i="h5b"></span></h2>
+  <div class="edu" id="edu"></div>
+  <h4 style="margin:34px 0 14px" data-i="cert"></h4>
+  <div class="pills"><span>TOEIC 885/990 · ETS (2025)</span><span>Sebrae Supernova · SEBRAE (2025)</span><span>Flutter, TDD, Clean Architecture, SOLID e Design Patterns · Udemy (2020)</span><span>Flutter - Aprendendo tudo sobre Design · Udemy (2019)</span><span>Advanced English · Wise Up (2018)</span><span>HTTP: Entendendo a web por baixo dos panos · Alura (2018)</span><span>The Complete Elixir and Phoenix Bootcamp · Udemy (2018)</span><span>React Native Parte 1 · Alura (2018)</span><span>Produtividade · Alura (2018)</span><span>Duolingo Certified Educator (2017)</span><span>iMasters Certified Professional · JavaScript (2016)</span></div>
+  <h4 style="margin:28px 0 14px" data-i="lang"></h4>
+  <div class="pills" id="langp"></div>
+</div></section>
+<section id="contato" class="contact"><div class="wrap reveal">
+  <p class="kicker" data-i="k6"></p>
+  <h2><span data-i="h6a"></span> <span class="grad" data-i="h6b"></span></h2>
+  <p class="lead" style="margin:0 auto" data-i="p6"></p>
+  <div class="socials">
+    <a class="btn primary" href="https://linkedin.com/in/zeucxb" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn" href="https://github.com/zeucxb" target="_blank" rel="noopener">GitHub</a>
+    <a class="btn" href="https://x.com/zeucxb" target="_blank" rel="noopener">X / Twitter</a>
+    <a class="btn" href="https://youtube.com/eliseucodinhoto" target="_blank" rel="noopener">YouTube</a>
+    <a class="btn" href="https://medium.com/@zeucxb" target="_blank" rel="noopener">Medium</a>
+  </div>
+</div></section>
+<footer class="mono">© <span id="y"></span> Eliseu Codinhoto · <span data-i="foot"></span></footer>
+
+<script>
+const I18N={
+pt:{nav:["Sobre","Trajetória","Skills","Comunidade","Formação","Contato"],
+now:"Hoje: Senior Staff AI Engineer · AI Platform @ Safra",hi:"Oi, eu sou o",
+typed:["<b>AI Staff Engineer</b> no Safra","<b>Tech Lead</b> & Arquiteto de Software","<b>+10 anos</b> construindo produtos","Fundador do <b>FlutterSP</b> 💙","Curioso desde os <b>12 anos</b>","Cidadão europeu 🇪🇺"],
+cta:"Ver minha trajetória →",scroll:"role pra baixo",
+k1:"01 · Sobre",h1a:"Um curioso que transformou",h1b:"curiosidade em carreira.",
+p1:"Comecei nessa vida aos 12 anos e uma coisa eu aprendi cedo: o valor do conhecimento. Por isso não passo um dia sem descobrir e compartilhar algo novo.",
+p2:"Profissional de Desenvolvimento Mobile e Tech Lead com mais de 10 anos de experiência na construção e otimização de soluções mobile de alto impacto. Liderança em projetos desde a concepção até a entrega, com foco em performance, escalabilidade e na capacitação de equipes de engenharia. Comecei como full stack, passei pelo backend em startups, liderei áreas inteiras de mobile e hoje levo essa bagagem para a Inteligência Artificial.",
+st:["anos de experiência","devs mobile na XP (quase isso!)","repositórios públicos","ano em que criei meu canal"],
+quote:"“O Eliseu é um dos caras com mais expertise técnica que eu já conheci. […] Inspira e ajuda quem está nos desafios do dia a dia junto com ele.”<br>— Leonardo Ribeiro, recomendação no LinkedIn",
+k2:"02 · Trajetória",h2a:"A jornada,",h2b:"capítulo por capítulo.",hint:"Clique em um card para ver os detalhes. Use os filtros para explorar.",
+f:["Tudo","IA","Mobile & Flutter","Liderança","Backend & Web","Comunidade"],now2:"ATUAL",
+k3:"03 · Skills",h3a:"A caixa de",h3b:"ferramentas.",sk:["📱 Mobile & IA","⚙️ Backend & Dados","🧭 Liderança"],
+lead:["Liderança em tecnologia", "Desenvolvimento de pessoas", "Arquitetura e design de software", "TDD", "SOLID", "Design Patterns", "Injeção de dependência", "Testes unitários", "CI", "Gestão de projetos", "Startups", "FinTech"],
+k4:"04 · Comunidade",h4a:"Aprender em público,",h4b:"devolver em dobro.",
+p4:"Criei meu canal no YouTube em 2015, aos 17 anos, para compartilhar o que aprendia. Desde então organizo comunidades, palestro, escrevo e mantenho projetos open source.",
+ct:"🎤 Comunidade & palestras",art:"✍️ Artigos",os:"🛠️ Open source em destaque",
+comm:["Organizer · FlutterBR / fundador do FlutterSP","Coordenador das trilhas Flutter/Mobile · TDC","Palestra “Golang GraphQL API” · TDC São Paulo","7Masters Go & Programação Funcional · iMasters","Instrutor e palestrante · EuProgramador","Instrutor · WebSchool","Speaker · .NETCoders","Writer & Volunteer · Training Center"],
+today:"hoje",
+repos:["Descubra seu nome safadão com um CLI em Node.js.","Um CLI para envio de e-mails.","CLI que simplifica a criação de mocks dinâmicos.","Material da minha palestra no Golang Meetup SP, no Google.","Exemplo de API REST em Go com MongoDB.","Lista de empresas usando Flutter pelo mundo 🌎💙"],
+k5:"05 · Formação",h5a:"Nunca parei",h5b:"de estudar.",
+edu:[["Gestão Empresarial", "Fatec São Bernardo do Campo Adib Moises Dib", "2024 — 2027"], ["Informática para Negócios", "Fatec São Bernardo do Campo Adib Moises Dib", "2023 — hoje"], ["Tecnólogo em Análise e Desenvolvimento de Sistemas", "IFSP", "2015 — 2016"], ["Inglês", "Wise Up", "2017 — 2018"], ["Técnico em Informática para Internet · Técnico em Informática", "ETEC", "2013 — 2014"], ["Técnico em Programação de Jogos Digitais (não concluído)", "ETEC", "2015"], ["Webmaster", "Alpha Brasil", "2012 — 2013"]],
+cert:"Certificações",lang:"Idiomas",langs:["Português", "Inglês · TOEIC 885/990"],
+k6:"06 · Contato",h6a:"Bora construir",h6b:"algo juntos?",p6:"Seja para falar de IA, Flutter, arquitetura ou liderança técnica, me chama.",
+foot:"feito com curiosidade 💙",
+ch:[["0","O começo","Curiosidade, primeiros códigos e o primeiro emprego"],["I","Backend, startups e comunidade","Go, Node, arquitetura e muita vontade de aprender"],["II","A virada Flutter","Do primeiro dev mobile a Head de uma área inteira"],["III","Escala na XP Inc.","Arquitetura, gestão e Flutter para centenas de devs"],["IV","IA e fintechs globais","De arquiteto mobile a engenheiro de plataformas de IA"]],
+undated:"sem data"},
+en:{nav:["About","Journey","Skills","Community","Education","Contact"],
+now:"Now: Senior Staff AI Engineer · AI Platform @ Safra",hi:"Hi, I'm",
+typed:["<b>AI Staff Engineer</b> at Safra","<b>Tech Lead</b> & Software Architect","<b>10+ years</b> building products","Founder of <b>FlutterSP</b> 💙","Curious since age <b>12</b>","EU citizen 🇪🇺"],
+cta:"See my journey →",scroll:"scroll down",
+k1:"01 · About",h1a:"A curious kid who turned",h1b:"curiosity into a career.",
+p1:"I started in this world at 12, and learned early on the value of knowledge. That's why I don't let a day go by without discovering and sharing something new.",
+p2:"Mobile Development professional and Tech Lead with 10+ years building and optimizing high-impact mobile solutions. I lead projects from conception to delivery, focused on performance, scalability and empowering engineering teams. I started as a full-stack developer, went through backend at startups, led entire mobile areas, and now bring all of that into Artificial Intelligence.",
+st:["years of experience","mobile devs at XP (almost!)","public repositories","year I started my channel"],
+quote:"“Eliseu is one of the most technically skilled people I've ever met. […] He inspires and helps everyone facing day-to-day challenges alongside him.”<br>— Leonardo Ribeiro, LinkedIn recommendation",
+k2:"02 · Journey",h2a:"The journey,",h2b:"chapter by chapter.",hint:"Click a card to see the details. Use the filters to explore.",
+f:["All","AI","Mobile & Flutter","Leadership","Backend & Web","Community"],now2:"CURRENT",
+k3:"03 · Skills",h3a:"The",h3b:"toolbox.",sk:["📱 Mobile & AI","⚙️ Backend & Data","🧭 Leadership"],
+lead:["Tech leadership", "People development", "Software architecture & design", "TDD", "SOLID", "Design Patterns", "Dependency Injection", "Unit Testing", "CI", "Project Management", "Startups", "FinTech"],
+k4:"04 · Community",h4a:"Learn in public,",h4b:"give back twice.",
+p4:"I started my YouTube channel in 2015, at 17, to share what I was learning. Since then I've organized communities, given talks, written articles and maintained open source projects.",
+ct:"🎤 Community & talks",art:"✍️ Articles",os:"🛠️ Featured open source",
+comm:["Organizer · FlutterBR / founder of FlutterSP","Flutter/Mobile track coordinator · TDC","Talk “Golang GraphQL API” · TDC São Paulo","7Masters Go & Functional Programming · iMasters","Instructor & speaker · EuProgramador","Instructor · WebSchool","Speaker · .NETCoders","Writer & Volunteer · Training Center"],
+today:"now",
+repos:["Find your “safadão” name with a Node.js CLI.","A CLI email sender.","A CLI that simplifies creating dynamic mocks.","Slides/code from my talk at Golang Meetup SP, at Google.","A simple Go REST API example with MongoDB.","A list of companies using Flutter around the world 🌎💙"],
+k5:"05 · Education",h5a:"I never stopped",h5b:"learning.",
+edu:[["Business Management", "Fatec São Bernardo do Campo Adib Moises Dib", "2024 — 2027"], ["IT for Business", "Fatec São Bernardo do Campo Adib Moises Dib", "2023 — now"], ["Technologist in Systems Analysis & Development", "IFSP", "2015 — 2016"], ["English", "Wise Up", "2017 — 2018"], ["IT for Internet Technician · IT Technician", "ETEC", "2013 — 2014"], ["Digital Games Programming Technician (not completed)", "ETEC", "2015"], ["Webmaster", "Alpha Brasil", "2012 — 2013"]],
+cert:"Certifications",lang:"Languages",langs:["Portuguese", "English · TOEIC 885/990"],
+k6:"06 · Contact",h6a:"Let's build",h6b:"something together?",p6:"Whether it's AI, Flutter, architecture or technical leadership, reach out.",
+foot:"made with curiosity 💙",
+ch:[["0","The beginning","Curiosity, first lines of code and my first job"],["I","Backend, startups & community","Go, Node, architecture and a hunger to learn"],["II","The Flutter turn","From first mobile dev to Head of an entire area"],["III","Scale at XP Inc.","Architecture, management and Flutter for hundreds of devs"],["IV","AI & global fintechs","From mobile architect to AI platform engineer"]],
+undated:"undated"},
+es:{nav:["Sobre mí","Trayectoria","Skills","Comunidad","Formación","Contacto"],
+now:"Hoy: Senior Staff AI Engineer · AI Platform @ Safra",hi:"Hola, soy",
+typed:["<b>AI Staff Engineer</b> en Safra","<b>Tech Lead</b> y Arquitecto de Software","<b>+10 años</b> construyendo productos","Fundador de <b>FlutterSP</b> 💙","Curioso desde los <b>12 años</b>","Ciudadano europeo 🇪🇺"],
+cta:"Ver mi trayectoria →",scroll:"desliza hacia abajo",
+k1:"01 · Sobre mí",h1a:"Un curioso que convirtió",h1b:"la curiosidad en carrera.",
+p1:"Empecé en este mundo a los 12 años y aprendí pronto el valor del conocimiento. Por eso no dejo pasar un día sin descubrir y compartir algo nuevo.",
+p2:"Profesional de Desarrollo Mobile y Tech Lead con más de 10 años de experiencia construyendo y optimizando soluciones mobile de alto impacto. Lidero proyectos desde la concepción hasta la entrega, con foco en rendimiento, escalabilidad y en potenciar equipos de ingeniería. Empecé como full stack, pasé por el backend en startups, lideré áreas mobile completas y hoy llevo esa experiencia a la Inteligencia Artificial.",
+st:["años de experiencia","devs mobile en XP (¡casi!)","repositorios públicos","año en que creé mi canal"],
+quote:"“Eliseu es una de las personas con más expertise técnico que he conocido. […] Inspira y ayuda a quienes enfrentan los desafíos del día a día junto a él.”<br>— Leonardo Ribeiro, recomendación en LinkedIn",
+k2:"02 · Trayectoria",h2a:"El viaje,",h2b:"capítulo a capítulo.",hint:"Haz clic en una tarjeta para ver los detalles. Usa los filtros para explorar.",
+f:["Todo","IA","Mobile y Flutter","Liderazgo","Backend y Web","Comunidad"],now2:"ACTUAL",
+k3:"03 · Skills",h3a:"La caja de",h3b:"herramientas.",sk:["📱 Mobile e IA","⚙️ Backend y Datos","🧭 Liderazgo"],
+lead:["Liderazgo tecnológico", "Desarrollo de personas", "Arquitectura y diseño de software", "TDD", "SOLID", "Design Patterns", "Inyección de dependencias", "Pruebas unitarias", "CI", "Gestión de proyectos", "Startups", "FinTech"],
+k4:"04 · Comunidad",h4a:"Aprender en público,",h4b:"devolver el doble.",
+p4:"Creé mi canal de YouTube en 2015, a los 17 años, para compartir lo que aprendía. Desde entonces organizo comunidades, doy charlas, escribo y mantengo proyectos open source.",
+ct:"🎤 Comunidad y charlas",art:"✍️ Artículos",os:"🛠️ Open source destacado",
+comm:["Organizer · FlutterBR / fundador de FlutterSP","Coordinador de los tracks Flutter/Mobile · TDC","Charla “Golang GraphQL API” · TDC São Paulo","7Masters Go y Programación Funcional · iMasters","Instructor y speaker · EuProgramador","Instructor · WebSchool","Speaker · .NETCoders","Writer & Volunteer · Training Center"],
+today:"hoy",
+repos:["Descubre tu nombre “safadão” con un CLI en Node.js.","Un CLI para enviar e-mails.","CLI que simplifica la creación de mocks dinámicos.","Material de mi charla en el Golang Meetup SP, en Google.","Ejemplo de API REST en Go con MongoDB.","Lista de empresas que usan Flutter en el mundo 🌎💙"],
+k5:"05 · Formación",h5a:"Nunca dejé",h5b:"de estudiar.",
+edu:[["Gestión Empresarial", "Fatec São Bernardo do Campo Adib Moises Dib", "2024 — 2027"], ["Informática para Negocios", "Fatec São Bernardo do Campo Adib Moises Dib", "2023 — hoy"], ["Tecnólogo en Análisis y Desarrollo de Sistemas", "IFSP", "2015 — 2016"], ["Inglés", "Wise Up", "2017 — 2018"], ["Técnico en Informática para Internet · Técnico en Informática", "ETEC", "2013 — 2014"], ["Técnico en Programación de Videojuegos (no concluido)", "ETEC", "2015"], ["Webmaster", "Alpha Brasil", "2012 — 2013"]],
+cert:"Certificaciones",lang:"Idiomas",langs:["Portugués", "Inglés · TOEIC 885/990"],
+k6:"06 · Contacto",h6a:"¿Construimos",h6b:"algo juntos?",p6:"Ya sea para hablar de IA, Flutter, arquitectura o liderazgo técnico, escríbeme.",
+foot:"hecho con curiosidad 💙",
+ch:[["0","El comienzo","Curiosidad, primeras líneas de código y mi primer empleo"],["I","Backend, startups y comunidad","Go, Node, arquitectura y muchas ganas de aprender"],["II","El giro Flutter","De primer dev mobile a Head de un área entera"],["III","Escala en XP Inc.","Arquitectura, gestión y Flutter para cientos de devs"],["IV","IA y fintechs globales","De arquitecto mobile a ingeniero de plataformas de IA"]],
+undated:"sin fecha"},
+it:{nav:["Chi sono","Percorso","Skills","Community","Formazione","Contatti"],
+now:"Oggi: Senior Staff AI Engineer · AI Platform @ Safra",hi:"Ciao, sono",
+typed:["<b>AI Staff Engineer</b> in Safra","<b>Tech Lead</b> e Software Architect","<b>10+ anni</b> a costruire prodotti","Fondatore di <b>FlutterSP</b> 💙","Curioso dall'età di <b>12 anni</b>","Cittadino UE 🇪🇺"],
+cta:"Guarda il mio percorso →",scroll:"scorri in basso",
+k1:"01 · Chi sono",h1a:"Un curioso che ha trasformato",h1b:"la curiosità in carriera.",
+p1:"Ho iniziato a 12 anni e ho imparato presto il valore della conoscenza. Per questo non lascio passare un giorno senza scoprire e condividere qualcosa di nuovo.",
+p2:"Professionista dello sviluppo mobile e Tech Lead con oltre 10 anni di esperienza nella creazione e ottimizzazione di soluzioni mobile ad alto impatto. Guido progetti dall'ideazione alla consegna, con focus su prestazioni, scalabilità e crescita dei team di ingegneria. Ho iniziato come full stack, sono passato al backend nelle startup, ho guidato intere aree mobile e oggi porto tutto questo nell'Intelligenza Artificiale.",
+st:["anni di esperienza","dev mobile in XP (quasi!)","repository pubblici","anno in cui ho aperto il canale"],
+quote:"“Eliseu è una delle persone con più competenza tecnica che abbia mai conosciuto. […] Ispira e aiuta chi affronta con lui le sfide di ogni giorno.”<br>— Leonardo Ribeiro, raccomandazione su LinkedIn",
+k2:"02 · Percorso",h2a:"Il viaggio,",h2b:"capitolo per capitolo.",hint:"Clicca su una card per i dettagli. Usa i filtri per esplorare.",
+f:["Tutto","IA","Mobile e Flutter","Leadership","Backend e Web","Community"],now2:"ATTUALE",
+k3:"03 · Skills",h3a:"La cassetta degli",h3b:"attrezzi.",sk:["📱 Mobile e IA","⚙️ Backend e Dati","🧭 Leadership"],
+lead:["Leadership tecnologica", "Sviluppo delle persone", "Architettura e design del software", "TDD", "SOLID", "Design Patterns", "Dependency Injection", "Unit Testing", "CI", "Project Management", "Startup", "FinTech"],
+k4:"04 · Community",h4a:"Imparare in pubblico,",h4b:"restituire il doppio.",
+p4:"Ho aperto il mio canale YouTube nel 2015, a 17 anni, per condividere ciò che imparavo. Da allora organizzo community, tengo talk, scrivo e mantengo progetti open source.",
+ct:"🎤 Community e talk",art:"✍️ Articoli",os:"🛠️ Open source in evidenza",
+comm:["Organizer · FlutterBR / fondatore di FlutterSP","Coordinatore delle track Flutter/Mobile · TDC","Talk “Golang GraphQL API” · TDC São Paulo","7Masters Go e Programmazione Funzionale · iMasters","Istruttore e speaker · EuProgramador","Istruttore · WebSchool","Speaker · .NETCoders","Writer & Volunteer · Training Center"],
+today:"oggi",
+repos:["Scopri il tuo nome “safadão” con una CLI in Node.js.","Una CLI per inviare e-mail.","CLI che semplifica la creazione di mock dinamici.","Materiale del mio talk al Golang Meetup SP, da Google.","Esempio di API REST in Go con MongoDB.","Elenco di aziende che usano Flutter nel mondo 🌎💙"],
+k5:"05 · Formazione",h5a:"Non ho mai smesso",h5b:"di studiare.",
+edu:[["Gestione Aziendale", "Fatec São Bernardo do Campo Adib Moises Dib", "2024 — 2027"], ["Informatica per il Business", "Fatec São Bernardo do Campo Adib Moises Dib", "2023 — oggi"], ["Tecnologo in Analisi e Sviluppo di Sistemi", "IFSP", "2015 — 2016"], ["Inglese", "Wise Up", "2017 — 2018"], ["Tecnico Informatico per Internet · Tecnico Informatico", "ETEC", "2013 — 2014"], ["Tecnico in Programmazione di Videogiochi (non completato)", "ETEC", "2015"], ["Webmaster", "Alpha Brasil", "2012 — 2013"]],
+cert:"Certificazioni",lang:"Lingue",langs:["Portoghese", "Inglese · TOEIC 885/990"],
+k6:"06 · Contatti",h6a:"Costruiamo",h6b:"qualcosa insieme?",p6:"Che si tratti di IA, Flutter, architettura o leadership tecnica, scrivimi.",
+foot:"fatto con curiosità 💙",
+ch:[["0","L'inizio","Curiosità, prime righe di codice e il primo lavoro"],["I","Backend, startup e community","Go, Node, architettura e tanta voglia di imparare"],["II","La svolta Flutter","Da primo dev mobile a Head di un'intera area"],["III","Scala in XP Inc.","Architettura, gestione e Flutter per centinaia di dev"],["IV","IA e fintech globali","Da architetto mobile a ingegnere di piattaforme IA"]],
+undated:"senza data"}
+};
+const M={pt:["jan","fev","mar","abr","mai","jun","jul","ago","set","out","nov","dez"],en:["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],es:["ene","feb","mar","abr","may","jun","jul","ago","sep","oct","nov","dic"],it:["gen","feb","mar","apr","mag","giu","lug","ago","set","ott","nov","dic"]};
+// timeline: c=chapter idx, t=tags, d=[start,end] "YYYY-MM"|"YYYY"|null|"now"
+const TL=[
+{c:0,t:"backend",first:1,d:["2015-04","2015-10"],co:"Alphacode IT Solutions",r:{pt:"Desenvolvedor Full Stack · primeiro emprego",en:"Full Stack Developer · first job",es:"Desarrollador Full Stack · primer empleo",it:"Sviluppatore Full Stack · primo lavoro"},x:{pt:"Meu primeiro emprego e o primeiro funcionário da empresa. Em remoto, participei de muitos projetos em pouco tempo, principalmente lojas de e-commerce em PHP/MySQL, além do frontend em HTML, CSS e JavaScript.",en:"My first job, as the company's very first employee. Working remotely, I took part in many projects in a short time, mostly e-commerce stores in PHP/MySQL, plus frontend in HTML, CSS and JavaScript.",es:"Mi primer empleo, como el primer empleado de la empresa. En remoto, participé en muchos proyectos en poco tiempo, sobre todo tiendas e-commerce en PHP/MySQL, además del frontend en HTML, CSS y JavaScript.",it:"Il mio primo lavoro, come primo dipendente dell'azienda. Da remoto ho partecipato a molti progetti in poco tempo, soprattutto e-commerce in PHP/MySQL, oltre al frontend in HTML, CSS e JavaScript."}},
+{c:0,t:"comm",d:["2015-01","2019-10"],co:"EuProgramador",r:{pt:"Criador, instrutor e palestrante",en:"Creator, instructor & speaker",es:"Creador, instructor y speaker",it:"Creatore, istruttore e speaker"},x:{pt:"Meu desafio pessoal de aprender, compartilhar e retribuir: palestras, vídeos, podcasts e textos sobre Go, Elixir, GraphQL, React, Java, Sass, PHP e temas do dia a dia de quem trabalha com tecnologia.",en:"My personal challenge to learn, share and give back: talks, videos, podcasts and writing about Go, Elixir, GraphQL, React, Java, Sass, PHP and the day-to-day of tech professionals.",es:"Mi desafío personal de aprender, compartir y retribuir: charlas, videos, podcasts y textos sobre Go, Elixir, GraphQL, React, Java, Sass, PHP y el día a día de quien trabaja en tecnología.",it:"La mia sfida personale per imparare, condividere e restituire: talk, video, podcast e articoli su Go, Elixir, GraphQL, React, Java, Sass, PHP e la quotidianità di chi lavora nella tecnologia."}},
+{c:0,t:"comm",d:["2015-04","2017-12"],co:".NETCoders",r:{pt:"Speaker voluntário",en:"Volunteer speaker",es:"Speaker voluntario",it:"Speaker volontario"},x:{pt:"Palestras na comunidade .NETCoders.",en:"Talks at the .NETCoders community.",es:"Charlas en la comunidad .NETCoders.",it:"Talk nella community .NETCoders."}},
+{c:0,t:"backend",d:["2015","2016"],co:"IFSP",r:{pt:"Tecnólogo em Análise e Desenvolvimento de Sistemas",en:"Technologist in Systems Analysis & Development",es:"Tecnólogo en Análisis y Desarrollo de Sistemas",it:"Tecnologo in Analisi e Sviluppo di Sistemi"},x:{pt:"Formação em paralelo aos primeiros trabalhos.",en:"Studied alongside my first jobs.",es:"Estudios en paralelo a mis primeros trabajos.",it:"Studi in parallelo ai primi lavori."}},
+{c:0,t:"comm",d:["2016-02","2017-12"],co:"WebSchool",r:{pt:"Instrutor voluntário",en:"Volunteer instructor",es:"Instructor voluntario",it:"Istruttore volontario"},x:{pt:"Ensinando desenvolvimento web.",en:"Teaching web development.",es:"Enseñando desarrollo web.",it:"Insegnando sviluppo web."}},
+{c:0,t:"backend lead",d:["2016-05","2016-10"],co:"Like Online",r:{pt:"Arquiteto e engenheiro de software",en:"Software Architect & Engineer",es:"Arquitecto e ingeniero de software",it:"Architetto e ingegnere del software"},x:{pt:"Responsável pela reestruturação completa, pelas decisões e pela criação do backend de duas startups nascidas dentro da Like: OneFits e GoAhead. Semi-remoto, com NodeJS e MongoDB e, depois, Go. Cresci muito profissionalmente.",en:"Responsible for the full restructuring, decisions and creation of the backend for two startups born inside Like: OneFits and GoAhead. Semi-remote, with NodeJS and MongoDB, later Go. I grew a lot professionally.",es:"Responsable de la reestructuración completa, las decisiones y la creación del backend de dos startups nacidas dentro de Like: OneFits y GoAhead. Semi-remoto, con NodeJS y MongoDB y, después, Go. Crecí mucho profesionalmente.",it:"Responsabile della ristrutturazione completa, delle decisioni e della creazione del backend di due startup nate dentro Like: OneFits e GoAhead. Semi-remoto, con NodeJS e MongoDB, poi Go. Sono cresciuto molto professionalmente."}},
+{c:1,t:"backend",d:["2016-10","2017-11"],co:"Easy Carros",r:{pt:"Desenvolvedor back-end",en:"Back-end Developer",es:"Desarrollador back-end",it:"Sviluppatore back-end"},x:{pt:"Primeira vez alocado integralmente em um time de dev maior: aprendi a trabalhar em equipe e o dia a dia de uma startup, incluindo o negócio. NodeJS, GraphQL e MongoDB, e assumi projetos em Go.",en:"My first time fully allocated to a larger dev team: I learned teamwork and startup life, including the business side. NodeJS, GraphQL and MongoDB, and I took on Go projects.",es:"Mi primera vez en un equipo de desarrollo más grande a tiempo completo: aprendí a trabajar en equipo y el día a día de una startup, incluido el negocio. NodeJS, GraphQL y MongoDB, y asumí proyectos en Go.",it:"La prima volta a tempo pieno in un team di sviluppo più grande: ho imparato il lavoro di squadra e la vita in startup, incluso il business. NodeJS, GraphQL e MongoDB, e ho preso in carico progetti in Go."}},
+{c:1,t:"backend",d:["2016-10","2017-06"],co:"SecretCrew",r:{pt:"Projeto com Giovanny",en:"Project with Giovanny",es:"Proyecto con Giovanny",it:"Progetto con Giovanny"},x:{pt:"Projeto paralelo, com uma API GraphQL.",en:"Side project, with a GraphQL API.",es:"Proyecto paralelo, con una API GraphQL.",it:"Progetto parallelo, con un'API GraphQL."}},
+{c:1,t:"comm",d:["2017-05","now"],co:"Training Center",r:{pt:"Writer & Volunteer",en:"Writer & Volunteer",es:"Writer & Volunteer",it:"Writer & Volunteer"},x:{pt:"Projeto sem fins lucrativos que ajuda devs, iniciantes ou não, com dúvidas de carreira e conexões para criar projetos juntos.",en:"A non-profit helping developers, beginners or not, with career questions and connections to build projects together.",es:"Proyecto sin fines de lucro que ayuda a devs, principiantes o no, con dudas de carrera y conexiones para crear proyectos juntos.",it:"Progetto no-profit che aiuta gli sviluppatori, principianti e non, con dubbi di carriera e contatti per creare progetti insieme."}},
+{c:1,t:"backend",d:["2017-06","2018-12"],co:"Scanbü",r:{pt:"Projeto com Giovanny",en:"Project with Giovanny",es:"Proyecto con Giovanny",it:"Progetto con Giovanny"},x:{pt:"Projeto empreendedor construído em parceria com o Giovanny.",en:"An entrepreneurial project built in partnership with Giovanny.",es:"Proyecto emprendedor construido junto a Giovanny.",it:"Progetto imprenditoriale costruito insieme a Giovanny."}},
+{c:1,t:"backend lead",d:["2017-11","2018-03"],co:"NeoPag",r:{pt:"Engenheiro de software sênior",en:"Senior Software Engineer",es:"Ingeniero de software senior",it:"Ingegnere del software senior"},x:{pt:"Ajudei a criar um produto do zero, montar o time, estruturar o backend e liderar o projeto. Meu primeiro contato com Elixir: Elixir, Phoenix, MongoDB e Postgres.",en:"Helped create a product from scratch, build the team, structure the backend and lead the project. My first time with Elixir: Elixir, Phoenix, MongoDB and Postgres.",es:"Ayudé a crear un producto desde cero, armar el equipo, estructurar el backend y liderar el proyecto. Mi primer contacto con Elixir: Elixir, Phoenix, MongoDB y Postgres.",it:"Ho aiutato a creare un prodotto da zero, formare il team, strutturare il backend e guidare il progetto. Il mio primo incontro con Elixir: Elixir, Phoenix, MongoDB e Postgres."}},
+{c:1,t:"comm mobile",d:["2018-05","now"],co:"FlutterBR",r:{pt:"Organizer",en:"Organizer",es:"Organizer",it:"Organizer"},x:{pt:"Organizando a comunidade Flutter no Brasil.",en:"Organizing the Flutter community in Brazil.",es:"Organizando la comunidad Flutter en Brasil.",it:"Organizzo la community Flutter in Brasile."}},
+{c:1,t:"backend",d:["2018-05","2019-08"],co:"Accenture",r:{pt:"Consultor",en:"Consultant",es:"Consultor",it:"Consulente"},x:{pt:"Projetos de inovação e transformação digital para clientes globais, com foco em backend: arquitetura de referência para produtos de alta performance, escalabilidade e disponibilidade. Go, Node, JavaScript, Java, Angular, MongoDB, Redis, Cassandra, Kafka, Vert.x e MQTT.",en:"Innovation and digital transformation projects for global clients, focused on backend: reference architecture for high-performance, scalable, highly available products. Go, Node, JavaScript, Java, Angular, MongoDB, Redis, Cassandra, Kafka, Vert.x and MQTT.",es:"Proyectos de innovación y transformación digital para clientes globales, con foco en backend: arquitectura de referencia para productos de alto rendimiento, escalabilidad y disponibilidad. Go, Node, JavaScript, Java, Angular, MongoDB, Redis, Cassandra, Kafka, Vert.x y MQTT.",it:"Progetti di innovazione e trasformazione digitale per clienti globali, con focus sul backend: architettura di riferimento per prodotti ad alte prestazioni, scalabili e disponibili. Go, Node, JavaScript, Java, Angular, MongoDB, Redis, Cassandra, Kafka, Vert.x e MQTT."}},
+{c:2,t:"mobile",d:["2019-08","2020-10"],co:"Sciensa",r:{pt:"Flutter Consultant",en:"Flutter Consultant",es:"Consultor Flutter",it:"Consulente Flutter"},x:{pt:"Consultoria para empresas migrando ou iniciando o desenvolvimento de produtos com Flutter.",en:"Consulting for companies migrating to or starting product development with Flutter.",es:"Consultoría para empresas que migran o inician el desarrollo de productos con Flutter.",it:"Consulenza per aziende che migrano a Flutter o iniziano a sviluppare prodotti con Flutter."}},
+{c:2,t:"mobile",d:["2019-10","2020-10"],co:"Remessa Online",r:{pt:"Mobile Specialist",en:"Mobile Specialist",es:"Mobile Specialist",it:"Mobile Specialist"},x:{pt:"Primeiro desenvolvedor mobile da empresa: defini a arquitetura, estruturei a área e desenvolvi o app inteiro sozinho.",en:"The company's first mobile developer: I defined the architecture, structured the area and built the whole app by myself.",es:"El primer desarrollador mobile de la empresa: definí la arquitectura, estructuré el área y desarrollé toda la app yo solo.",it:"Il primo sviluppatore mobile dell'azienda: ho definito l'architettura, strutturato l'area e sviluppato l'intera app da solo."}},
+{c:2,t:"mobile lead",d:["2020-10","2022-01"],co:"Remessa Online",r:{pt:"Head Mobile",en:"Head of Mobile",es:"Head Mobile",it:"Head Mobile"},x:{pt:"Defini arquitetura e decisões técnicas e conduzi a evolução técnica do mobile. Construí e operei a Área Mobile, formei e guiei times apoiando seu crescimento profissional e pessoal.",en:"Defined architecture and technical decisions and drove mobile's technical evolution. Built and ran the Mobile Area, formed and guided teams while supporting their professional and personal growth.",es:"Definí la arquitectura y las decisiones técnicas e impulsé la evolución técnica de mobile. Construí y operé el Área Mobile, formé y guié equipos apoyando su crecimiento profesional y personal.",it:"Ho definito architettura e decisioni tecniche e guidato l'evoluzione tecnica del mobile. Ho costruito e gestito l'Area Mobile, formato e guidato team sostenendone la crescita professionale e personale."}},
+{c:2,t:"mobile comm",d:["2021-01","2021-12"],co:"Rocketseat",r:{pt:"Creator no Experts Club",en:"Creator at Experts Club",es:"Creator en Experts Club",it:"Creator all'Experts Club"},x:{pt:"Aulas práticas periódicas em vídeo compartilhando minha experiência em mobile para ajudar os devs do clube no aprendizado contínuo.",en:"Regular hands-on video lessons sharing my mobile expertise to help club developers keep learning.",es:"Clases prácticas periódicas en video compartiendo mi experiencia en mobile para ayudar a los devs del club en su aprendizaje continuo.",it:"Lezioni pratiche periodiche in video per condividere la mia esperienza mobile e aiutare i dev del club nell'apprendimento continuo."}},
+{c:3,t:"lead mobile",d:["2022-01","2022-08"],co:"XP Inc. · InfoMoney | IM+",r:{pt:"Staff Engineer",en:"Staff Engineer",es:"Staff Engineer",it:"Staff Engineer"},x:{pt:"Líder técnico apoiando arquitetura e decisões de tecnologia, melhorando o ambiente de compartilhamento de conhecimento e a evolução das pessoas do time.",en:"Technical leader supporting architecture and tech decisions, improving the knowledge-sharing environment and the team's self-improvement.",es:"Líder técnico apoyando la arquitectura y las decisiones tecnológicas, mejorando el ambiente de conocimiento compartido y la evolución del equipo.",it:"Leader tecnico a supporto di architettura e scelte tecnologiche, migliorando la condivisione della conoscenza e la crescita del team."}},
+{c:3,t:"lead",d:["2022-08","2022-11"],co:"XP Inc.",r:{pt:"Engineering Manager",en:"Engineering Manager",es:"Engineering Manager",it:"Engineering Manager"},x:{pt:"Gestão de projetos e de time.",en:"Project and team management.",es:"Gestión de proyectos y de equipo.",it:"Gestione di progetti e team."}},
+{c:3,t:"mobile lead",d:["2022-11","2025-09"],co:"XP Inc.",r:{pt:"Staff Engineer · Mobile Architecture",en:"Staff Engineer · Mobile Architecture",es:"Staff Engineer · Mobile Architecture",it:"Staff Engineer · Mobile Architecture"},x:{pt:"Estruturei a fundação mobile da empresa, com ferramentas internas e componentes cross para acelerar a migração de times e projetos para Flutter. Defini stack e arquitetura, apoiei novos times e construí a trilha de aprendizado para quase 200 devs mobile.",en:"Built the company's mobile foundation, with internal tools and cross components to speed up migrating teams and projects to Flutter. Defined stack and architecture, supported new teams and built the learning path for almost 200 mobile developers.",es:"Estructuré la base mobile de la empresa, con herramientas internas y componentes cross para acelerar la migración de equipos y proyectos a Flutter. Definí stack y arquitectura, apoyé nuevos equipos y construí la ruta de aprendizaje para casi 200 devs mobile.",it:"Ho costruito le fondamenta mobile dell'azienda, con strumenti interni e componenti cross per accelerare la migrazione di team e progetti a Flutter. Ho definito stack e architettura, supportato nuovi team e creato il percorso di apprendimento per quasi 200 sviluppatori mobile."}},
+{c:4,t:"lead mobile ai",d:["2025-09","2026-07"],co:"Kueski",r:{pt:"Senior Staff Software Engineer",en:"Senior Staff Software Engineer",es:"Senior Staff Software Engineer",it:"Senior Staff Software Engineer"},x:{pt:"Liderei iniciativas cross-mobile e escalei a engenharia de aplicações para preparar a plataforma para mais de 10 milhões de usuários: migrei e reorganizei a arquitetura mobile, padronizei dependências e governança dos times e defini boas práticas de uso de IA, com pipelines, scripts e hooks automatizados num fluxo AI-first.",en:"Led cross-mobile initiatives and scaled application engineering to prepare the platform for 10M+ users: migrated and reorganized the mobile architecture, standardized dependencies and team governance, and defined AI best practices with automated pipelines, scripts and hooks for an AI-first workflow.",es:"Lideré iniciativas cross-mobile y escalé la ingeniería de aplicaciones para preparar la plataforma para más de 10 millones de usuarios: migré y reorganicé la arquitectura mobile, estandaricé dependencias y gobernanza de los equipos y definí buenas prácticas de uso de IA, con pipelines, scripts y hooks automatizados en un flujo AI-first.",it:"Ho guidato iniziative cross-mobile e scalato l'ingegneria applicativa per preparare la piattaforma a oltre 10 milioni di utenti: ho migrato e riorganizzato l'architettura mobile, standardizzato dipendenze e governance dei team e definito best practice per l'uso dell'IA, con pipeline, script e hook automatizzati in un flusso AI-first."}},
+{c:4,t:"ai lead",d:["2026-07","now"],now:1,co:"Safra",r:{pt:"Senior Staff AI Engineer · AI Platform",en:"Senior Staff AI Engineer · AI Platform",es:"Senior Staff AI Engineer · AI Platform",it:"Senior Staff AI Engineer · AI Platform"},x:{pt:"Meu capítulo atual: engenharia de IA no time de AI Platform.",en:"My current chapter: AI engineering on the AI Platform team.",es:"Mi capítulo actual: ingeniería de IA en el equipo de AI Platform.",it:"Il mio capitolo attuale: ingegneria IA nel team AI Platform."}}
+];
+
+const root=document.documentElement;
+if(location.search.includes('preview'))root.classList.add('pv');
+const saved=localStorage.getItem('theme');
+if(saved)root.dataset.theme=saved;else if(matchMedia('(prefers-color-scheme: light)').matches)root.dataset.theme='light';
+document.getElementById('theme').onclick=()=>{root.dataset.theme=root.dataset.theme==='light'?'dark':'light';localStorage.setItem('theme',root.dataset.theme)};
+document.getElementById('y').textContent=new Date().getFullYear();
+const REPOS=[["Dev-Safadao",28],["mail-sender",16],["dymock",12],["golang-graphql-talk",12],["Go-REST",10],["FlutterUsers",0]];
+const COMMY=["2018 — *","2020 — 2021","2017","2017","2015 — 2019","2016 — 2017","2015 — 2017","2017 — *"];
+const FT=["all","ai","mobile","lead","backend","comm"];
+let L='pt',filter='all';
+function fmt(d,l){if(!d)return I18N[l].undated;const f=x=>x==='now'?I18N[l].today:(x.length===4?x:M[l][+x.slice(5)-1]+' '+x.slice(0,4));return f(d[0])+' — '+f(d[1])}
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;e.target.classList.add('show');
+ e.target.querySelectorAll('[data-count]').forEach(n=>{if(n.dataset.done)return;n.dataset.done=1;const t=+n.dataset.count,suf=t===10?'+':'';
+  if(root.classList.contains('pv')){n.textContent=t+suf;return}const s=performance.now();
+  (function f(now){const k=Math.min((now-s)/1400,1);n.textContent=Math.round(t*(1-Math.pow(1-k,3)))+(k===1?suf:'');if(k<1)requestAnimationFrame(f)})(s)})}),{threshold:.12});
+function renderTL(){const T=I18N[L],tl=document.getElementById('tl');let h='<div class="tl-fill" id="tlfill"></div>',last=-1;
+ TL.forEach(it=>{if(it.c!==last){last=it.c;const c=T.ch[it.c];h+=`<div class="chapter"><span class="num">${c[0]}</span><div><h3>${c[1]}</h3><p>${c[2]}</p></div></div>`}
+  h+=`<div class="item${it.now?' now':''}${it.first?' first':''}" data-t="${it.t}"><div class="card"><div class="top"><div><span class="role">${it.r[L]}</span>${it.now?`<span class="badge">${T.now2}</span>`:''}<br><span class="co">${it.co}</span></div><span class="when">${fmt(it.d,L)}</span></div><div class="more">${it.x[L]}</div></div></div>`});
+ tl.innerHTML=h;tl.querySelectorAll('.item').forEach(x=>{io.observe(x)});tl.querySelectorAll('.card').forEach(c=>c.onclick=()=>c.classList.toggle('open'));applyFilter()}
+function applyFilter(){document.querySelectorAll('#filters button').forEach(b=>b.classList.toggle('on',b.dataset.f===filter));
+ document.querySelectorAll('.item').forEach(it=>it.classList.toggle('hide',filter!=='all'&&!it.dataset.t.split(' ').includes(filter)));
+ document.querySelectorAll('.chapter').forEach(c=>c.style.display=filter==='all'?'':'none')}
+function setLang(l,push){if(!I18N[l])l='pt';L=l;const T=I18N[l];root.lang=l==='pt'?'pt-BR':l;localStorage.setItem('lang',l);
+ if(push){const u=new URL(location);u.searchParams.set('lang',l);history.replaceState(null,'',u)}
+ document.querySelectorAll('[data-i]').forEach(e=>e.innerHTML=T[e.dataset.i]);
+ document.querySelectorAll('[data-n]').forEach(e=>e.textContent=T.nav[+e.dataset.n]);
+ document.querySelectorAll('[data-s]').forEach(e=>e.textContent=T.st[+e.dataset.s]);
+ document.querySelectorAll('[data-k]').forEach(e=>e.textContent=T.sk[+e.dataset.k]);
+ document.querySelectorAll('.langs button').forEach(b=>b.classList.toggle('on',b.dataset.l===l));
+ document.getElementById('filters').innerHTML=T.f.map((x,i)=>`<button data-f="${FT[i]}">${x}</button>`).join('');
+ document.querySelectorAll('#filters button').forEach(b=>b.onclick=()=>{filter=b.dataset.f;applyFilter()});
+ document.getElementById('leadp').innerHTML=T.lead.map(x=>`<span>${x}</span>`).join('');
+ document.getElementById('langp').innerHTML=T.langs.map(x=>`<span>${x}</span>`).join('');
+ document.getElementById('comm').innerHTML=T.comm.map((x,i)=>`<li>${x}<small>${COMMY[i].replace('*',T.today)}</small></li>`).join('');
+ document.getElementById('repos').innerHTML=REPOS.map((r,i)=>`<a class="repo" href="https://github.com/zeucxb/${r[0]}" target="_blank" rel="noopener"><b>${r[0]}</b><p>${T.repos[i]}</p><small>${r[1]?'★ '+r[1]:'Flutter'}</small></a>`).join('');
+ document.getElementById('edu').innerHTML=T.edu.map(e=>`<div class="e"><b>${e[0]}</b><br>${e[1]}<br><span>${e[2]}</span></div>`).join('');
+ document.title='Eliseu Codinhoto · '+(l==='pt'?'AI Staff Engineer':'AI Staff Engineer');
+ renderTL();typedReset()}
+// typed
+const el=document.getElementById('typed');let p=0,i=0,del=false,timer;
+const strip=s=>s.replace(/<[^>]+>/g,'');
+function render(full,n){let out='',c=0,tag=false;for(const ch of full){if(ch==='<')tag=true;if(tag){out+=ch;if(ch==='>')tag=false;continue}if(c<n){out+=ch;c++}}return out}
+function tick(){const ph=I18N[L].typed,f=ph[p%ph.length],len=strip(f).length;el.innerHTML=render(f,i);
+ if(!del&&i<len){i++;timer=setTimeout(tick,55)}else if(!del){del=true;timer=setTimeout(tick,1600)}else if(i>0){i--;timer=setTimeout(tick,25)}else{del=false;p++;timer=setTimeout(tick,300)}}
+function typedReset(){clearTimeout(timer);p=0;del=false;i=root.classList.contains('pv')?99:0;tick()}
+document.querySelectorAll('.langs button').forEach(b=>b.onclick=()=>setLang(b.dataset.l,true));
+const qp=new URLSearchParams(location.search).get('lang');
+const nav=(navigator.language||'pt').slice(0,2).toLowerCase();
+setLang(qp||localStorage.getItem('lang')||(I18N[nav]?nav:'pt'),false);
+document.querySelectorAll('.reveal').forEach(x=>io.observe(x));
+const bar=document.getElementById('progress');
+addEventListener('scroll',()=>{const h=document.body.scrollHeight-innerHeight;bar.style.width=(scrollY/h*100)+'%';
+ const tl=document.getElementById('tl'),fill=document.getElementById('tlfill');if(!fill)return;const r=tl.getBoundingClientRect();
+ fill.style.height=(Math.min(Math.max((innerHeight*.6-r.top)/r.height,0),1)*100)+'%'},{passive:true});
+
+</script>
+</body>
+</html>
